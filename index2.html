@@ -1,310 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>U.E 17 de Septiembre - Educación Pública de Calidad</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>U.E 17 de septiembre</title>
+<link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body {
+margin: 0;
+font-family: 'Domine', serif;
+background-color: #F8E9D1;
+color: #333;
+}
+header {
+background-color: #EA6534;
+padding: 15px 0;
+text-align: center;
+}
+header h1 {
+margin: 0;
+color: white;
+font-size: 2rem;
+}
+nav {
+display: flex;
+justify-content: center;
+gap: 20px;
+background-color: #EC6736;
+padding: 10px 0;
+}
+nav a {
+color: white;
+text-decoration: none;
+font-weight: bold;
+font-size: 1rem;
+}
+nav a:hover {
+text-decoration: underline;
+}
+section {
+padding: 40px 20px;
+text-align: center;
+}
+section h2 {
+color: #EA6534;
+margin-bottom: 20px;
+}
+footer {
+background-color: #EA6534;
+color: white;
+text-align: center;
+padding: 10px 0;
+margin-top: 20px;
+}
+</style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container header-content">
-            <div class="logo">
-                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHJlY3QgeD0iMTAiIHk9IjEwIiB3aWR0aD0iODAiIGhlaWdodD0iODAiIGZpbGw9IiNmZmYiIHJ4PSIxMCIvPjx0ZXh0IHg9IjUwIiB5PSI1OCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjQwIiBmaWxsPSIjRUE2NTM0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIj4xNzwvdGV4dD48L3N2Zz4=" alt="Logo U.E 17 de Septiembre">
-                <h1>U.E 17 de Septiembre</h1>
-            </div>
-            <button class="menu-toggle" id="menuToggle">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav id="mainNav">
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#historia">Historia</a></li>
-                    <li><a href="#especialidad">Especialidad</a></li>
-                    <li><a href="#eventos">Eventos</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero" id="inicio">
-        <div class="hero-content">
-            <h2>Bienvenidos a la U.E 17 de Septiembre</h2>
-            <p>Formando jóvenes con valores, conocimientos y conciencia social para un futuro mejor</p>
-            <a href="#contacto" class="btn">Contáctanos</a>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <div class="section-title">
-                <h2>Nuestra Institución</h2>
-                <p>Comprometidos con la educación pública de calidad para nuestra comunidad</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-book-open"></i>
-                    </div>
-                    <h3>Educación Integral</h3>
-                    <p>Formación académica de calidad con enfoque en valores y desarrollo humano.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Comunidad Inclusiva</h3>
-                    <p>Espacio de aprendizaje para todos, fomentando la diversidad y la inclusión.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Excelencia Académica</h3>
-                    <p>Programas educativos diseñados para el desarrollo del máximo potencial de cada estudiante.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- History Section -->
-    <section class="history" id="historia">
-        <div class="container">
-            <div class="history-content">
-                <div class="history-text">
-                    <h2>Nuestra Historia</h2>
-                    <p>La Unidad Educativa 17 de Septiembre fue fundada en 1975 con el objetivo de brindar educación pública de calidad a la comunidad. Desde sus inicios, nuestra institución se ha caracterizado por su compromiso con la excelencia educativa y la formación integral de sus estudiantes.</p>
-                    <p>El nombre de nuestra institución rinde homenaje a la fecha patria que conmemora la lucha por la independencia y la libertad, valores que transmitimos a nuestros estudiantes.</p>
-                    <p>A lo largo de los años, hemos crecido y nos hemos adaptado a los cambios educativos, siempre manteniendo nuestro compromiso con la comunidad y la educación pública.</p>
-                </div>
-                <div class="history-image">
-                    <img src="https://images.unsplash.com/photo-1591123120675-4eb5f2a5cf93?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Historia del colegio">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Specialties Section -->
-    <section class="specialties" id="especialidad">
-        <div class="container">
-            <div class="section-title">
-                <h2>Nuestras Especialidades</h2>
-                <p>Formación diversificada para el desarrollo de habilidades y talentos</p>
-            </div>
-            <div class="specialties-grid">
-                <div class="specialty-card">
-                    <div class="specialty-img">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Ciencias">
-                    </div>
-                    <div class="specialty-content">
-                        <h3>Ciencias</h3>
-                        <p>Programa de ciencias con laboratorios equipados para experimentación e investigación.</p>
-                    </div>
-                </div>
-                <div class="specialty-card">
-                    <div class="specialty-img">
-                        <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Humanidades">
-                    </div>
-                    <div class="specialty-content">
-                        <h3>Humanidades</h3>
-                        <p>Formación en ciencias sociales, literatura y artes para el desarrollo humanístico.</p>
-                    </div>
-                </div>
-                <div class="specialty-card">
-                    <div class="specialty-img">
-                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Deportes">
-                    </div>
-                    <div class="specialty-content">
-                        <h3>Deportes</h3>
-                        <p>Programa deportivo con diversas disciplinas para el desarrollo físico y mental.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Events Section -->
-    <section class="events" id="eventos">
-        <div class="container">
-            <div class="section-title">
-                <h2>Próximos Eventos</h2>
-                <p>Participa en nuestras actividades y celebraciones comunitarias</p>
-            </div>
-            <div class="events-grid">
-                <div class="event-card">
-                    <div class="event-img">
-                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Feria científica">
-                    </div>
-                    <div class="event-content">
-                        <span class="event-date">15 Septiembre, 2023</span>
-                        <h3>Feria Científica Anual</h3>
-                        <p>Exposición de proyectos científicos realizados por nuestros estudiantes.</p>
-                    </div>
-                </div>
-                <div class="event-card">
-                    <div class="event-img">
-                        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Aniversario">
-                    </div>
-                    <div class="event-content">
-                        <span class="event-date">17 Septiembre, 2023</span>
-                        <h3>Celebración Aniversario</h3>
-                        <p>Acto cultural y festival artístico para celebrar nuestro aniversario.</p>
-                    </div>
-                </div>
-                <div class="event-card">
-                    <div class="event-img">
-                        <img src="https://images.unsplash.com/photo-1549037173-e3b717902c57?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Torneo deportivo">
-                    </div>
-                    <div class="event-content">
-                        <span class="event-date">25 Septiembre, 2023</span>
-                        <h3>Torneo Deportivo Intercursos</h3>
-                        <p>Competencias deportivas entre los diferentes cursos de la institución.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contacto">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contacto</h2>
-                <p>Estamos a tu disposición para resolver cualquier duda o consulta</p>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div>
-                            <h3>Dirección</h3>
-                            <p>Av. Principal #123, Barrio Centro</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div>
-                            <h3>Teléfono</h3>
-                            <p>(04) 234-5678</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <h3>Email</h3>
-                            <p>info@ue17deseptiembre.edu.ec</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div>
-                            <h3>Horario de atención</h3>
-                            <p>Lunes a Viernes: 7:30 am - 4:30 pm</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <h3>Envíanos un mensaje</h3>
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Nombre completo</label>
-                            <input type="text" id="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Correo electrónico</label>
-                            <input type="email" id="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Teléfono</label>
-                            <input type="tel" id="phone">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Mensaje</label>
-                            <textarea id="message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Enviar mensaje</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-info">
-                    <div class="footer-logo">U.E 17 de Septiembre</div>
-                    <p>Formando jóvenes con valores para un futuro mejor desde 1975.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h3>Enlaces rápidos</h3>
-                    <ul>
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#historia">Historia</a></li>
-                        <li><a href="#especialidad">Especialidad</a></li>
-                        <li><a href="#eventos">Eventos</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h3>Recursos</h3>
-                    <ul>
-                        <li><a href="#">Calendario Escolar</a></li>
-                        <li><a href="#">Reglamento Interno</a></li>
-                        <li><a href="#">Biblioteca Virtual</a></li>
-                        <li><a href="#">Guías de Estudio</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h3>Legal</h3>
-                    <ul>
-                        <li><a href="#">Política de Privacidad</a></li>
-                        <li><a href="#">Términos y Condiciones</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2023 U.E 17 de Septiembre. Todos los derechos reservados.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Menu toggle functionality
-        const menuToggle = document.getElementById('menuToggle');
-        const mainNav = document.getElementById('mainNav');
-        
-        menuToggle.addEventListener('click', () => {
-            mainNav.classList.toggle('active');
-        });
-        
-        // Close menu when clicking on a link
-        const navLinks = document.querySelectorAll('nav a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mainNav.classList.remove('active');
-            });
-        });
-    </script>
-</body>
-</html>
+<header>
+<h1>U.E 17 de septiembre</h1>
+</header>
+<nav>
+<a href="#inicio">Inicio</a>
+<a href="#historia">Historia</a>
