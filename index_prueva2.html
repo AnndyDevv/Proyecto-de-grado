@@ -3,152 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="style2.css">
   <title>Unidad Educativa 17 de Septiembre</title>
-  <style>
-    /* ===== Reset ===== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Segoe UI", sans-serif;
-    }
-
-    body {
-      background-color: #fdf7e3; /* crema amarillento */
-      color: #333;
-    }
-
-    /* ===== HEADER ===== */
-    header {
-      background: linear-gradient(90deg, #ff7c2a, #ff9e4d);
-      padding: 15px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    header .logo {
-      font-size: 1.6rem;
-      font-weight: bold;
-      color: white;
-      letter-spacing: 1px;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 25px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-weight: 500;
-      padding: 8px 14px;
-      border-radius: 6px;
-      transition: all 0.3s ease;
-    }
-
-    nav ul li a:hover {
-      background: white;
-      color: #ff7c2a;
-    }
-
-    /* ===== HERO ===== */
-    .hero {
-      height: 85vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background: linear-gradient(rgba(255,124,42,0.7), rgba(255,124,42,0.7)),
-        url('images/fondo.png') no-repeat center/cover;
-      color: white;
-      padding: 20px;
-    }
-
-    .hero h1 {
-      font-size: 3.2rem;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      font-size: 1.3rem;
-      margin-bottom: 25px;
-    }
-
-    .hero a {
-      background: white;
-      color: #ff7c2a;
-      padding: 12px 24px;
-      border-radius: 30px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .hero a:hover {
-      background: #ffe2c7;
-    }
-
-    /* ===== SECCIÓN DESTACADA ===== */
-    .about {
-      padding: 70px 40px;
-      text-align: center;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .about h2 {
-      font-size: 2.2rem;
-      color: #ff7c2a;
-      margin-bottom: 20px;
-    }
-
-    .about p {
-      font-size: 1.2rem;
-      color: #555;
-      line-height: 1.7;
-    }
-
-    /* ===== FOOTER ===== */
-    footer {
-      background: #333;
-      color: #eee;
-      text-align: center;
-      padding: 20px;
-      margin-top: 50px;
-    }
-
-    footer p {
-      font-size: 0.9rem;
-    }
-
-    /* ===== Responsive ===== */
-    @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-        background: #ff7c2a;
-        position: absolute;
-        top: 70px;
-        right: 0;
-        width: 100%;
-        display: none;
-      }
-      nav ul.active {
-        display: flex;
-      }
-    }
-  </style>
 </head>
 <body>
 
   <!-- HEADER -->
   <header>
-    <div class="logo">Unidad Educativa 17 de Septiembre</div>
+    <div class="logo">
+      <img src="images/logo.png" alt="ni idea">
+      Unidad Educativa 17 de Septiembre</div>
     <nav>
       <ul>
         <li><a href="#">Inicio</a></li>
