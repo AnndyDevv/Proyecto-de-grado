@@ -31,6 +31,7 @@
       font-weight: bold;
       color: white;
       letter-spacing: 1px;
+      
     }
 
     nav ul {
@@ -137,4 +138,14 @@
       nav ul.active {
         display: flex;
       }
+      /* ===== Nuestra historia ===== */
+        .contenido p{
+        
+        
+      }
+      
+
+ 
+
+
     }
