@@ -3,158 +3,188 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Acoso Escolar</title>
+  <title>Prevención del acoso escolar</title>
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
+      font-family: "Arial", sans-serif;
     }
 
     body {
-      background-color: #f5f5f5;
-      color: #333;
+      background-color: #f8faf8;
+      color: #1b1b1b;
+      line-height: 1.6;
     }
 
     /* HEADER */
     header {
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                  url('https://images.unsplash.com/photo-1606112219348-204d7d8b94ee?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("https://anpearagon.es/image.php?link=notices/2/d%C3%ADa-bullying-2023-web_t1698924777_2_b.jpg") center/cover no-repeat;
       color: white;
-      padding: 100px 20px;
       text-align: center;
+      padding: 120px 20px;
     }
 
     header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 15px;
     }
 
     header p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto;
-      line-height: 1.6;
-    }
-
-    /* SECCIÓN PRINCIPAL */
-    main {
-      padding: 50px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    section {
-      margin-bottom: 60px;
-    }
-
-    h2 {
-      font-size: 2rem;
-      color: #333;
-      margin-bottom: 15px;
-      border-left: 6px solid #0077b6;
-      padding-left: 10px;
-    }
-
-    p {
       font-size: 1rem;
-      line-height: 1.8;
+      max-width: 650px;
+      margin: 0 auto;
+      color: #eaeaea;
+    }
+
+    /* SECCIONES */
+    section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 10%;
+      gap: 50px;
+    }
+
+    section:nth-child(even) {
+      flex-direction: row-reverse;
+      background-color: #f5f8f6;
+    }
+
+    section img {
+      width: 50%;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    section .text {
+      width: 50%;
+    }
+
+    section h2 {
+      font-size: 2rem;
       margin-bottom: 15px;
+      color: #1a1a1a;
     }
 
-    /* GALERÍA DE IMÁGENES */
-    .galeria {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
+    section p {
+      font-size: 1rem;
+      color: #333;
     }
 
-    .galeria a {
-      display: block;
-      overflow: hidden;
-      border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+    /* GALERÍA FINAL */
+ .galeria {
+  padding: 80px 10%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 60px;
+}
 
-    .galeria a:hover {
-      transform: scale(1.03);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-    }
+.galeria .intro {
+  width: 40%;
+}
 
-    .galeria img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+.imagenes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 50%;
+}
 
-    /* FOOTER */
-    footer {
-      background-color: #222;
-      color: #ccc;
-      text-align: center;
-      padding: 25px 10px;
-      font-size: 0.9rem;
-    }
+.imagenes figure {
+  width: 100%;
+}
 
-    footer a {
-      color: #00b4d8;
-      text-decoration: none;
-    }
+.imagenes img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
-    footer a:hover {
-      text-decoration: underline;
-    }
+.imagenes figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #444;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .galeria {
+    flex-direction: column;
+  }
+
+  .galeria .intro,
+  .imagenes {
+    width: 100%;
+  }
+
+  .imagenes {
+    grid-template-columns: 1fr 1fr;
+  }
+}
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Acoso Escolar</h1>
-    <p>El acoso escolar es un problema que afecta a miles de estudiantes. Conocer, prevenir y actuar son pasos esenciales para erradicarlo.</p>
+    <h1>Prevención del acoso escolar</h1>
+    <p>Aprende a identificar y prevenir el acoso escolar en tu entorno para crear un ambiente más seguro y respetuoso para todos.</p>
   </header>
 
-  <main>
-    <section>
+  <section>
+    <div class="text">
       <h2>¿Qué es el acoso escolar?</h2>
-      <p>El acoso escolar o bullying es cualquier forma de maltrato físico, verbal o psicológico que se produce entre estudiantes de forma reiterada. Este comportamiento tiene consecuencias graves en la autoestima y el bienestar de quienes lo sufren.</p>
-    </section>
+      <p>
+        El acoso escolar es una problemática que afecta a muchos entornos educativos. Se refiere a comportamientos agresivos y repetidos, dirigidos hacia un estudiante con la intención de intimidar, humillar o dañar, creando un ambiente peligroso y excluyente.
+      </p>
+    </div>
+    <img src="https://mexico.unir.net/wp-content/uploads/sites/6/2024/04/violencia-escolar.jpg" alt="Acoso escolar">
+  </section>
 
-    <section>
-      <h2>Tipos de acoso</h2>
-      <p>Existen diversas formas de acoso: físico, verbal, social y cibernético. Todos ellos dañan emocionalmente a las víctimas y crean un entorno inseguro.</p>
-    </section>
+  <section>
+    <div class="text">
+      <h2>Causas del acoso escolar y cifras de afectados</h2>
+      <p>
+        Es un fenómeno social complejo que se manifiesta como un comportamiento agresivo, repetitivo y sistemático, dirigido hacia un estudiante o un grupo de estudiantes, caracterizado por un desequilibrio de poder real o percibido entre la víctima y el agresor. Este maltrato, que puede ser físico, verbal, psicológico o, cada vez más, digital, no se reduce a un conflicto puntual, sino que constituye una relación de victimización sostenida donde la víctima se encuentra en una posición de inferioridad que le dificulta defenderse. Sus consecuencias trascienden el momento del hecho, generando secuelas profundas en la salud mental, el rendimiento académico y el desarrollo social de todos los implicados: la víctima, el agresor y los testigos, erosionando gravemente el clima de convivencia y seguridad que debe prevalecer en el entorno educativo.
+      </p>
+    </div>
+    <img src="https://www.infocop.es/wp-content/uploads/2025/04/no-al-acoso-escolar-1024x683.jpg" alt="Stop bullying">
+  </section>
 
-    <section>
-      <h2>Consecuencias</h2>
-      <p>Las consecuencias del acoso escolar pueden ser devastadoras: ansiedad, depresión, aislamiento social y bajo rendimiento académico. Es fundamental ofrecer apoyo y fomentar la empatía en las aulas.</p>
-    </section>
+  <div class="galeria">
+  <div class="intro">
+    <h2>Prevenir el acoso escolar</h2>
+    <p>
+      Prevenir el acoso escolar significa crear un ambiente seguro y respetuoso donde los estudiantes aprendan a respetar y valorar a los demás, donde se denuncien las agresiones y tanto docentes como familias trabajen juntos para detectar, detener y evitar cualquier tipo de maltrato.
+    </p>
+  </div>
 
-    <section>
-      <h2>Imágenes relacionadas</h2>
-      <div class="galeria">
-        <a href="https://unsplash.com/photos/tZc3vjPCk-Q" target="_blank">
-          <img src="https://images.unsplash.com/photo-1604881984048-8a26b05f1e47?auto=format&fit=crop&w=800&q=80" alt="Niño triste en el colegio">
-        </a>
-        <a href="https://unsplash.com/photos/_UeY8aTI6d0" target="_blank">
-          <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=800&q=80" alt="Grupo de estudiantes">
-        </a>
-        <a href="https://unsplash.com/photos/9rYfG8sWRVo" target="_blank">
-          <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=800&q=80" alt="Educación y respeto">
-        </a>
-        <a href="https://unsplash.com/photos/X1ex5ZKt2FA" target="_blank">
-          <img src="https://images.unsplash.com/photo-1544535830-9c8e95b76b69?auto=format&fit=crop&w=800&q=80" alt="Apoyo entre compañeros">
-        </a>
-      </div>
-    </section>
-  </main>
+  <div class="imagenes">
+    <figure>
+      <img src="https://i.pinimg.com/736x/8e/28/15/8e281504b5c0c60b6aadb2aa6f99eb38.jpg" alt="Reflexión sobre el tema">
 
-  <footer>
-    <p>Proyecto educativo sobre el <strong>acoso escolar</strong> — Creado por Kevin Heleno © 2025</p>
-  </footer>
+    </figure>
+    <figure>
+      <img src="https://www.infobae.com/resizer/v2/https%3A%2F%2Fs3.amazonaws.com%2Farc-wordpress-client-uploads%2Finfobae-wp%2Fwp-content%2Fuploads%2F2016%2F09%2F19152609%2Fbullying-1920-11.jpg?auth=2edce8d271483c5a737b5e43674bc741381f8dd6922a817bda1f4a67ad7b1117&smart=true&width=1200&height=1200&quality=85" alt="Soluciones y apoyo">
+ 
+    </figure>
+    <figure>
+      <img src="https://ve.arcores.org/wp-content/uploads/2024/05/Acoso-escolar-bullying.jpg" alt="Prevención del acoso escolar">
+   
+    </figure>
+    <figure>
+      <img src="https://observatorio.tec.mx/wp-content/uploads/2024/02/Reflexiones-para-prevenir-el-acoso-escolar-en-la-adolescencia.jpg" alt="Consecuencias del bullying">
+    </figure>
+  </div>
+</div>
+
+
 </body>
 </html>
