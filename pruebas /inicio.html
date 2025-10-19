@@ -1,33 +1,174 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="inicio.css">
-  <title>Unidad Educativa 17 de Septiembre</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acoso Escolar</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Georgia", serif;
+        color: #111;
+        background-color: #f4f4f4;
+        line-height: 1.6;
+    }
+
+    header {
+        background: url('https://img.freepik.com/foto-gratis/pasillo-escuela-borrosos-lockers_23-2149660445.jpg') center/cover no-repeat;
+        height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #000;
+    }
+
+    header h1 {
+        font-size: 3rem;
+        background: rgba(255,255,255,0.75);
+        padding: 20px 30px;
+        border-radius: 10px;
+        font-weight: 900;
+    }
+
+    section {
+        padding: 80px 8%;
+    }
+
+    .intro {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #000;
+        color: #fff;
+        flex-wrap: wrap;
+    }
+
+    .intro .texto {
+        flex: 1;
+        padding-right: 40px;
+        min-width: 300px;
+    }
+
+    .intro img {
+        flex: 1;
+        width: 100%;
+        border-radius: 5px;
+        object-fit: cover;
+        min-width: 300px;
+    }
+
+    .intro p {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+
+    .victimas {
+        background-color: #eaf5e5;
+    }
+
+    .victimas h2 {
+        font-size: 2.5rem;
+        margin-bottom: 25px;
+        font-weight: 900;
+    }
+
+    .victimas-contenido {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .victimas-texto {
+        flex: 1;
+        min-width: 300px;
+        margin-right: 20px;
+    }
+
+    .victimas-texto p {
+        font-size: 1.1rem;
+    }
+
+    .victimas-imagenes {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        margin-top: 40px;
+        flex-wrap: wrap;
+    }
+
+    .victimas-imagenes img {
+        width: 32%;
+        border-radius: 8px;
+        object-fit: cover;
+        min-width: 250px;
+    }
+
+    .afrontar {
+        background-color: #eaf5e5;
+        text-align: center;
+    }
+
+    .afrontar h2 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        font-weight: 900;
+    }
+
+    .afrontar p {
+        max-width: 900px;
+        margin: 0 auto;
+        font-size: 1.1rem;
+    }
+
+    @media (max-width: 900px) {
+        header h1 { font-size: 2rem; }
+        .intro { flex-direction: column; }
+        .intro .texto { padding-right: 0; margin-bottom: 20px; }
+        .victimas-contenido { flex-direction: column; }
+        .victimas-imagenes img { width: 100%; }
+    }
+</style>
 </head>
 <body>
-    <!---HEADER---->
-  <header id="Header">
-    <img src="images/logo.png" class ="logo" alt="">
-    <div class="name"> U.E 17 de Septiembre</div>
-    <input type="checkbox" id="menu" />
-    <label for="menu">
-      <img src="images/menu.png" class="menu-icono" alt="">
-    </label>
-     <ul class= "menu">
-      <li class="item">Inicio</li>
-      <li class="item">Historia</li>
-      <li class="item">Oferca academica</li>
-      <li class="item">Noticias</li>
-      <li class="btn">Contacto</li>
-     </ul>
-  </header>
-   <!---Script del Header-->
-  <script src="inicio.js">
 
-  </script>
-  
+<header>
+    <h1>¿QUÉ ES EL ACOSO ESCOLAR Y POR QUÉ IMPORTA?</h1>
+</header>
+
+<section class="intro">
+    <div class="texto">
+        <p><strong>El acoso escolar</strong> es una forma de violencia repetida en la que un estudiante o grupo agrede, humilla o excluye a otro de manera intencional. Puede ser físico, verbal, psicológico o digital.</p>
+        <p>Importa porque <strong>afecta profundamente la salud emocional, el aprendizaje y la autoestima</strong> de las víctimas.</p>
+        <p>Detenerlo requiere <strong>empatía, comunicación y acción conjunta</strong> entre estudiantes, docentes y familias.</p>
+    </div>
+    <img src="https://abrahamronquillo09-ltxyu.wordpress.com/wp-content/uploads/2025/10/image.jpeg" alt="Libros sobre bullying">
+</section>
+
+<section class="victimas">
+    <h2>CONSECUENCIAS DEL ACOSO ESCOLAR EN LAS VÍCTIMAS</h2>
+    <div class="victimas-contenido">
+        <div class="victimas-texto">
+            <p>El acoso escolar puede generar daños emocionales profundos, como ansiedad, depresión y baja autoestima. Estas heridas pueden afectar el rendimiento académico y la integración social, dejando secuelas duraderas en quienes lo sufren.</p>
+        </div>
+    </div>
+    <div class="victimas-imagenes">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE2o2W03_yLfvjG-VeLrfsT_khcylWbycfff5Zj41z6y6L9qA345yBVltupVko2YuP_kQ&usqp=CAU" alt="Niño víctima de acoso">
+        <img src="https://jupsin.com/wp-content/uploads/2018/02/bullying-3089938_1280_Fotor.jpg" alt="Niña tapándose la cara">
+        <img src="https://www.shutterstock.com/image-photo/lifestyle-dramatic-isolated-portrait-young-260nw-1174437733.jpg" alt="Niño con manos pintadas STOP">
+    </div>
+</section>
+
+<section class="afrontar">
+    <h2>¿CÓMO PODEMOS AFRONTAR LOS CASOS DE ACOSO ESCOLAR?</h2>
+    <p>Para afrontar el acoso escolar se debe <strong>denunciar</strong> los hechos a adultos de confianza o a las autoridades del centro educativo, <strong>mantener una comunicación abierta</strong> con los hijos sobre el tema y <strong>fomentar su autoestima y habilidades de resolución de conflictos</strong>.  
+    Para las víctimas, se recomienda buscar apoyo profesional y apoyarse en sus amistades, mientras que el enfoque escolar debe ser restaurativo, promoviendo un ambiente de respeto y seguridad.</p>
+</section>
+
 </body>
 </html>
