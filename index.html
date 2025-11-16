@@ -3,242 +3,353 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Proyecto - Sitio en construccion</title>
+    <title>Proyecto - Sitio en construcción</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-
     @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Gorditas:wght@400;700&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bubblegum+Sans&family=Fuzzy+Bubbles:wght@400;700&family=Gorditas:wght@400;700&family=Lilita+One&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Fuzzy+Bubbles:wght@400;700&family=Gorditas:wght@400;700&display=swap');
-        body {
-            margin: 0;
-            font-family: "Arvo", sans-serif;
-            color: #222;
-            background: #f9f9f9;
-        }
-        header {
-            background: white;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            padding: 20px 40px;
-            position: relative;
-            top: 0;
-            z-index: 10;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 1.4rem;
-        }
-        nav a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: #444;
-            font-weight: 600;
-        }
-        .hero {
-            padding: 120px 40px;
-            text-align: center;
-            background: url('images/jovenes-lab.jpg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-        }
     
-        .titulo-grande {
-           font-size: 4.4rem; /* lo haces tan grande como quieras */
-           font-weight: 700;
-}
-
-         #texto-sombra {
-             text-shadow: 0 0 8px rgba(0,0,0,0.8);
-         }
-
-
-        .hero p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 60px 20px;
-        }
-        .section-title {
-            font-size: 4.4rem;
-            margin-bottom: 20px;
-            text-align: center;
-            font-family: "Bubblegum Sans", sans-serif;
-        }     
-        .section-bach-cont {
-            max-width: 850px;        /* Cambia el ancho del texto */
-            margin: 0 auto;          /* Centra el bloque */
-            text-align: center;      /* Centra el texto */
-            line-height: 1.6;        /* Mejor legibilidad */
-            font-size: 20px;         /* Cambia el tamaño de letra */
-}
-
-        .section-bach-cont p {
-             margin-bottom: 10px;     /* Espaciado entre líneas */
-}
-    
-
-
-        
-        footer {
-            background: #0E183B;
-            color: #eee;
-            text-align: center;
-            padding: 40px 10px;
-            margin-top: 40px;
-        }
-        @media (max-width: 700px) {
-        #nav-menu {
-        position: absolute;
-        top: 70px;
-        right: 20px;
-        background: white;
-        padding: 20px;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        display: none;
-        flex-direction: column !important;
-        gap: 15px;
-        z-index: 1000;
+    body {
+        margin: 0;
+        font-family: "Arvo", sans-serif;
+        color: #222;
+        background: #f9f9f9;
     }
+    header {
+        background: white;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        padding: 20px 40px;
+        position: relative;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 1.4rem;
+    }
+    nav a {
+        margin-left: 20px;
+        text-decoration: none;
+        color: #444;
+        font-weight: 600;
+    }
+    .hero {
+        padding: 120px 40px;
+        text-align: center;
+        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');
+        background-size: cover;
+        background-position: center;
+        color: white;
+    }
+
+    .titulo-grande {
+        font-size: 4.4rem;
+        font-weight: 700;
+        font-family: "Bubblegum Sans", sans-serif;
+    }
+
+    #texto-sombra {
+        text-shadow: 0 0 8px rgba(0,0,0,0.8);
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+        max-width: 700px;
+        margin: 20px auto;
+    }
+
+    /* =========================================
+       SECCIÓN ¿QUÉ ES ESTE BACHILLERATO? - IMAGEN PEGADA AL BORDE IZQUIERDO
+    ========================================= */
+    .sobre-bachi {
+        padding: 100px 0; /* ← ELIMINÉ PADDING LATERAL */
+        background: #fff;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden; /* ← IMPORTANTE para que la imagen no cause scroll */
+    }
+
+    /* CONTENEDOR SIN MÁRGENES LATERALES */
+    .sobre-contenido {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        width: 100%; /* ← OCUPA TODO EL ANCHO */
+        margin: 0; /* ← SIN MARGEN */
+    }
+
+    /* IMAGEN PEGADA AL BORDE IZQUIERDO */
+    .sobre-img {
+        flex: 0 0 55%; /* ← ANCHO FIJO DE LA IMAGEN */
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 0; /* ← SIN MARGEN */
+    }
+
+    .sobre-img img {
+        width: 100%;
+        max-width: none; /* ← ELIMINÉ LIMITE DE ANCHO */
+        height: 500px;
+        border-radius: 0 20px 20px 0; /* ← SOLO BORDES REDONDEADOS DERECHA */
+        object-fit: cover;
+        object-position: center;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    /* TEXTO A LA DERECHA CON ESPACIO */
+    .sobre-texto {
+        flex: 1;
+        padding: 0 40px 0 20px; /* ← ESPACIO SOLO DERECHA */
+        max-width: 600px; /* ← LIMITE PARA NO EXTENDERSE DEMASIADO */
+    }
+
+    .titulo-sobre {
+        font-size: 3.5rem;
+        margin-bottom: 30px;
+        font-family: "Bubblegum Sans", sans-serif;
+        color: #0E183B;
+        line-height: 1.1;
+    }
+
+    .sobre-texto p {
+        font-size: 1.3rem;
+        line-height: 1.7;
+        color: #333;
+        margin-bottom: 25px;
+    }
+
+    .sobre-texto strong {
+        color: #0E183B;
+        font-weight: 700;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+        .sobre-contenido {
+            gap: 40px;
+        }
+        
+        .sobre-img {
+            flex: 0 0 50%;
+        }
+        
+        .sobre-texto {
+            padding: 0 30px 0 15px;
+        }
+        
+        .titulo-sobre {
+            font-size: 3rem;
+        }
+        
+        .sobre-texto p {
+            font-size: 1.2rem;
+        }
+        
+        .sobre-img img {
+            height: 450px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .sobre-contenido {
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .sobre-img {
+            flex: 0 0 auto;
+            width: 100%;
+            margin-left: 0;
+        }
+        
+        .sobre-img img {
+            width: 100%;
+            border-radius: 0; /* ← SIN BORDES EN MÓVIL */
+            height: 300px;
+            object-position: center 25%;
+        }
+        
+        .sobre-texto {
+            padding: 0 25px;
+            max-width: none;
+            text-align: center;
+        }
+        
+        .titulo-sobre {
+            font-size: 2.5rem;
+        }
+        
+        .sobre-texto p {
+            font-size: 1.1rem;
+        }
+        
+        .sobre-bachi {
+            padding: 60px 0;
+        }
+    }
+
+    /* =========================================
+       FOOTER
+    ========================================= */
+        
+    footer {
+        background: #0E183B;
+        color: #eee;
+        text-align: center;
+        padding: 40px 10px;
+        margin-top: 40px;
+    }
+    
+    @media (max-width: 700px) {
+        #nav-menu {
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: none;
+            flex-direction: column !important;
+            gap: 15px;
+            z-index: 1000;
+        }
     }
 
     @media (max-width: 700px) {
-    .titulo-grande {
-        font-size: 2.4rem;
-        line-height: 1.2;
+        .titulo-grande {
+            font-size: 2.4rem;
+            line-height: 1.2;
+        }
     }
-}
 
     body {
-    overflow-x: hidden;
-
-}
-
-/* =========================================
-    SECCIÓN ¿POR QUÉ ESTUDIARLO?
-========================================= */
-.carousel-container {
-  position: relative;
-  max-width: 900px;
-  margin: 40px auto;
-  display: flex;
-  align-items: center;
-}
-
-.carousel {
-  display: flex;
-  overflow: hidden;
-  scroll-behavior: smooth;
-  gap: 20px;
-}
-
-.card {
-  min-width: 260px;
-  background: #fff;
-  border: 2px solid #222;
-  border-radius: 10px;
-  overflow: hidden;
-  flex-shrink: 0;
-  transition: transform 0.2s ease;
-}
-
-.card img {
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
-  border-bottom: 2px solid #222;
-}
-
-.card h3 {
-  margin: 15px;
-  font-size: 18px;
-  font-weight: 800;
-}
-
-.card p {
-  padding: 0 15px 20px;
-  color: #444;
-}
-
-/* Botones */
-.carousel-btn {
-  background: #000;
-  color: #fff;
-  border: none;
-  padding: 12px 18px;
-  cursor: pointer;
-  font-size: 18px;
-  border-radius: 50%;
-  transition: 0.2s;
-}
-
-.carousel-btn:hover {
-  background: #333;
-}
-
-.left {
-  margin-right: 10px;
-}
-
-.right {
-  margin-left: 10px;
-}
-
-/* =========================================
-    SECCIÓN DE BOTONES / ENLACES
-========================================= */
-.links-section {
-    background: #eef3fb; /* azul muy suave */
-    padding: 60px 20px;
-    margin-top: 70px;
-}
-
-.links-grid {
-    max-width: 900px;
-    margin: 40px auto 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.info-btn {
-    display: block;
-    text-decoration: none;
-    padding: 18px 20px;
-    background: #fefeff;
-    color: rgb(0, 0, 0);
-    border: 1px solid #000000;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    text-align: center;
-    font-weight: 600;
-    border-color: 1px black;
-    transition: background 0.25s ease, transform 0.25s ease;
-}
-
-.info-btn:hover {
-    background: #0E183B;
-    color: white;
-    transform: translateY(-4px);
-}
-
-/* Responsivo */
-@media (max-width: 600px) {
-    .links-grid {
-        grid-template-columns: 1fr;
+        overflow-x: hidden;
     }
-}
 
-</style>
+    /* =========================================
+        SECCIÓN ¿POR QUÉ ESTUDIARLO?
+    ========================================= */
+    .carousel-container {
+        position: relative;
+        max-width: 900px;
+        margin: 40px auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .carousel {
+        display: flex;
+        overflow: hidden;
+        scroll-behavior: smooth;
+        gap: 20px;
+    }
+
+    .card {
+        min-width: 260px;
+        background: #fff;
+        border: 2px solid #222;
+        border-radius: 10px;
+        overflow: hidden;
+        flex-shrink: 0;
+        transition: transform 0.2s ease;
+    }
+
+    .card img {
+        width: 100%;
+        height: 140px;
+        object-fit: cover;
+        border-bottom: 2px solid #222;
+    }
+
+    .card h3 {
+        margin: 15px;
+        font-size: 18px;
+        font-weight: 800;
+    }
+
+    .card p {
+        padding: 0 15px 20px;
+        color: #444;
+    }
+
+    /* Botones */
+    .carousel-btn {
+        background: #000;
+        color: #fff;
+        border: none;
+        padding: 12px 18px;
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 50%;
+        transition: 0.2s;
+    }
+
+    .carousel-btn:hover {
+        background: #333;
+    }
+
+    .left {
+        margin-right: 10px;
+    }
+
+    .right {
+        margin-left: 10px;
+    }
+
+    /* =========================================
+        SECCIÓN DE BOTONES / ENLACES
+    ========================================= */
+    .links-section {
+        background: #eef3fb;
+        padding: 60px 20px;
+        margin-top: 70px;
+    }
+
+    .links-grid {
+        max-width: 900px;
+        margin: 40px auto 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .info-btn {
+        display: block;
+        text-decoration: none;
+        padding: 18px 20px;
+        background: #fefeff;
+        color: rgb(0, 0, 0);
+        border: 1px solid #000000;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        text-align: center;
+        font-weight: 600;
+        border-color: 1px black;
+        transition: background 0.25s ease, transform 0.25s ease;
+    }
+
+    .info-btn:hover {
+        background: #0E183B;
+        color: white;
+        transform: translateY(-4px);
+    }
+
+    /* Responsivo */
+    @media (max-width: 600px) {
+        .links-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    </style>
 </head>
 <body>
     <header>
@@ -273,52 +384,116 @@
         window.addEventListener('resize', checkWidth);
         window.addEventListener('load', checkWidth);
 
+        // Código del carrusel
+        document.addEventListener("DOMContentLoaded", function () {
+            const carousel = document.getElementById("carousel");
+            const nextBtn = document.getElementById("nextBtn");
+            const prevBtn = document.getElementById("prevBtn");
 
-     //tarjetas slider
+            if (!carousel) return;
 
-     const carousel = document.getElementById("carousel");
-     const nextBtn = document.getElementById("nextBtn");
-     const prevBtn = document.getElementById("prevBtn");
+            carousel.style.scrollBehavior = "smooth";
+            carousel.style.scrollSnapType = "x mandatory";
 
-nextBtn.addEventListener("click", () => {
-  carousel.scrollLeft += 280; // avanza una tarjeta
-});
+            const cards = carousel.querySelectorAll(".card");
+            cards.forEach(card => {
+                card.style.scrollSnapAlign = "center";
+            });
 
-prevBtn.addEventListener("click", () => {
-  carousel.scrollLeft -= 280;
-});
+            function getStep() {
+                const first = carousel.querySelector(".card");
+                if (!first) return 280;
+                const cardWidth = first.offsetWidth;
+                const gap = parseInt(getComputedStyle(carousel).gap) || 20;
+                return cardWidth + gap;
+            }
 
+            if (nextBtn) {
+                nextBtn.addEventListener("click", () => {
+                    const step = getStep();
+                    carousel.scrollBy({ left: step, behavior: "smooth" });
+                });
+            }
+            if (prevBtn) {
+                prevBtn.addEventListener("click", () => {
+                    const step = getStep();
+                    carousel.scrollBy({ left: -step, behavior: "smooth" });
+                });
+            }
 
+            let isDown = false;
+            let startX;
+            let scrollStart;
+
+            carousel.addEventListener("pointerdown", (e) => {
+                isDown = true;
+                carousel.setPointerCapture(e.pointerId);
+                startX = e.clientX;
+                scrollStart = carousel.scrollLeft;
+                carousel.classList.add("dragging");
+            });
+
+            carousel.addEventListener("pointermove", (e) => {
+                if (!isDown) return;
+                const dx = e.clientX - startX;
+                carousel.scrollLeft = scrollStart - dx;
+            });
+
+            function releasePointer(e) {
+                if (!isDown) return;
+                isDown = false;
+                try { carousel.releasePointerCapture(e.pointerId); } catch(_) {}
+                carousel.classList.remove("dragging");
+                const step = getStep();
+                const index = Math.round(carousel.scrollLeft / step);
+                carousel.scrollTo({ left: index * step, behavior: "smooth" });
+            }
+
+            carousel.addEventListener("pointerup", releasePointer);
+            carousel.addEventListener("pointercancel", releasePointer);
+            carousel.addEventListener("pointerleave", (e) => {
+                if (isDown) releasePointer(e);
+            });
+
+            carousel.addEventListener("wheel", (e) => {
+                if (Math.abs(e.deltaX) === 0 && Math.abs(e.deltaY) > 0) {
+                    carousel.scrollLeft += e.deltaY;
+                    e.preventDefault();
+                }
+            }, { passive: false });
+        });
     </script>
 
     <section class="hero" id="inicio">
-        <h2 class="titulo-grande" id="texto-sombra">BACHILLERATO TECNICO EN INFORMÁTICA</h2>
-        <p class="texto-sombra" id="texto-sombra" >Una formación moderna y versátil que combina tecnología, lógica, creatividad y práctica. Aquí se forjan los futuros desarrolladores, técnicos y creadores digitales.</p>
+        <h2 class="titulo-grande" id="texto-sombra">BACHILLERATO TÉCNICO EN INFORMÁTICA</h2>
+        <p class="texto-sombra" id="texto-sombra">Una formación moderna y versátil que combina tecnología, lógica, creatividad y práctica. Aquí se forjan los futuros desarrolladores, técnicos y creadores digitales.</p>
     </section>
 
-    <section class="container" id="sobre">
-        <h2 class="section-title">¿Qué es este bachillerato?</h2>
-        <div class="section-bach-cont">
-            <p>El Bachillerato Técnico en Informática forma estudiantes capaces de comprender, 
-               construir y mantener las bases tecnológicas que mueven al mundo actual. 
-               Combina teoría sólida con práctica constante, enseñando desde los fundamentos de programación y redes hasta el manejo de sistemas, bases de datos y herramientas digitales modernas.
-               Es una formación que mira hacia adelante, pero se apoya en principios tradicionales: 
-               disciplina, lógica, resolución de problemas y trabajo ordenado. El estudiante aprende a pensar como un desarrollador, a analizar como 
-               un técnico y a crear como un profesional que entiende que cada línea de código es una responsabilidad.
-               En este camino, el alumno desarrolla criterio, paciencia y habilidad para 
-               convertir ideas en soluciones reales, preparándose para continuar estudios superiores 
-               o incorporarse al mundo laboral con una base técnica confiable.</p>
+    <!-- SECCIÓN CON IMAGEN PEGADA AL BORDE IZQUIERDO -->
+    <section class="sobre-bachi">
+        <div class="sobre-contenido">
+            <!-- IMAGEN PEGADA A LA IZQUIERDA -->
+            <div class="sobre-img">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                     alt="Estudiantes trabajando en informática">
+            </div>
+            
+            <!-- TEXTO A LA DERECHA -->
+            <div class="sobre-texto">
+                <h2 class="titulo-sobre">¿Qué es este bachillerato?</h2>
+                <p>El <strong>Bachillerato Técnico en Informática</strong> forma estudiantes capaces de desarrollar soluciones tecnológicas innovadoras, combinando conocimientos teóricos con habilidades prácticas en programación, redes, bases de datos y desarrollo de software.</p>
+                <p>Esta formación se apoya en disciplina, lógica y creatividad para preparar a los estudiantes para el mundo laboral o para continuar estudios superiores en áreas tecnológicas. Los estudiantes adquieren competencias que les permiten diseñar, implementar y mantener sistemas informáticos adaptados a las necesidades actuales del mercado.</p>
+            </div>
         </div>
+    </section>
        
    <!-- ================================
      SECCIÓN ¿POR QUÉ ESTUDIARLO?
 ================================ -->
 <div class="carousel-container">
-
   <button class="carousel-btn left" id="prevBtn">❮</button>
 
   <div class="carousel" id="carousel">
-    
     <div class="card">
       <img src="https://picsum.photos/300?random=10">
       <h3>Aprendizaje Práctico</h3>
@@ -342,14 +517,10 @@ prevBtn.addEventListener("click", () => {
       <h3>Salida Laboral Real</h3>
       <p>Base sólida para entrar al mercado laboral con competencias digitales.</p>
     </div>
-
-    <!-- Puedes añadir mas tarjetas aquí -->
   </div>
 
   <button class="carousel-btn right" id="nextBtn">❯</button>
-
 </div>
-
 
 <!-- ================================
      SECCIÓN BOTONES / ENLACES
@@ -365,9 +536,8 @@ prevBtn.addEventListener("click", () => {
     </div>
 </section>
 
-    </section>
     <footer id="contacto">
-        <p>© 2025 -| Proyecto de Grado</p>
+        <p>© 2025 - Proyecto de Grado</p>
         <p>Contacto: andylandi50@gmail.com</p>
     </footer>
 </body>
