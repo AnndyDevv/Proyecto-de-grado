@@ -126,49 +126,72 @@
 /* =========================================
     SECCIÓN ¿POR QUÉ ESTUDIARLO?
 ========================================= */
-.cards-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.carousel-container {
+  position: relative;
+  max-width: 900px;
+  margin: 40px auto;
+  display: flex;
+  align-items: center;
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
   gap: 20px;
-  padding: 30px;
-  max-width: 1100px;
-  margin: auto;
 }
 
 .card {
+  min-width: 260px;
   background: #fff;
-  border: 1px solid #000000;
-  padding-bottom: 20px;
+  border: 2px solid #222;
+  border-radius: 10px;
   overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
 }
 
 .card img {
   width: 100%;
-  height: 160px;
+  height: 140px;
   object-fit: cover;
-  border-bottom: 1px solid #222;
+  border-bottom: 2px solid #222;
 }
 
 .card h3 {
-  font-size: 20px;
-  font-weight: 800;
   margin: 15px;
+  font-size: 18px;
+  font-weight: 800;
 }
 
 .card p {
-  font-size: 15px;
-  margin: 0 15px 10px;
+  padding: 0 15px 20px;
   color: #444;
-  line-height: 1.5;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+/* Botones */
+.carousel-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
+  transition: 0.2s;
 }
 
+.carousel-btn:hover {
+  background: #333;
+}
 
+.left {
+  margin-right: 10px;
+}
+
+.right {
+  margin-left: 10px;
+}
 
 /* =========================================
     SECCIÓN DE BOTONES / ENLACES
@@ -249,6 +272,23 @@
 
         window.addEventListener('resize', checkWidth);
         window.addEventListener('load', checkWidth);
+
+
+     //tarjetas slider
+
+     const carousel = document.getElementById("carousel");
+     const nextBtn = document.getElementById("nextBtn");
+     const prevBtn = document.getElementById("prevBtn");
+
+nextBtn.addEventListener("click", () => {
+  carousel.scrollLeft += 280; // avanza una tarjeta
+});
+
+prevBtn.addEventListener("click", () => {
+  carousel.scrollLeft -= 280;
+});
+
+
     </script>
 
     <section class="hero" id="inicio">
@@ -273,34 +313,42 @@
    <!-- ================================
      SECCIÓN ¿POR QUÉ ESTUDIARLO?
 ================================ -->
-<section class="cards-container">
+<div class="carousel-container">
 
-  <div class="card">
-    <img src="https://picsum.photos/300?random=1" alt="Aprendizaje práctico">
-    <h3>Aprendizaje Práctico</h3>
-    <p>Desarrolla habilidades aplicadas mediante proyectos reales del bachillerato técnico en informática.</p>
+  <button class="carousel-btn left" id="prevBtn">❮</button>
+
+  <div class="carousel" id="carousel">
+    
+    <div class="card">
+      <img src="https://picsum.photos/300?random=10">
+      <h3>Aprendizaje Práctico</h3>
+      <p>Proyectos y actividades reales del bachillerato técnico en informática.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://picsum.photos/300?random=11">
+      <h3>Pensamiento Lógico</h3>
+      <p>Desarrolla habilidades de razonamiento mediante ejercicios algorítmicos.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://picsum.photos/300?random=12">
+      <h3>Proyección Futura</h3>
+      <p>Prepárate para estudios superiores y carreras tecnológicas.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://picsum.photos/300?random=13">
+      <h3>Salida Laboral Real</h3>
+      <p>Base sólida para entrar al mercado laboral con competencias digitales.</p>
+    </div>
+
+    <!-- Puedes añadir mas tarjetas aquí -->
   </div>
 
-  <div class="card">
-    <img src="https://picsum.photos/300?random=2" alt="Pensamiento lógico">
-    <h3>Pensamiento Lógico</h3>
-    <p>Fortalece tu capacidad de análisis y resolución de problemas con ejercicios orientados a algoritmos.</p>
-  </div>
+  <button class="carousel-btn right" id="nextBtn">❯</button>
 
-  <div class="card">
-    <img src="https://picsum.photos/300?random=3" alt="Proyección futura">
-    <h3>Proyección Futura</h3>
-    <p>Prepárate para continuar estudios superiores y entrar a áreas tecnológicas de gran demanda.</p>
-  </div>
-
-  <div class="card">
-    <img src="https://picsum.photos/300?random=4" alt="Salida laboral real">
-    <h3>Salida Laboral Real</h3>
-    <p>Obtén bases sólidas para ingresar al mercado laboral con conocimientos prácticos y útiles.</p>
-  </div>
-
-</section>
-
+</div>
 
 
 <!-- ================================
