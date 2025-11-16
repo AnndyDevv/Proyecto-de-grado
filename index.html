@@ -7,487 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Gorditas:wght@400;700&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bubblegum+Sans&family=Fuzzy+Bubbles:wght@400;700&family=Gorditas:wght@400;700&family=Lilita+One&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Fuzzy+Bubbles:wght@400;700&family=Gorditas:wght@400;700&display=swap');
-    
-    body {
-        margin: 0;
-        font-family: "Arvo", sans-serif;
-        color: #222;
-        background: #f9f9f9;
-    }
-    header {
-        background: #030240;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        padding: 20px 40px;
-        position: relative;
-        top: 0;
-        z-index: 10;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    header h1 {
-      color: white;
-        margin: 0;
-        font-size: 1.4rem;
-    }
-    nav a {
-        margin-left: 20px;
-        text-decoration: none;
-        color: #fff;
-        font-weight: 600;
-    }
-    .hero {
-        padding: 120px 40px;
-        text-align: center;
-        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');
-        background-size: cover;
-        background-position: center;
-        color: white;
-    }
-
-    .titulo-grande {
-        font-size: 4.4rem;
-        font-weight: 700;
-        font-family: "Bubblegum Sans", sans-serif;
-    }
-
-    #texto-sombra {
-        text-shadow: 0 0 8px rgba(0,0,0,0.8);
-    }
-
-    .hero p {
-        font-size: 1.1rem;
-        opacity: 0.9;
-        max-width: 700px;
-        margin: 20px auto;
-    }
-
-    /* =========================================
-       SECCIÓN ¿QUÉ ES ESTE BACHILLERATO? - IMAGEN PEGADA AL BORDE IZQUIERDO
-    ========================================= */
-    .sobre-bachi {
-        padding: 100px 0;
-        background: #fff;
-        width: 100%;
-        box-sizing: border-box;
-        overflow: hidden;
-    }
-
-    .sobre-contenido {
-        display: flex;
-        align-items: center;
-        gap: 60px;
-        width: 100%;
-        margin: 0;
-    }
-
-    .sobre-img {
-        flex: 0 0 55%;
-        display: flex;
-        justify-content: flex-start;
-        margin-left: 0;
-    }
-
-    .sobre-img img {
-        width: 100%;
-        max-width: none;
-        height: 500px;
-        object-fit: cover;
-        object-position: center;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    }
-
-    .sobre-texto {
-        flex: 1;
-        padding: 0 40px 0 20px;
-        max-width: 600px;
-    }
-
-    .titulo-sobre {
-        font-size: 3.5rem;
-        margin-bottom: 30px;
-        font-family: "Bubblegum Sans", sans-serif;
-        color: #0E183B;
-        line-height: 1.1;
-    }
-
-    .sobre-texto p {
-        font-size: 1.3rem;
-        line-height: 1.7;
-        color: #333;
-        margin-bottom: 25px;
-    }
-
-    .sobre-texto strong {
-        color: #0E183B;
-        font-weight: 700;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 1024px) {
-        .sobre-contenido {
-            gap: 40px;
-        }
-        
-        .sobre-img {
-            flex: 0 0 50%;
-        }
-        
-        .sobre-texto {
-            padding: 0 30px 0 15px;
-        }
-        
-        .titulo-sobre {
-            font-size: 3rem;
-        }
-        
-        .sobre-texto p {
-            font-size: 1.2rem;
-        }
-        
-        .sobre-img img {
-            height: 450px;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .sobre-contenido {
-            flex-direction: column;
-            gap: 30px;
-        }
-        
-        .sobre-img {
-            flex: 0 0 auto;
-            width: 100%;
-            margin-left: 0;
-        }
-        
-        .sobre-img img {
-            width: 100%;
-            border-radius: 0;
-            height: 300px;
-            object-position: center 25%;
-        }
-        
-        .sobre-texto {
-            padding: 0 25px;
-            max-width: none;
-            text-align: center;
-        }
-        
-        .titulo-sobre {
-            font-size: 2.5rem;
-        }
-        
-        .sobre-texto p {
-            font-size: 1.1rem;
-        }
-        
-        .sobre-bachi {
-            padding: 60px 0;
-        }
-    }
-
-    /* =========================================
-        SECCIÓN CARRUSEL TIPO MENÚ DE RESTAURANTE
-    ========================================= */
-    .carousel-section {
-        padding: 100px 0;
-        background: linear-gradient(135deg, #06092c 0%, #030519 100%);
-        width: 100%;
-    }
-
-    .carousel-title {
-        font-size: 3.5rem;
-        text-align: center;
-        margin-bottom: 60px;
-        font-family: "Bubblegum Sans", sans-serif;
-        color: white;
-    }
-
-    .carousel-container {
-        position: relative;
-        width: 100%;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        padding: 0 20px;
-    }
-
-    .carousel {
-        display: flex;
-        overflow: hidden;
-        scroll-behavior: smooth;
-        gap: 25px;
-        width: 100%;
-        padding: 20px 0;
-    }
-
-    /* CARDS ALTAS COMO MENÚ DE RESTAURANTE - IMAGEN ABAJO */
-    .card {
-        min-width: 320px;  /* ← MÁS ESTRECHAS */
-        height: 600px;     /* ← MÁS ALTAS */
-        background: white;
-        border: none;
-        overflow: hidden;
-        flex-shrink: 0;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-        display: flex;
-        flex-direction: column;
-        position: relative;
-    }
-
-    .card:hover {
-        transform: translateY(-15px);
-        box-shadow: 0 25px 50px rgba(0,0,0,0.3);
-    }
-
-    /* CONTENIDO ARRIBA */
-    .card-content {
-        padding: 35px 30px;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .card h3 {
-        font-size: 2.2rem;
-        font-weight: 700;
-        margin: 0 0 20px 0;
-        color: #0E183B;
-        font-family: "Bubblegum Sans", sans-serif;
-        line-height: 1.2;
-    }
-
-    .card p {
-        font-size: 1.2rem;
-        line-height: 1.6;
-        color: #444;
-        margin: 0;
-        flex: 1;
-    }
-
-    /* IMAGEN ABAJO */
-    .card-img {
-        width: 100%;
-        height: 220px;
-        overflow: hidden;
-        position: relative;
-    }
-
-    .card-img img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.3s ease;
-    }
-
-    .card:hover .card-img img {
-        transform: scale(1.05);
-    }
-
-    /* BOTONES MÁS VISIBLES */
-    .carousel-btn {
-        background: white;
-        color: #0E183B;
-        border: none;
-        padding: 20px 25px;
-        cursor: pointer;
-        font-size: 24px;
-        border-radius: 50%;
-        transition: 0.3s ease;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        z-index: 10;
-        font-weight: bold;
-    }
-
-    .carousel-btn:hover {
-        background: #282F44;
-        color: white;
-        transform: scale(1.1);
-    }
-
-    .left {
-        margin-right: 20px;
-    }
-
-    .right {
-        margin-left: 20px;
-    }
-
-    /* BADGE DECORATIVO */
-    .card-badge {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        background: #0E183B;
-        color: white;
-        padding: 8px 15px;
-        border-radius: 20px;
-        font-size: 0.9rem;
-        font-weight: 600;
-        z-index: 2;
-    }
-
-    /* Responsive para el carrusel tipo menú */
-    @media (max-width: 1024px) {
-        .card {
-            min-width: 280px;
-            height: 550px;
-        }
-        
-        .card h3 {
-            font-size: 2rem;
-        }
-        
-        .card p {
-            font-size: 1.1rem;
-        }
-        
-        .card-img {
-            height: 200px;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .carousel-section {
-            padding: 60px 0;
-        }
-        
-        .carousel-title {
-            font-size: 2.8rem;
-            margin-bottom: 40px;
-        }
-        
-        .card {
-            min-width: 260px;
-            height: 500px;
-        }
-        
-        .card-content {
-            padding: 25px 20px;
-        }
-        
-        .card h3 {
-            font-size: 1.8rem;
-        }
-        
-        .card p {
-            font-size: 1rem;
-        }
-        
-        .card-img {
-            height: 180px;
-        }
-        
-        .carousel-btn {
-            padding: 15px 20px;
-            font-size: 20px;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .card {
-            min-width: 240px;
-            height: 480px;
-        }
-    }
-
-    /* =========================================
-       FOOTER
-    ========================================= */
-        
-    footer {
-        background: #030519;
-        color: #eee;
-        text-align: center;
-        padding: 40px 10px;
-        margin-top: 40px;
-    }
-    
-    @media (max-width: 700px) {
-        #nav-menu {
-            position: absolute;
-            top: 70px;
-            right: 20px;
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            display: none;
-            flex-direction: column !important;
-            gap: 15px;
-            z-index: 1000;
-        }
-    }
-
-    @media (max-width: 700px) {
-        .titulo-grande {
-            font-size: 2.4rem;
-            line-height: 1.2;
-        }
-    }
-
-    body {
-        overflow-x: hidden;
-    }
-
-    /* =========================================
-        SECCIÓN DE BOTONES / ENLACES
-    ========================================= */
-    .links-section {
-        background: #eef3fb;
-        padding: 60px 20px;
-        margin-top: 70px;
-    }
-
-    .links-grid {
-        max-width: 900px;
-        margin: 40px auto 0;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-
-    .info-btn {
-        display: block;
-        text-decoration: none;
-        padding: 18px 20px;
-        background: #fefeff;
-        color: rgb(0, 0, 0);
-        border: 1px solid #000000;
-        font-size: 1.2rem;
-        text-align: center;
-        font-weight: 600;
-        border-color: 1px black;
-        transition: background 0.25s ease, transform 0.25s ease;
-    }
-
-    .info-btn:hover {
-        background: #0E183B;
-        color: white;
-        transform: translateY(-4px);
-    }
-
-    /* Responsivo */
-    @media (max-width: 600px) {
-        .links-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-
-    </style>
+     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>U.E 17 DE SEPTIEMBRE</h1>
-        <button id="menu-btn" style="background:none;border:none;font-size:1.8rem;cursor:pointer;display:none;">☰</button>
+        <button id="menu-btn" style="background:white;border:none;font-size:1.8rem;cursor:pointer;display:none;">☰</button>
         <nav id="nav-menu" style="display:flex; flex-direction: row; gap: 20px;">
             <a href="#inicio">¿Qué aprenderas?</a>
             <a href="#sobre">Competencias técnicas</a>
@@ -629,7 +154,6 @@
             <div class="carousel" id="carousel">
                 <!-- CARD 1 -->
                 <div class="card">
-                    <div class="card-badge">🔥 Popular</div>
                     <div class="card-content">
                         <h3>Aprendizaje Práctico</h3>
                         <p>Proyectos y actividades reales del bachillerato técnico en informática. Desarrolla habilidades mediante ejercicios prácticos y casos reales del mundo laboral tecnológico.</p>
@@ -641,7 +165,6 @@
 
                 <!-- CARD 2 -->
                 <div class="card">
-                    <div class="card-badge">🧠 Esencial</div>
                     <div class="card-content">
                         <h3>Pensamiento Lógico</h3>
                         <p>Desarrolla habilidades de razonamiento mediante ejercicios algorítmicos y resolución de problemas complejos. Perfecto para mentes analíticas y creativas.</p>
@@ -653,7 +176,6 @@
 
                 <!-- CARD 3 -->
                 <div class="card">
-                    <div class="card-badge">🚀 Futuro</div>
                     <div class="card-content">
                         <h3>Proyección Profesional</h3>
                         <p>Prepárate para estudios superiores y carreras tecnológicas. Abre puertas a universidades y especializaciones en el área de tecnología e innovación.</p>
@@ -665,7 +187,6 @@
 
                 <!-- CARD 4 -->
                 <div class="card">
-                    <div class="card-badge">💼 Trabajo</div>
                     <div class="card-content">
                         <h3>Salida Laboral Real</h3>
                         <p>Base sólida para entrar al mercado laboral con competencias digitales demandadas. Desarrollador, técnico en redes, administrador de sistemas.</p>
@@ -677,7 +198,6 @@
 
                 <!-- CARD 5 -->
                 <div class="card">
-                    <div class="card-badge">💻 Técnico</div>
                     <div class="card-content">
                         <h3>Competencias Técnicas</h3>
                         <p>Domina lenguajes de programación, bases de datos, redes y desarrollo web. Conviértete en un profesional completo del área tecnológica.</p>
@@ -689,7 +209,6 @@
 
                 <!-- CARD 6 -->
                 <div class="card">
-                    <div class="card-badge">🎓 Formación</div>
                     <div class="card-content">
                         <h3>Educación Integral</h3>
                         <p>Combina conocimientos técnicos con formación humana y valores. Prepara estudiantes para los desafíos del mundo actual y futuro.</p>
