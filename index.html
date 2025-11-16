@@ -69,45 +69,41 @@
        SECCIÓN ¿QUÉ ES ESTE BACHILLERATO? - IMAGEN PEGADA AL BORDE IZQUIERDO
     ========================================= */
     .sobre-bachi {
-        padding: 100px 0; /* ← ELIMINÉ PADDING LATERAL */
+        padding: 100px 0;
         background: #fff;
         width: 100%;
         box-sizing: border-box;
-        overflow: hidden; /* ← IMPORTANTE para que la imagen no cause scroll */
+        overflow: hidden;
     }
 
-    /* CONTENEDOR SIN MÁRGENES LATERALES */
     .sobre-contenido {
         display: flex;
         align-items: center;
         gap: 60px;
-        width: 100%; /* ← OCUPA TODO EL ANCHO */
-        margin: 0; /* ← SIN MARGEN */
+        width: 100%;
+        margin: 0;
     }
 
-    /* IMAGEN PEGADA AL BORDE IZQUIERDO */
     .sobre-img {
-        flex: 0 0 55%; /* ← ANCHO FIJO DE LA IMAGEN */
+        flex: 0 0 55%;
         display: flex;
         justify-content: flex-start;
-        margin-left: 0; /* ← SIN MARGEN */
+        margin-left: 0;
     }
 
     .sobre-img img {
         width: 100%;
-        max-width: none; /* ← ELIMINÉ LIMITE DE ANCHO */
+        max-width: none;
         height: 500px;
-        border-radius: 0 20px 20px 0; /* ← SOLO BORDES REDONDEADOS DERECHA */
         object-fit: cover;
         object-position: center;
         box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     }
 
-    /* TEXTO A LA DERECHA CON ESPACIO */
     .sobre-texto {
         flex: 1;
-        padding: 0 40px 0 20px; /* ← ESPACIO SOLO DERECHA */
-        max-width: 600px; /* ← LIMITE PARA NO EXTENDERSE DEMASIADO */
+        padding: 0 40px 0 20px;
+        max-width: 600px;
     }
 
     .titulo-sobre {
@@ -171,7 +167,7 @@
         
         .sobre-img img {
             width: 100%;
-            border-radius: 0; /* ← SIN BORDES EN MÓVIL */
+            border-radius: 0;
             height: 300px;
             object-position: center 25%;
         }
@@ -196,11 +192,218 @@
     }
 
     /* =========================================
+        SECCIÓN CARRUSEL TIPO MENÚ DE RESTAURANTE
+    ========================================= */
+    .carousel-section {
+        padding: 100px 0;
+        background: linear-gradient(135deg, #0E183B 0%, #2D3B6B 100%);
+        width: 100%;
+    }
+
+    .carousel-title {
+        font-size: 3.5rem;
+        text-align: center;
+        margin-bottom: 60px;
+        font-family: "Bubblegum Sans", sans-serif;
+        color: white;
+    }
+
+    .carousel-container {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .carousel {
+        display: flex;
+        overflow: hidden;
+        scroll-behavior: smooth;
+        gap: 25px;
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    /* CARDS ALTAS COMO MENÚ DE RESTAURANTE - IMAGEN ABAJO */
+    .card {
+        min-width: 320px;  /* ← MÁS ESTRECHAS */
+        height: 600px;     /* ← MÁS ALTAS */
+        background: white;
+        border: none;
+        overflow: hidden;
+        flex-shrink: 0;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .card:hover {
+        transform: translateY(-15px);
+        box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+    }
+
+    /* CONTENIDO ARRIBA */
+    .card-content {
+        padding: 35px 30px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .card h3 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin: 0 0 20px 0;
+        color: #0E183B;
+        font-family: "Bubblegum Sans", sans-serif;
+        line-height: 1.2;
+    }
+
+    .card p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: #444;
+        margin: 0;
+        flex: 1;
+    }
+
+    /* IMAGEN ABAJO */
+    .card-img {
+        width: 100%;
+        height: 220px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .card-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .card:hover .card-img img {
+        transform: scale(1.05);
+    }
+
+    /* BOTONES MÁS VISIBLES */
+    .carousel-btn {
+        background: white;
+        color: #0E183B;
+        border: none;
+        padding: 20px 25px;
+        cursor: pointer;
+        font-size: 24px;
+        border-radius: 50%;
+        transition: 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        z-index: 10;
+        font-weight: bold;
+    }
+
+    .carousel-btn:hover {
+        background: #282F44;
+        color: white;
+        transform: scale(1.1);
+    }
+
+    .left {
+        margin-right: 20px;
+    }
+
+    .right {
+        margin-left: 20px;
+    }
+
+    /* BADGE DECORATIVO */
+    .card-badge {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: #0E183B;
+        color: white;
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        z-index: 2;
+    }
+
+    /* Responsive para el carrusel tipo menú */
+    @media (max-width: 1024px) {
+        .card {
+            min-width: 280px;
+            height: 550px;
+        }
+        
+        .card h3 {
+            font-size: 2rem;
+        }
+        
+        .card p {
+            font-size: 1.1rem;
+        }
+        
+        .card-img {
+            height: 200px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .carousel-section {
+            padding: 60px 0;
+        }
+        
+        .carousel-title {
+            font-size: 2.8rem;
+            margin-bottom: 40px;
+        }
+        
+        .card {
+            min-width: 260px;
+            height: 500px;
+        }
+        
+        .card-content {
+            padding: 25px 20px;
+        }
+        
+        .card h3 {
+            font-size: 1.8rem;
+        }
+        
+        .card p {
+            font-size: 1rem;
+        }
+        
+        .card-img {
+            height: 180px;
+        }
+        
+        .carousel-btn {
+            padding: 15px 20px;
+            font-size: 20px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .card {
+            min-width: 240px;
+            height: 480px;
+        }
+    }
+
+    /* =========================================
        FOOTER
     ========================================= */
         
     footer {
-        background: #0E183B;
+        background: #191D32;
         color: #eee;
         text-align: center;
         padding: 40px 10px;
@@ -235,76 +438,6 @@
     }
 
     /* =========================================
-        SECCIÓN ¿POR QUÉ ESTUDIARLO?
-    ========================================= */
-    .carousel-container {
-        position: relative;
-        max-width: 900px;
-        margin: 40px auto;
-        display: flex;
-        align-items: center;
-    }
-
-    .carousel {
-        display: flex;
-        overflow: hidden;
-        scroll-behavior: smooth;
-        gap: 20px;
-    }
-
-    .card {
-        min-width: 260px;
-        background: #fff;
-        border: 2px solid #222;
-        border-radius: 10px;
-        overflow: hidden;
-        flex-shrink: 0;
-        transition: transform 0.2s ease;
-    }
-
-    .card img {
-        width: 100%;
-        height: 140px;
-        object-fit: cover;
-        border-bottom: 2px solid #222;
-    }
-
-    .card h3 {
-        margin: 15px;
-        font-size: 18px;
-        font-weight: 800;
-    }
-
-    .card p {
-        padding: 0 15px 20px;
-        color: #444;
-    }
-
-    /* Botones */
-    .carousel-btn {
-        background: #000;
-        color: #fff;
-        border: none;
-        padding: 12px 18px;
-        cursor: pointer;
-        font-size: 18px;
-        border-radius: 50%;
-        transition: 0.2s;
-    }
-
-    .carousel-btn:hover {
-        background: #333;
-    }
-
-    .left {
-        margin-right: 10px;
-    }
-
-    .right {
-        margin-left: 10px;
-    }
-
-    /* =========================================
         SECCIÓN DE BOTONES / ENLACES
     ========================================= */
     .links-section {
@@ -328,7 +461,6 @@
         background: #fefeff;
         color: rgb(0, 0, 0);
         border: 1px solid #000000;
-        border-radius: 5px;
         font-size: 1.2rem;
         text-align: center;
         font-weight: 600;
@@ -384,7 +516,7 @@
         window.addEventListener('resize', checkWidth);
         window.addEventListener('load', checkWidth);
 
-        // Código del carrusel
+        // Código del carrusel MEJORADO
         document.addEventListener("DOMContentLoaded", function () {
             const carousel = document.getElementById("carousel");
             const nextBtn = document.getElementById("nextBtn");
@@ -402,9 +534,9 @@
 
             function getStep() {
                 const first = carousel.querySelector(".card");
-                if (!first) return 280;
+                if (!first) return 345; // Ajustado para cards más estrechas
                 const cardWidth = first.offsetWidth;
-                const gap = parseInt(getComputedStyle(carousel).gap) || 20;
+                const gap = parseInt(getComputedStyle(carousel).gap) || 25;
                 return cardWidth + gap;
             }
 
@@ -469,16 +601,13 @@
         <p class="texto-sombra" id="texto-sombra">Una formación moderna y versátil que combina tecnología, lógica, creatividad y práctica. Aquí se forjan los futuros desarrolladores, técnicos y creadores digitales.</p>
     </section>
 
-    <!-- SECCIÓN CON IMAGEN PEGADA AL BORDE IZQUIERDO -->
     <section class="sobre-bachi">
         <div class="sobre-contenido">
-            <!-- IMAGEN PEGADA A LA IZQUIERDA -->
             <div class="sobre-img">
                 <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
                      alt="Estudiantes trabajando en informática">
             </div>
             
-            <!-- TEXTO A LA DERECHA -->
             <div class="sobre-texto">
                 <h2 class="titulo-sobre">¿Qué es este bachillerato?</h2>
                 <p>El <strong>Bachillerato Técnico en Informática</strong> forma estudiantes capaces de desarrollar soluciones tecnológicas innovadoras, combinando conocimientos teóricos con habilidades prácticas en programación, redes, bases de datos y desarrollo de software.</p>
@@ -486,55 +615,107 @@
             </div>
         </div>
     </section>
-       
-   <!-- ================================
-     SECCIÓN ¿POR QUÉ ESTUDIARLO?
-================================ -->
-<div class="carousel-container">
-  <button class="carousel-btn left" id="prevBtn">❮</button>
 
-  <div class="carousel" id="carousel">
-    <div class="card">
-      <img src="https://picsum.photos/300?random=10">
-      <h3>Aprendizaje Práctico</h3>
-      <p>Proyectos y actividades reales del bachillerato técnico en informática.</p>
-    </div>
+    <!-- ================================
+     SECCIÓN CARRUSEL TIPO MENÚ DE RESTAURANTE
+    ================================= -->
+    <section class="carousel-section">
+        <h2 class="carousel-title">¿Por qué estudiar Informática?</h2>
+        
+        <div class="carousel-container">
+            <button class="carousel-btn left" id="prevBtn">❮</button>
 
-    <div class="card">
-      <img src="https://picsum.photos/300?random=11">
-      <h3>Pensamiento Lógico</h3>
-      <p>Desarrolla habilidades de razonamiento mediante ejercicios algorítmicos.</p>
-    </div>
+            <div class="carousel" id="carousel">
+                <!-- CARD 1 -->
+                <div class="card">
+                    <div class="card-badge">🔥 Popular</div>
+                    <div class="card-content">
+                        <h3>Aprendizaje Práctico</h3>
+                        <p>Proyectos y actividades reales del bachillerato técnico en informática. Desarrolla habilidades mediante ejercicios prácticos y casos reales del mundo laboral tecnológico.</p>
+                    </div>
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80">
+                    </div>
+                </div>
 
-    <div class="card">
-      <img src="https://picsum.photos/300?random=12">
-      <h3>Proyección Futura</h3>
-      <p>Prepárate para estudios superiores y carreras tecnológicas.</p>
-    </div>
+                <!-- CARD 2 -->
+                <div class="card">
+                    <div class="card-badge">🧠 Esencial</div>
+                    <div class="card-content">
+                        <h3>Pensamiento Lógico</h3>
+                        <p>Desarrolla habilidades de razonamiento mediante ejercicios algorítmicos y resolución de problemas complejos. Perfecto para mentes analíticas y creativas.</p>
+                    </div>
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80">
+                    </div>
+                </div>
 
-    <div class="card">
-      <img src="https://picsum.photos/300?random=13">
-      <h3>Salida Laboral Real</h3>
-      <p>Base sólida para entrar al mercado laboral con competencias digitales.</p>
-    </div>
-  </div>
+                <!-- CARD 3 -->
+                <div class="card">
+                    <div class="card-badge">🚀 Futuro</div>
+                    <div class="card-content">
+                        <h3>Proyección Profesional</h3>
+                        <p>Prepárate para estudios superiores y carreras tecnológicas. Abre puertas a universidades y especializaciones en el área de tecnología e innovación.</p>
+                    </div>
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80">
+                    </div>
+                </div>
 
-  <button class="carousel-btn right" id="nextBtn">❯</button>
-</div>
+                <!-- CARD 4 -->
+                <div class="card">
+                    <div class="card-badge">💼 Trabajo</div>
+                    <div class="card-content">
+                        <h3>Salida Laboral Real</h3>
+                        <p>Base sólida para entrar al mercado laboral con competencias digitales demandadas. Desarrollador, técnico en redes, administrador de sistemas.</p>
+                    </div>
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80">
+                    </div>
+                </div>
 
-<!-- ================================
+                <!-- CARD 5 -->
+                <div class="card">
+                    <div class="card-badge">💻 Técnico</div>
+                    <div class="card-content">
+                        <h3>Competencias Técnicas</h3>
+                        <p>Domina lenguajes de programación, bases de datos, redes y desarrollo web. Conviértete en un profesional completo del área tecnológica.</p>
+                    </div>
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80">
+                    </div>
+                </div>
+
+                <!-- CARD 6 -->
+                <div class="card">
+                    <div class="card-badge">🎓 Formación</div>
+                    <div class="card-content">
+                        <h3>Educación Integral</h3>
+                        <p>Combina conocimientos técnicos con formación humana y valores. Prepara estudiantes para los desafíos del mundo actual y futuro.</p>
+                    </div>
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80">
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-btn right" id="nextBtn">❯</button>
+        </div>
+    </section>
+
+    <!-- ================================
      SECCIÓN BOTONES / ENLACES
-================================ -->
-<section class="links-section">
-    <h2 class="section-title">¡Explora más!</h2>
+    ================================= -->
+    <section class="links-section">
+        <h2 class="section-title">¡Explora más!</h2>
 
-    <div class="links-grid">
-        <a class="info-btn" href="#">📘 Malla Curricular</a>
-        <a class="info-btn" href="#">🛠 Prácticas</a>
-        <a class="info-btn" href="#">📈 Salidas Laborales</a>
-        <a class="info-btn" href="#">👤 Perfil del Estudiante</a>
-    </div>
-</section>
+        <div class="links-grid">
+            <a class="info-btn" href="#">📘 Malla Curricular</a>
+            <a class="info-btn" href="#">🛠 Prácticas</a>
+            <a class="info-btn" href="#">📈 Salidas Laborales</a>
+            <a class="info-btn" href="#">👤 Perfil del Estudiante</a>
+        </div>
+    </section>
 
     <footer id="contacto">
         <p>© 2025 - Proyecto de Grado</p>
