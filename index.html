@@ -72,24 +72,24 @@
             margin-bottom: 20px;
             text-align: center;
             font-family: "Bubblegum Sans", sans-serif;
+        }     
+        .section-bach-cont {
+            max-width: 850px;        /* Cambia el ancho del texto */
+            margin: 0 auto;          /* Centra el bloque */
+            text-align: center;      /* Centra el texto */
+            line-height: 1.6;        /* Mejor legibilidad */
+            font-size: 20px;         /* Cambia el tamaño de letra */
+}
 
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
-        .card h3 {
-            margin-top: 0;
-        }
+        .section-bach-cont p {
+             margin-bottom: 10px;     /* Espaciado entre líneas */
+}
+    
+
+
+        
         footer {
-            background: #222;
+            background: #0E183B;
             color: #eee;
             text-align: center;
             padding: 40px 10px;
@@ -120,7 +120,101 @@
 
     body {
     overflow-x: hidden;
+
 }
+
+/* =========================================
+    SECCIÓN ¿POR QUÉ ESTUDIARLO?
+========================================= */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #000000;
+  padding-bottom: 20px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-bottom: 1px solid #222;
+}
+
+.card h3 {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 15px;
+}
+
+.card p {
+  font-size: 15px;
+  margin: 0 15px 10px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+
+/* =========================================
+    SECCIÓN DE BOTONES / ENLACES
+========================================= */
+.links-section {
+    background: #eef3fb; /* azul muy suave */
+    padding: 60px 20px;
+    margin-top: 70px;
+}
+
+.links-grid {
+    max-width: 900px;
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.info-btn {
+    display: block;
+    text-decoration: none;
+    padding: 18px 20px;
+    background: #fefeff;
+    color: rgb(0, 0, 0);
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 600;
+    border-color: 1px black;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.info-btn:hover {
+    background: #0E183B;
+    color: white;
+    transform: translateY(-4px);
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .links-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 </style>
 </head>
 <body>
@@ -131,7 +225,7 @@
             <a href="#inicio">¿Qué aprenderas?</a>
             <a href="#sobre">Competencias técnicas</a>
             <a href="#contacto">Salida profesional</a>
-            <a href="">Plan de estudio</a>
+            <a href="#contacto">Plan de estudio</a>
         </nav>
     </header>
 
@@ -158,31 +252,75 @@
     </script>
 
     <section class="hero" id="inicio">
-        <h2 class="titulo-grande" id="texto-sombra">Bachillerato Técnico en Informática</h2>
-        <p class="texto-sombra" id="texto-sombra" >"Tecnología, práctica y futuro en tus manos."</p>
+        <h2 class="titulo-grande" id="texto-sombra">BACHILLERATO TECNICO EN INFORMÁTICA</h2>
+        <p class="texto-sombra" id="texto-sombra" >Una formación moderna y versátil que combina tecnología, lógica, creatividad y práctica. Aquí se forjan los futuros desarrolladores, técnicos y creadores digitales.</p>
     </section>
 
     <section class="container" id="sobre">
         <h2 class="section-title">¿Qué es este bachillerato?</h2>
-        <div class="grid" style="margin-top:40px;">
-            <div class="card">
-                <h3>Funcionalidad 1</h3>
-                <p>Describe brevemente qué hace esta parte del proyecto.</p>
-            </div>
-            <div class="card">
-                <h3>Funcionalidad 2</h3>
-                <p>Explica otra característica destacada de forma clara y simple.</p>
-            </div>
-            <div class="card">
-                <h3>Funcionalidad 3</h3>
-                <p>Otra función que quieras resaltar para que el sitio luzca completo.</p>
-            </div>
+        <div class="section-bach-cont">
+            <p>El Bachillerato Técnico en Informática forma estudiantes capaces de comprender, 
+               construir y mantener las bases tecnológicas que mueven al mundo actual. 
+               Combina teoría sólida con práctica constante, enseñando desde los fundamentos de programación y redes hasta el manejo de sistemas, bases de datos y herramientas digitales modernas.
+               Es una formación que mira hacia adelante, pero se apoya en principios tradicionales: 
+               disciplina, lógica, resolución de problemas y trabajo ordenado. El estudiante aprende a pensar como un desarrollador, a analizar como 
+               un técnico y a crear como un profesional que entiende que cada línea de código es una responsabilidad.
+               En este camino, el alumno desarrolla criterio, paciencia y habilidad para 
+               convertir ideas en soluciones reales, preparándose para continuar estudios superiores 
+               o incorporarse al mundo laboral con una base técnica confiable.</p>
         </div>
-    </section>
+       
+   <!-- ================================
+     SECCIÓN ¿POR QUÉ ESTUDIARLO?
+================================ -->
+<section class="cards-container">
 
+  <div class="card">
+    <img src="https://picsum.photos/300?random=1" alt="Aprendizaje práctico">
+    <h3>Aprendizaje Práctico</h3>
+    <p>Desarrolla habilidades aplicadas mediante proyectos reales del bachillerato técnico en informática.</p>
+  </div>
+
+  <div class="card">
+    <img src="https://picsum.photos/300?random=2" alt="Pensamiento lógico">
+    <h3>Pensamiento Lógico</h3>
+    <p>Fortalece tu capacidad de análisis y resolución de problemas con ejercicios orientados a algoritmos.</p>
+  </div>
+
+  <div class="card">
+    <img src="https://picsum.photos/300?random=3" alt="Proyección futura">
+    <h3>Proyección Futura</h3>
+    <p>Prepárate para continuar estudios superiores y entrar a áreas tecnológicas de gran demanda.</p>
+  </div>
+
+  <div class="card">
+    <img src="https://picsum.photos/300?random=4" alt="Salida laboral real">
+    <h3>Salida Laboral Real</h3>
+    <p>Obtén bases sólidas para ingresar al mercado laboral con conocimientos prácticos y útiles.</p>
+  </div>
+
+</section>
+
+
+
+<!-- ================================
+     SECCIÓN BOTONES / ENLACES
+================================ -->
+<section class="links-section">
+    <h2 class="section-title">¡Explora más!</h2>
+
+    <div class="links-grid">
+        <a class="info-btn" href="#">📘 Malla Curricular</a>
+        <a class="info-btn" href="#">🛠 Prácticas</a>
+        <a class="info-btn" href="#">📈 Salidas Laborales</a>
+        <a class="info-btn" href="#">👤 Perfil del Estudiante</a>
+    </div>
+</section>
+
+    </section>
     <footer id="contacto">
-        <p>© 2025 - Tu Nombre | Proyecto de Grado</p>
-        <p>Contacto: tuemail@example.com</p>
+        <p>© 2025 -| Proyecto de Grado</p>
+        <p>Contacto: andylandi50@gmail.com</p>
     </footer>
 </body>
 </html>
