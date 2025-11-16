@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto - Sitio en construccion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Gorditas:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bubblegum+Sans&family=Fuzzy+Bubbles:wght@400;700&family=Gorditas:wght@400;700&family=Lilita+One&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Fuzzy+Bubbles:wght@400;700&family=Gorditas:wght@400;700&display=swap');
+        body {
+            margin: 0;
+            font-family: "Arvo", sans-serif;
+            color: #222;
+            background: #f9f9f9;
+        }
+        header {
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 20px 40px;
+            position: relative;
+            top: 0;
+            z-index: 10;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.4rem;
+        }
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #444;
+            font-weight: 600;
+        }
+        .hero {
+            padding: 120px 40px;
+            text-align: center;
+            background: url('images/jovenes-lab.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+    
+        .titulo-grande {
+           font-size: 4.4rem; /* lo haces tan grande como quieras */
+           font-weight: 700;
+}
+
+         #texto-sombra {
+             text-shadow: 0 0 8px rgba(0,0,0,0.8);
+         }
+
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+        .section-title {
+            font-size: 4.4rem;
+            margin-bottom: 20px;
+            text-align: center;
+            font-family: "Bubblegum Sans", sans-serif;
+
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .card h3 {
+            margin-top: 0;
+        }
+        footer {
+            background: #222;
+            color: #eee;
+            text-align: center;
+            padding: 40px 10px;
+            margin-top: 40px;
+        }
+        @media (max-width: 700px) {
+        #nav-menu {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        display: none;
+        flex-direction: column !important;
+        gap: 15px;
+        z-index: 1000;
+    }
+    }
+
+    @media (max-width: 700px) {
+    .titulo-grande {
+        font-size: 2.4rem;
+        line-height: 1.2;
+    }
+}
+
+    body {
+    overflow-x: hidden;
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>U.E 17 DE SEPTIEMBRE</h1>
+        <button id="menu-btn" style="background:none;border:none;font-size:1.8rem;cursor:pointer;display:none;">☰</button>
+        <nav id="nav-menu" style="display:flex; flex-direction: row; gap: 20px;">
+            <a href="#inicio">¿Qué aprenderas?</a>
+            <a href="#sobre">Competencias técnicas</a>
+            <a href="#contacto">Salida profesional</a>
+            <a href="">Plan de estudio</a>
+        </nav>
+    </header>
+
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const nav = document.getElementById('nav-menu');
+
+        function checkWidth() {
+            if (window.innerWidth < 700) {
+                btn.style.display = 'block';
+                nav.style.display = 'none';
+            } else {
+                btn.style.display = 'none';
+                nav.style.display = 'flex';
+            }
+        }
+
+        btn.addEventListener('click', () => {
+            nav.style.display = nav.style.display === 'none' ? 'block' : 'none';
+        });
+
+        window.addEventListener('resize', checkWidth);
+        window.addEventListener('load', checkWidth);
+    </script>
+
+    <section class="hero" id="inicio">
+        <h2 class="titulo-grande" id="texto-sombra">Bachillerato Técnico en Informática</h2>
+        <p class="texto-sombra" id="texto-sombra" >"Tecnología, práctica y futuro en tus manos."</p>
+    </section>
+
+    <section class="container" id="sobre">
+        <h2 class="section-title">¿Qué es este bachillerato?</h2>
+        <div class="grid" style="margin-top:40px;">
+            <div class="card">
+                <h3>Funcionalidad 1</h3>
+                <p>Describe brevemente qué hace esta parte del proyecto.</p>
+            </div>
+            <div class="card">
+                <h3>Funcionalidad 2</h3>
+                <p>Explica otra característica destacada de forma clara y simple.</p>
+            </div>
+            <div class="card">
+                <h3>Funcionalidad 3</h3>
+                <p>Otra función que quieras resaltar para que el sitio luzca completo.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <p>© 2025 - Tu Nombre | Proyecto de Grado</p>
+        <p>Contacto: tuemail@example.com</p>
+    </footer>
+</body>
+</html>
