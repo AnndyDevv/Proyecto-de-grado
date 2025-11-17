@@ -10,7 +10,7 @@
         background: #f9f9f9;
     }
     header {
-        background: rgb(3, 2, 64);
+        background: #060c30;
         box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         padding: 20px 40px;
         position: relative;
@@ -250,7 +250,7 @@
     ========================================= */
     .carousel-section {
         padding: 100px 0;
-        background: linear-gradient(135deg, #06092c 0%, #030519 100%);
+        /*background: linear-gradient(135deg, #06092c 0%, #030519 100%);*/
         width: 100%;
     }
 
@@ -259,7 +259,7 @@
         text-align: center;
         margin-bottom: 60px;
         font-family: "Bubblegum Sans", sans-serif;
-        color: white;
+        color: #0E183B;
     }
 
     .carousel-container {
@@ -285,23 +285,23 @@
 }
 
     /* CARDS ALTAS COMO MENÚ DE RESTAURANTE - IMAGEN ABAJO */
-    .card {
-        min-width: 320px;  /* ← MÁS ESTRECHAS */
-        height: 600px;     /* ← MÁS ALTAS */
-        background: white;
-        border: none;
-        overflow: hidden;
-        flex-shrink: 0;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-        display: flex;
-        flex-direction: column;
-        position: relative;
+  .card {
+     min-width: 320px;
+    height: 600px;
+    background: white;
+    border: 1.5px solid rgba(0,0,0,0.25);
+    overflow: hidden;
+    flex-shrink: 0;
+    /* sombra suave y realista */
+    box-shadow: 0 8px 22px rgba(0,0,0,0.10);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
     }
 
     .card:hover {
-        transform: translateY(-15px);
-        box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+       transform: translateY(-10px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.18);
     }
 
     /* CONTENIDO ARRIBA */
@@ -317,7 +317,7 @@
         font-size: 2.2rem;
         font-weight: 700;
         margin: 0 0 20px 0;
-        color: #0E183B;
+        color: #192761;
         font-family: "Bubblegum Sans", sans-serif;
         line-height: 1.2;
     }
@@ -447,8 +447,15 @@
     /* =========================================
         SECCIÓN DE BOTONES / ENLACES
     ========================================= */
+    .section-title {
+         font-size: 4.2rem;
+        text-align: center;
+        font-family: "Bubblegum Sans", sans-serif;
+
+    }
+    
     .links-section {
-        background: #eef3fb;
+         background: #ffffff;
         padding: 60px 20px;
         margin-top: 70px;
     }
@@ -476,7 +483,7 @@
     }
 
     .info-btn:hover {
-        background: #0E183B;
+        background: #060c22;
         color: white;
         transform: translateY(-4px);
     }
@@ -493,7 +500,7 @@
     ========================================= */
         
     footer {
-        background: #030519;
+        background: #01030f;
         color: #eee;
         text-align: center;
         padding: 40px 10px;
