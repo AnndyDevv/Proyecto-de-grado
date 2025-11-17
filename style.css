@@ -279,6 +279,10 @@
         width: 100%;
         padding: 20px 0;
     }
+ .carousel .card {
+    max-width: 350px;   /* Tamaño ideal */
+    min-width: 320px;   /* Tamaño mínimo */
+}
 
     /* CARDS ALTAS COMO MENÚ DE RESTAURANTE - IMAGEN ABAJO */
     .card {
@@ -529,3 +533,15 @@
     body {
         overflow-x: hidden;
     }
+
+    /* ====== ANIMACIÓN DE APARICIÓN ====== */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
