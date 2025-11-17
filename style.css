@@ -7,32 +7,98 @@
         margin: 0;
         font-family: "Arvo", sans-serif;
         color: #222;
-        background: #f9f9f9;
+          background:    #d6e1fc;
     }
-    header {
-        background: #060c30;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        padding: 20px 40px;
-        position: relative;
-        top: 0;
-        z-index: 10;
+   /* =========================================
+   HEADER CON EFECTO HOVER COMPLETO
+========================================= */
+header {
+    background: #060c30;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 20px 40px;
+    position: relative;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: white;
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+/* CONTENEDOR DE NAVEGACIÓN */
+#nav-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/* ESTILOS PARA LOS ENLACES - EFECTO HOVER COMPLETO */
+#nav-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+/* EFECTO HOVER - TODA EL ÁREA SE PONE BLANCA */
+#nav-menu a:hover {
+    background-color: white;
+    color: #060c30;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+    #menu-btn {
+        background: white;
+        border: none;
+        font-size: 1.8rem;
+        cursor: pointer;
+        display: block;
+    }
+
+    #nav-menu {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        display: none;
+        flex-direction: column !important;
+        gap: 15px;
+        z-index: 1000;
+    }
+
+    #nav-menu a {
+        color: #000000;
+        padding: 10px 15px;
+        transition: all 0.3s ease;
+    }
+
+    #nav-menu a:hover {
+        background-color: #060c30;
+        color: white;
+        transform: translateY(-2px);
+    }
+
+    /* Mostrar menú cuando está activo */
+    #nav-menu.active {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
     }
-    header h1 {
-      color: white;
-        margin: 0;
-        font-size: 1.4rem;
-    }
-    nav a {
-        margin-left: 20px;
-        text-decoration: none;
-        color: #fff;
-        font-weight: 600;
-    }
-    
-    .hero {
+}
+
+.hero {
         padding: 120px 40px;
         text-align: center;
         background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');
@@ -63,7 +129,7 @@
     ========================================= */
     .sobre-bachi {
         padding: 100px 0;
-        background: #fff;
+        background: #d6e1fc;
         width: 100%;
         box-sizing: border-box;
         overflow: hidden;
@@ -188,11 +254,11 @@
 
 .seccion-mixta {
     padding: 70px 20px;
-    background: #ffffff;
+    background: #d6e1fc;
 }
 
 .seccion-mixta.alt {
-    background: #f5f5f5;
+    background: #d6e1fc;
 }
 
 .mixta-contenido {
@@ -455,7 +521,7 @@
     }
     
     .links-section {
-         background: #ffffff;
+          background: radial-gradient(circle at top left, #d6e1fc, #e1edff);
         padding: 60px 20px;
         margin-top: 70px;
     }
