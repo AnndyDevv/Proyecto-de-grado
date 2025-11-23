@@ -3,21 +3,183 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Proyecto - Sitio en construcción</title>
+    <title>Plan de Estudios - U.E 17 de Septiembre</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="que_aprenderas.css">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="que_aprenderas.css">
      <script src="que_aprenderas.js" defer></script>
 </head>
 <body>
+
     <header>
         <h1>U.E 17 de Septiembre</h1>
         <button id="menu-btn" style="background:white;border:none;font-size:1.8rem;cursor:pointer;display:none;">☰</button>
         <nav id="nav-menu" style="display:flex; flex-direction: row; gap: 20px;">
-            <a href="#inicio">¿Qué aprenderas?</a>
-            <a href="#sobre">Competencias técnicas</a>
-            <a href="#contacto">Salida profesional</a>
-            <a href="#contacto">Plan de estudio</a>
+            <a href="index.html">Inicio</a>
+            <a href="#">Malla Curricular</a>
+            <a href="#">Proyectos</a>
+            <a href="#">Contacto</a>
         </nav>
     </header>
+
+    <section class="hero-parallax">
+        <div class="hero-content">
+            <h1>¿Qué apréndras?</h1>
+            <p>Una formación moderna y versátil que combina tecnología, lógica, creatividad y práctica. Aquí se forjan los futuros desarrolladores, técnicos y creadores digitales.</p>
+        </div>
+    </section>
+
+    <div class="main-heading">
+        <h2>Plan de Estudios</h2>
+        <p class="main-subtext">
+            6 módulos clave que formarán tu perfil profesional
+        </p>
+    </div>
+
+    <section class="reveal" style="padding-bottom: 80px;">
+        <div class="curriculum-grid">
+            
+            <article class="curriculum-card">
+                <div class="cc-header"><h3>💻 Desarrollo & Programación</h3></div>
+                <div class="cc-body">
+                    <p>La columna vertebral. Aprenderás a crear soluciones lógicas.</p>
+                    <ul>
+                        <li>Lógica y Algoritmos (PSeInt)</li>
+                        <li>Programación Estructurada (C++)</li>
+                        <li>Programación Orientada a Objetos (Java)</li>
+                        <li>Desarrollo de Software de Escritorio</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="curriculum-card">
+                <div class="cc-header"><h3>🌐 Mundo Web</h3></div>
+                <div class="cc-body">
+                    <p>Creación de sitios modernos y presencia en internet.</p>
+                    <ul>
+                        <li>HTML5 y Semántica Web</li>
+                        <li>CSS3 y Diseño Responsivo</li>
+                        <li>JavaScript Interactivo</li>
+                        <li>Publicación de sitios (Hosting)</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="curriculum-card">
+                <div class="cc-header"><h3>🔧 Soporte Técnico</h3></div>
+                <div class="cc-body">
+                    <p>Dominio físico de los equipos y su mantenimiento.</p>
+                    <ul>
+                        <li>Arquitectura del Computador</li>
+                        <li>Ensamblaje y Desensamblaje</li>
+                        <li>Mantenimiento Preventivo</li>
+                        <li>Diagnóstico de Fallas Físicas</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="curriculum-card">
+                <div class="cc-header"><h3>📄 Ofimática y Gestión</h3></div>
+                <div class="cc-body">
+                    <p>Herramientas esenciales para el mundo empresarial.</p>
+                    <ul>
+                        <li>Procesamiento de Textos Avanzado</li>
+                        <li>Hojas de Cálculo y Fórmulas</li>
+                        <li>Gestión de Bases de Datos (Access)</li>
+                        <li>Trabajo Colaborativo en la Nube</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="curriculum-card">
+                <div class="cc-header"><h3>📡 Redes y Conectividad</h3></div>
+                <div class="cc-body">
+                    <p>Conecta el mundo. Aprende cómo viaja la información.</p>
+                    <ul>
+                        <li>Cableado Estructurado (Normas)</li>
+                        <li>Configuración de Routers y Switch</li>
+                        <li>Creación de Redes LAN / WLAN</li>
+                        <li>Compartición de Recursos en Red</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="curriculum-card">
+                <div class="cc-header"><h3>🎨 Diseño Multimedia</h3></div>
+                <div class="cc-body">
+                    <p>La parte creativa de la tecnología.</p>
+                    <ul>
+                        <li>Edición de Imágenes Digitales</li>
+                        <li>Diseño Vectorial Básico</li>
+                        <li>Edición de Audio y Video</li>
+                        <li>Presentaciones Interactivas</li>
+                    </ul>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="year-section reveal">
+        <div class="main-heading">
+            <h2>Tu Camino Año a Año</h2>
+        </div>
+        
+        <div class="year-container">
+            
+            <div class="year-block">
+                <div class="year-number">1º</div>
+                <div class="year-info">
+                    <h3>Los Fundamentos</h3>
+                    <p>Aquí se sientan las bases. Pasarás de ser un usuario a un técnico. Entenderás cómo funciona la electricidad dentro del PC, instalarás tus primeros sistemas operativos y aprenderás a escribir tus primeras líneas de código lógico.</p>
+                </div>
+            </div>
+
+            <div class="year-block" style="border-left-color: #192761;">
+                <div class="year-number" style="background: #192761;">2º</div>
+                <div class="year-info">
+                    <h3>Desarrollo y Creación</h3>
+                    <p>El año de la construcción. Empezarás a crear sitios web que funcionan de verdad, programarás aplicaciones con ventanas y botones, y aprenderás a conectar computadoras entre sí creando redes funcionales.</p>
+                </div>
+            </div>
+
+            <div class="year-block" style="border-left-color: #282F44;">
+                <div class="year-number" style="background: #282F44;">3º</div>
+                <div class="year-info">
+                    <h3>Profesionalización + FCT</h3>
+                    <p>El paso final. Perfeccionarás tus habilidades en bases de datos y desarrollo móvil. Pero lo más importante: te prepararás para tu inserción laboral con la asignatura de FOL y tus prácticas profesionales.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="seccion-mixta reveal">
+        <div class="mixta-contenido">
+            <div class="mixta-texto">
+                <h2>Formación en Centros de Trabajo (FCT)</h2>
+                <p>
+                    En el Bachillerato Técnico, el aula no es el límite. En tu último año, realizarás las **Pasantías Profesionales**.
+                </p>
+                <p>
+                    Tendrás la oportunidad de trabajar en empresas reales, instituciones públicas o departamentos de TI, aplicando todo lo aprendido bajo la supervisión de tutores expertos. Es tu primera experiencia laboral real antes de graduarte.
+                </p>
+                <a href="#" class="info-btn">Ver Convenios con Empresas</a>
+            </div>
+
+            <div class="mixta-img">
+                <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=1169&q=80" alt="Estudiante en pasantías">
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <p>© 2025 - Proyecto de Grado</p>
+        <p>Contacto: andylandi50@gmail.com</p>
+    </footer>
+
+
+</body>
+</html>
