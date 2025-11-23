@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plan de Estudios - U.E 17 de Septiembre</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    
+
+    
+    <style>
+
+    body {
+        margin: 0;
+        font-family: "Arvo", sans-serif;
+        color: #222;
+          background:    #d6e1fc;
+    }
+   /* =========================================
+   HEADER CON EFECTO HOVER COMPLETO
+========================================= */
+header {
+    background: #060c30;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 20px 40px;
+    position: relative;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: white;
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+/* CONTENEDOR DE NAVEGACIÓN */
+#nav-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/* ESTILOS PARA LOS ENLACES - EFECTO HOVER COMPLETO */
+#nav-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+/* EFECTO HOVER - TODA EL ÁREA SE PONE BLANCA */
+#nav-menu a:hover {
+    background-color: white;
+    color: #060c30;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+    #menu-btn {
+        background: white;
+        border: none;
+        font-size: 1.8rem;
+        cursor: pointer;
+        display: block;
+    }
+
+    #nav-menu {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        display: none;
+        flex-direction: column !important;
+        gap: 15px;
+        z-index: 1000;
+    }
+
+    #nav-menu a {
+        color: #000000;
+        padding: 10px 15px;
+        transition: all 0.3s ease;
+    }
+
+    #nav-menu a:hover {
+        background-color: #060c30;
+        color: white;
+        transform: translateY(-2px);
+    }
+
+    /* Mostrar menú cuando está activo */
+    #nav-menu.active {
+        display: flex;
+    }
+}
+
+        /*HERO*/
+
+        /* =========================================
+   ESTILO HERO CON EFECTO FIXED BACKGROUND
+========================================= */
+.hero-parallax {
+    /* Altura de la sección. Ajusta este valor (vh = viewport height) */
+    height: 100vh;
+    min-height: 500px; 
+    
+/* Reemplaza esta línea en tu .hero-parallax CSS */
+/* Reemplaza esta línea en tu .hero-parallax CSS */
+background-image: url('images/image3.png');
+    /* 2. 
+    
+    PROPIEDADES DE LA IMAGEN */
+    background-size: cover; /* Asegura que la imagen cubra toda la sección */
+    background-position: center center; /* Centra la imagen */
+    
+    /* 3. ¡LA PROPIEDAD CLAVE PARA EL EFECTO! */
+    background-attachment: fixed; 
+    
+    /* Centrar el contenido de texto (título/párrafo) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative; /* Necesario para la capa oscura */
+}
+
+/* Capa oscura (Overlay) para mejorar la legibilidad del texto blanco */
+.hero-parallax::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Capa semi-transparente negra (ajusta el último valor 0.7 para más o menos oscuridad) */
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: 1; /* Para que esté sobre la imagen pero debajo del texto */
+}
+
+/* Contenedor del texto (se coloca sobre el overlay) */
+.hero-content {
+    color: white;
+    z-index: 2; /* Mayor que el overlay */
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-family: "Bubblegum Sans", sans-serif;
+    font-size: 5rem; /* Ajusta el tamaño de la fuente si es necesario */
+    margin: 0 0 20px 0;
+    line-height: 1.1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra suave al texto para que resalte */
+}
+
+.hero-content p {
+    font-family: "Arvo", sans-serif;
+    font-size: 1.4rem;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Ajuste móvil */
+@media (max-width: 768px) {
+    .hero-parallax { height: 70vh; }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+}
+    /*cards*/
+    /* Ajuste para el Grid de materias (No es carrusel) */
+    .curriculum-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Mantengo 300px para que quepan 3 */
+        gap: 40px; /* Mantengo tu gap original */
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px; /* Un padding más generoso */
+    }
+
+    /* Modificación de tu Card para que funcione en Grid y tenga la sombra "dura" */
+    .curriculum-card {
+        background: white;
+        border: 2px solid #060c30; /* Borde oscuro y más grueso */
+        border-radius: 12px; /* Un poco más redondeado */
+        
+        /* ESTA ES LA CLAVE: LA SOMBRA DURA */
+        box-shadow: 8px 8px 0px #060c30; 
+        
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        height: 100%; /* Para que todas tengan la misma altura en la fila */
+    }
+
+    /* Efecto al pasar el mouse - la sombra se hace más grande y se "levanta" */
+    .curriculum-card:hover {
+        transform: translate(-4px, -4px); /* Se mueve un poco hacia arriba y a la izquierda */
+        box-shadow: 12px 12px 0px #060c30; /* La sombra se agranda y se mueve */
+    }
+
+    /* --- El encabezado ahora será claro para el título --- */
+    .cc-header {
+        background-color: #d6e1fc; /* Tu color de fondo claro */
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px solid #060c30; /* Una línea debajo del header */
+    }
+
+    .cc-header h3 {
+        margin: 0;
+        font-family: "Bubblegum Sans", cursive;
+        font-size: 1.8rem;
+        color: #060c30; /* Color oscuro para el texto del título */
+        letter-spacing: 1px;
+        font-weight: normal;
+        /* Si quieres un icono, puedes ponerlo aquí. De momento, solo texto. */
+    }
+    
+    /* Cuerpo de la tarjeta (se mantiene similar) */
+    .cc-body {
+        padding: 25px;
+        flex: 1;
+        color: #444;
+        font-family: "Arvo", sans-serif;
+    }
+
+    .cc-body p {
+        margin-bottom: 20px; /* Un poco menos de margen */
+        font-weight: normal; /* Normal, no negrita para el párrafo inicial */
+        color: #333;
+        font-size: 1rem; /* Un poco más pequeño para dejar más espacio a las listas */
+        line-height: 1.6;
+    }
+
+    .cc-body ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .cc-body li {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 10px; /* Un poco menos de margen entre ítems */
+        line-height: 1.5;
+        font-size: 0.95rem; /* Ítems más pequeños */
+    }
+
+    .cc-body li::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        top: 0px;
+        color: #060c30;
+        font-weight: 900;
+        font-size: 1.1rem;
+    }
+
+    /* ESTILOS PARA LOS AÑOS (TIMELINE EN BLOQUES) - Se mantienen igual si te gustaron */
+    .year-section {
+        padding: 80px 20px;
+        background: #e1edff;
+    }
+
+    .year-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .year-block {
+        background: white;
+        border-left: 8px solid #060c30;
+        padding: 30px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .year-number {
+        background: #060c30;
+        color: white;
+        font-family: "Bubblegum Sans", sans-serif;
+        font-size: 2.5rem;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        flex-shrink: 0;
+        border: 4px solid #d6e1fc;
+    }
+
+    .year-info h3 {
+        font-family: "Bubblegum Sans", sans-serif;
+        font-size: 2rem;
+        color: #0E183B;
+        margin: 0 0 10px 0;
+    }
+
+    /* Responsive para los bloques de año */
+    @media (max-width: 768px) {
+        .year-block {
+            flex-direction: column;
+            text-align: center;
+            border-left: none;
+            border-top: 8px solid #060c30;
+        }
+    }
+
+    /* =========================================
+   ESTILOS PARA SECCIÓN MIXTA (TEXTO + IMAGEN)
+========================================= */
+.seccion-mixta {
+    /* Usamos fondo blanco como contraste a la sección anterior y posterior */
+    background: white; 
+    padding: 100px 20px;
+}
+
+.mixta-contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    /* PROPIEDAD CLAVE: Define el contenedor como Flex para dos columnas */
+    display: flex;
+    gap: 60px; /* Espacio entre el texto y la imagen */
+    align-items: center; /* Centra el contenido verticalmente */
+}
+
+/* El texto y la imagen ocuparán la misma proporción (1:1) */
+.mixta-texto {
+    flex: 1; 
+}
+
+.mixta-img {
+    flex: 1;
+}
+
+/* --- ESTILO BRUTALISTA PARA LA IMAGEN --- */
+.mixta-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    
+    /* Aplicamos la misma sombra y borde que tus tarjetas */
+}
+
+/* --- ESTILO PARA EL BOTÓN "Ver Convenios" --- */
+.info-btn {
+    font-family: "Arvo", sans-serif;
+    text-decoration: none;
+    background: #060c30;
+    color: white;
+    font-weight: 700;
+    padding: 12px 25px;
+    border-radius: 8px;
+    border: 2px solid #000; /* Borde de seguridad */
+    
+    /* Una pequeña sombra dura para el botón */
+    box-shadow: 3px 3px 0px #000; 
+    transition: all 0.2s ease;
+}
+
+.info-btn:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px #000; /* La sombra desaparece al hacer clic/hover */
+}
+
+/* =========================================
+   RESPONSIVE (Para que se apilen en móvil)
+========================================= */
+@media (max-width: 900px) {
+    .mixta-contenido {
+        /* PROPIEDAD CLAVE: Apila las columnas verticalmente */
+        flex-direction: column; 
+    }
+    
+    .mixta-texto, .mixta-img {
+        flex: auto; /* Permite que ocupen el 100% del ancho */
+    }
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>U.E 17 de Septiembre</h1>
+        <button id="menu-btn" style="background:white;border:none;font-size:1.8rem;cursor:pointer;display:none;">☰</button>
+        <nav id="nav-menu" style="display:flex; flex-direction: row; gap: 20px;">
+            <a href="index.html">Inicio</a>
+            <a href="#">Malla Curricular</a>
+            <a href="#">Proyectos</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+
+    <section class="hero-parallax">
+    <div class="hero-content">
+        <h1>¿Qué apréndras?</h1>
+        <p>Una formación moderna y versátil que combina tecnología, lógica, creatividad y práctica. Aquí se forjan los futuros desarrolladores, técnicos y creadores digitales.</p>
+    </div>
+</section>
+
+    <div style="text-align: center; padding: 60px 20px 40px;">
+        <h2 style="font-family: 'Bubblegum Sans', sans-serif; font-size: 3.5rem; color: #0E183B; margin-bottom: 10px;">
+            Plan de Estudios
+        </h2>
+        <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto; color: #555;">
+            6 módulos clave que formarán tu perfil profesional
+        </p>
+    </div>
+
+    <section class="reveal" style="padding-bottom: 80px;">
+        <div class="curriculum-grid">
+            
+            <article class="curriculum-card">
+                <div class="cc-header">
+                    <h3>💻 Desarrollo & Programación</h3>
+                </div>
+                <div class="cc-body">
+                    <p>La columna vertebral. Aprenderás a crear soluciones lógicas.</p>
+                    <ul>
+                        <li>Lógica y Algoritmos (PSeInt)</li>
+                        <li>Programación Estructurada (C++)</li>
+                        <li>Programación Orientada a Objetos (Java)</li>
+                        <li>Desarrollo de Software de Escritorio</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="curriculum-card">
+                <div class="cc-header">
+                    <h3>🌐 Mundo Web</h3>
+                </div>
+                <div class="cc-body">
+                    <p>Creación de sitios modernos y presencia en internet.</p>
+                    <ul>
+                        <li>HTML5 y Semántica Web</li>
+                        <li>CSS3 y Diseño Responsivo</li>
+                        <li>JavaScript Interactivo</li>
+                        <li>Publicación de sitios (Hosting)</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="curriculum-card">
+                <div class="cc-header">
+                    <h3>🔧 Soporte Técnico</h3>
+                </div>
+                <div class="cc-body">
+                    <p>Dominio físico de los equipos y su mantenimiento.</p>
+                    <ul>
+                        <li>Arquitectura del Computador</li>
+                        <li>Ensamblaje y Desensamblaje</li>
+                        <li>Mantenimiento Preventivo</li>
+                        <li>Diagnóstico de Fallas Físicas</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="curriculum-card">
+                <div class="cc-header">
+                    <h3>📄 Ofimática y Gestión</h3>
+                </div>
+                <div class="cc-body">
+                    <p>Herramientas esenciales para el mundo empresarial.</p>
+                    <ul>
+                        <li>Procesamiento de Textos Avanzado</li>
+                        <li>Hojas de Cálculo y Fórmulas</li>
+                        <li>Gestión de Bases de Datos (Access)</li>
+                        <li>Trabajo Colaborativo en la Nube</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="curriculum-card">
+                <div class="cc-header">
+                    <h3>📡 Redes y Conectividad</h3>
+                </div>
+                <div class="cc-body">
+                    <p>Conecta el mundo. Aprende cómo viaja la información.</p>
+                    <ul>
+                        <li>Cableado Estructurado (Normas)</li>
+                        <li>Configuración de Routers y Switch</li>
+                        <li>Creación de Redes LAN / WLAN</li>
+                        <li>Compartición de Recursos en Red</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="curriculum-card">
+                <div class="cc-header">
+                    <h3>🎨 Diseño Multimedia</h3>
+                </div>
+                <div class="cc-body">
+                    <p>La parte creativa de la tecnología.</p>
+                    <ul>
+                        <li>Edición de Imágenes Digitales</li>
+                        <li>Diseño Vectorial Básico</li>
+                        <li>Edición de Audio y Video</li>
+                        <li>Presentaciones Interactivas</li>
+                    </ul>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="year-section reveal">
+        <h2 class="carousel-title">Tu Camino Año a Año</h2>
+        
+        <div class="year-container">
+            
+            <div class="year-block">
+                <div class="year-number">1º</div>
+                <div class="year-info">
+                    <h3>Los Fundamentos</h3>
+                    <p>Aquí se sientan las bases. Pasarás de ser un usuario a un técnico. Entenderás cómo funciona la electricidad dentro del PC, instalarás tus primeros sistemas operativos y aprenderás a escribir tus primeras líneas de código lógico.</p>
+                </div>
+            </div>
+
+            <div class="year-block" style="border-left-color: #192761;">
+                <div class="year-number" style="background: #192761;">2º</div>
+                <div class="year-info">
+                    <h3>Desarrollo y Creación</h3>
+                    <p>El año de la construcción. Empezarás a crear sitios web que funcionan de verdad, programarás aplicaciones con ventanas y botones, y aprenderás a conectar computadoras entre sí creando redes funcionales.</p>
+                </div>
+            </div>
+
+            <div class="year-block" style="border-left-color: #282F44;">
+                <div class="year-number" style="background: #282F44;">3º</div>
+                <div class="year-info">
+                    <h3>Profesionalización + FCT</h3>
+                    <p>El paso final. Perfeccionarás tus habilidades en bases de datos y desarrollo móvil. Pero lo más importante: te prepararás para tu inserción laboral con la asignatura de FOL y tus prácticas profesionales.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="seccion-mixta reveal">
+        <div class="mixta-contenido">
+            <div class="mixta-texto">
+                <h2>Formación en Centros de Trabajo (FCT)</h2>
+                <p>
+                    En el Bachillerato Técnico, el aula no es el límite. En tu último año, realizarás las <strong>Pasantías Profesionales</strong>.
+                </p>
+                <p>
+                    Tendrás la oportunidad de trabajar en empresas reales, instituciones públicas o departamentos de TI, aplicando todo lo aprendido bajo la supervisión de tutores expertos. Es tu primera experiencia laboral real antes de graduarte.
+                </p>
+                <a href="#" class="info-btn" style="display:inline-block; margin-top:20px;">Ver Convenios con Empresas</a>
+            </div>
+
+            <div class="mixta-img">
+                <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=1169&q=80" alt="Estudiante en pasantías">
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <p>© 2025 - Proyecto de Grado</p>
+        <p>Contacto: andylandi50@gmail.com</p>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        // Copia aquí el script de 'reveal' si no está en main.js
+        // Si ya está en main.js, no hace falta repetirlo.
+        document.addEventListener("DOMContentLoaded", () => {
+            const reveals = document.querySelectorAll(".reveal");
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, { threshold: 0.15 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
