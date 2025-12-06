@@ -7,7 +7,7 @@
     }
 
     /* =========================================
-       ESTILOS DE TÍTULOS REUTILIZABLES
+    ESTILOS DE TÍTULOS REUTILIZABLES
     ========================================= */
     .main-heading {
         text-align: center;
@@ -30,7 +30,7 @@
 
 
     /* =========================================
-       HEADER CON EFECTO HOVER COMPLETO
+    HEADER CON EFECTO HOVER COMPLETO
     ========================================= */
     header {
         background: #060c30;
@@ -94,14 +94,14 @@
     }
 
     /* =========================================
-       ESTILO HERO CON EFECTO FIXED BACKGROUND
+    ESTILO HERO CON EFECTO FIXED BACKGROUND
     ========================================= */
     .hero-parallax {
         height: 100vh;
         min-height: 500px; 
         
         /* Usando una imagen placeholder para que funcione el código, reemplaza esto con tu imagen */
-        background-image: url('images/fondo_hero.jpg'); 
+        background-image: url('images/image.png'); 
 
         background-size: cover;
         background-position: center center;
@@ -151,98 +151,122 @@
     }
 
     /* =========================================
-       ESTILOS DE CARDS (Módulos)
+    ESTILOS DE CARDS (Módulos)
     ========================================= */
+
+    @keyframes side-tilt-slow {
+        0%   { opacity: 0; transform: perspective(600px) rotateY(-25deg); }
+        30%  { transform: perspective(600px) rotateY(20deg); }
+        60%  { transform: perspective(600px) rotateY(-10deg); }
+        80%  { transform: perspective(600px) rotateY(5deg); }
+        100% { opacity: 1; transform: perspective(600px) rotateY(0deg); }
+      }
+      
+      .curriculum-card {
+        opacity: 0;
+        transform: perspective(600px) rotateY(0deg);
+      }
+      
+      .curriculum-card.visible {
+        animation: side-tilt-slow 1s cubic-bezier(0.36, 1.11, 0.89, 1.02) forwards;
+      }
+
+
     .curriculum-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 40px;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 40px 20px;
-    }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 20px; /* más juntas */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
 
-    .curriculum-card {
-        background: white;
-        border: 2px solid #060c30;
-        border-radius: 12px;
-        box-shadow: 8px 8px 0px #060c30; /* Sombra dura Neo-Brutalista */
-        transition: transform 0.25s ease, box-shadow 0.25s ease;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    }
+.curriculum-card {
+  background: #f9fbff;
+  border: 2px solid #060c30;
+  box-shadow: 6px 6px 0px #060c30;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
+  min-height: 340px; /* más grandes */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+}
 
-    .curriculum-card:hover {
-        transform: translate(-4px, -4px);
-        box-shadow: 12px 12px 0px #060c30;
-    }
+.curriculum-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 10px 10px 0px #060c30;
+}
 
-    .cc-header {
-        background-color: #d6e1fc;
-        padding: 20px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-bottom: 2px solid #060c30;
-    }
+/* Cabecera visual (más sobria, sin emojis) */
+.cc-header {
+  border-bottom: 3px solid #060c30;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
 
-    .cc-header h3 {
-        margin: 0;
-        font-family: "Bubblegum Sans", cursive;
-        font-size: 1.8rem;
-        color: #060c30;
-        letter-spacing: 1px;
-        font-weight: normal;
-    }
+.cc-header h3 {
+  margin: 0;
+  font-family: "Bubblegum Sans", sans-serif;
+  font-size: 1.8rem;
+  color: #060c30;
+}
+
+/* Texto más amplio */
+.cc-body {
+  color: #222;
+  font-family: "Arvo", sans-serif;
+}
+
+.cc-body p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Lista con íconos personalizados */
+.cc-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cc-body li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.cc-body li::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: #060c30;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 6px;
+}
+
+/* Adaptable */
+@media (max-width: 768px) {
+  .curriculum-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
+
     
-    .cc-body {
-        padding: 25px;
-        flex: 1;
-        color: #444;
-        font-family: "Arvo", sans-serif;
-    }
-
-    .cc-body p {
-        margin-bottom: 20px;
-        font-weight: normal;
-        color: #333;
-        font-size: 1rem;
-        line-height: 1.6;
-    }
-
-    .cc-body ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .cc-body li {
-        position: relative;
-        padding-left: 30px;
-        margin-bottom: 10px;
-        line-height: 1.5;
-        font-size: 0.95rem;
-    }
-
-    .cc-body li::before {
-        content: '✓';
-        position: absolute;
-        left: 0;
-        top: 0px;
-        color: #060c30;
-        font-weight: 900;
-        font-size: 1.1rem;
-    }
 
     /* =========================================
-       ESTILOS PARA LOS AÑOS (TIMELINE EN BLOQUES)
+    ESTILOS PARA LOS AÑOS (TIMELINE EN BLOQUES)
     ========================================= */
     .year-section {
         padding: 80px 20px;
-        background: #e1edff;
+        background: #d6e1fc; 
     }
     
     .year-section .main-heading {
@@ -300,10 +324,10 @@
     }
 
     /* =========================================
-       ESTILOS PARA SECCIÓN MIXTA (FCT)
+    ESTILOS PARA SECCIÓN MIXTA (FCT)
     ========================================= */
     .seccion-mixta {
-        background: white; 
+        background: #d6e1fc; 
         padding: 100px 20px;
     }
 
@@ -369,22 +393,36 @@
     }
     
     /* =========================================
-       FOOTER
+    FOOTER
     ========================================= */
     footer {
-        background: #060c30;
+        position: relative;
+        background: url('images/image.png') center center / cover no-repeat fixed;
         color: white;
         text-align: center;
-        padding: 30px 20px;
-        border-top: 8px solid #d6e1fc; /* Una línea para separarlo */
-    }
-    footer p {
-        margin: 5px 0;
-        font-size: 0.9rem;
-    }
+        padding: 80px 20px;
+        border-top: 8px solid #d6e1fc;
+        overflow: hidden;
+      }
+      
+      footer::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-color: rgba(0,0,0,0.7); /* mismo tono que tu hero */
+        z-index: 0;
+      }
+      
+      footer p {
+        position: relative;
+        z-index: 1;
+        margin: 10px 0;
+        font-size: 1rem;
+      }
+      
     
     /* =========================================
-       ANIMACIONES REVEAL (JS)
+    ANIMACIONES REVEAL (JS)
     ========================================= */
     .reveal {
         position: relative;
@@ -397,4 +435,3 @@
         opacity: 1;
         transform: translateY(0);
     }
-   
