@@ -1,0 +1,207 @@
+   /* --- FUENTES E INICIALIZACIÓN --- */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Space+Mono&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8; /* Fondo muy claro */
+            color: #333;
+        }
+
+        header {
+        background: #060c30;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        padding: 20px 40px;
+        position: relative;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+
+header h1 {
+    color: white;
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+/* CONTENEDOR DE NAVEGACIÓN */
+#nav-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/* ESTILOS PARA LOS ENLACES - EFECTO HOVER COMPLETO */
+#nav-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+/* EFECTO HOVER - TODA EL ÁREA SE PONE BLANCA */
+#nav-menu a:hover {
+    background-color: white;
+    color: #060c30;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+    #menu-btn {
+        background: white;
+        border: none;
+        font-size: 1.8rem;
+        cursor: pointer;
+        display: block;
+    }
+
+    #nav-menu {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        display: none;
+        flex-direction: column !important;
+        gap: 15px;
+        z-index: 1000;
+    }
+
+    #nav-menu a {
+        color: #000000;
+        padding: 10px 15px;
+        transition: all 0.3s ease;
+    }
+
+    #nav-menu a:hover {
+        background-color: #060c30;
+        color: white;
+        transform: translateY(-2px);
+    }
+
+    /* Mostrar menú cuando está activo */
+    #nav-menu.active {
+        display: flex;
+    }
+}
+
+        h1 {
+            text-align: center;
+            padding: 40px 0 10px;
+            font-size: 48px;
+            color: #1a1a1a;
+        }
+
+        p.intro {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 60px;
+            color: #555;
+        }
+
+        /* --- ESTILO GENERAL DEL CONTENEDOR --- */
+        .competencias-tecnicas {
+            padding: 20px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* --- ESTILO DE LA SECCIÓN ZIG-ZAG (FLEXBOX) --- */
+        .competencia-item {
+            display: flex;
+            align-items: center; /* Alineación vertical al centro */
+            margin-bottom: 120px; /* Espaciado generoso entre secciones */
+            gap: 50px; /* Espacio entre la imagen y el texto */
+        }
+
+        .media, .contenido {
+            flex: 1; /* Distribuye el espacio equitativamente */
+            padding: 20px;
+        }
+
+        /* --- ESTILO DE IMAGEN MODERNO --- */
+        .competencia-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px; /* Esquinas suaves */
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* Sombra elegante */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .competencia-item img:hover {
+            transform: translateY(-8px); /* Efecto de "levantamiento" sutil */
+        }
+        
+        /* --- ESTILO DE TÍTULOS Y TEXTO --- */
+        .competencia-item h2 {
+            font-size: 38px;
+            font-weight: 700;
+            color: #0077b6; /* Azul técnico como color de acento */
+            margin-top: 0;
+            border-bottom: 3px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+
+        /* --- ESTILO DE LISTA (VIÑETAS MODERNAS) --- */
+        .competencia-item ul {
+            list-style: none; /* Quitamos las viñetas por defecto */
+            padding-left: 0;
+        }
+
+        .competencia-item li {
+            font-size: 18px;
+            padding: 12px 0;
+            line-height: 1.6;
+            display: flex; /* Para alinear el icono y el texto */
+            align-items: flex-start;
+        }
+
+        .competencia-item li .icon {
+            font-family: 'Space Mono', monospace; /* Fuente de código para los iconos */
+            font-weight: bold;
+            color: #00b894; /* Verde neón para los iconos */
+            margin-right: 15px;
+            font-size: 20px;
+            line-height: 1.6;
+        }
+
+        /* --- ALTERNANCIA ZIG-ZAG (ORDEN DE COLUMNAS) --- */
+
+        /* ZIG: Imagen Izquierda, Texto Derecha (Orden por defecto) */
+        .zig .media { order: 1; }
+        .zig .contenido { order: 2; }
+
+        /* ZAG: Texto Izquierda, Imagen Derecha (Invertimos el orden) */
+        .zag .media { order: 2; }
+        .zag .contenido { order: 1; }
+
+
+        /* --- RESPONSIVE PARA MÓVIL --- */
+        @media (max-width: 992px) {
+            .competencia-item {
+                flex-direction: column; /* Apila imagen y texto verticalmente */
+                text-align: center;
+                margin-bottom: 60px;
+            }
+
+            /* Reseteamos el orden para que sea siempre Texto - Imagen en móvil */
+            .competencia-item .media, 
+            .competencia-item .contenido {
+                order: initial;
+                text-align: left;
+            }
+
+            .competencia-item h2 {
+                text-align: center;
+            }
+        }

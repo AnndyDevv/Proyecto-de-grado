@@ -357,9 +357,7 @@
         display: block;
         
         /* Aplicamos la misma sombra y borde que tus tarjetas */
-        border: 2px solid #060c30; 
         box-shadow: 8px 8px 0px #060c30; 
-        border-radius: 12px;
     }
 
     /* --- ESTILO PARA EL BOTÓN "Ver Convenios" --- */
@@ -370,7 +368,6 @@
         color: white;
         font-weight: 700;
         padding: 12px 25px;
-        border-radius: 8px;
         border: 2px solid #000;
         box-shadow: 3px 3px 0px #000; 
         transition: all 0.2s ease;
