@@ -1,0 +1,547 @@
+body {
+        margin: 0;
+        font-family: "Arvo", sans-serif;
+        color: #222;
+        background: #d6e1fc; /* Fondo general */
+    }
+
+    /* =========================================
+    ESTILOS DE TÍTULOS REUTILIZABLES
+    ========================================= */
+    .main-heading {
+        text-align: center;
+        padding: 60px 20px 0; /* Padding superior, y el inferior lo maneja la sección */
+    }
+
+    .main-heading h2 {
+        font-family: 'Bubblegum Sans', sans-serif; 
+        font-size: 3.5rem; 
+        color: #0E183B; /* Azul oscuro */
+        margin: 0 0 10px 0;
+    }
+
+    .main-subtext {
+        font-size: 1.2rem; 
+        max-width: 600px; 
+        margin: 0 auto; 
+        color: #555;
+    }
+
+
+    /* =========================================
+    HEADER CON EFECTO HOVER COMPLETO
+    ========================================= */
+    header {
+        background: #060c30;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        padding: 20px 40px;
+        position: relative;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header h1 {
+        color: white;
+        margin: 0;
+        font-size: 1.4rem;
+    }
+
+    #nav-menu {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    #nav-menu a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 600;
+        padding: 12px 20px;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+    }
+
+    #nav-menu a:hover {
+        background-color: white;
+        color: #060c30;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+    }
+
+    @media (max-width: 700px) {
+        #menu-btn { display: block; }
+        #nav-menu {
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: none;
+            flex-direction: column !important;
+            gap: 15px;
+            z-index: 1000;
+        }
+        #nav-menu a { color: #000000; padding: 10px 15px; }
+        #nav-menu a:hover { background-color: #060c30; color: white; transform: translateY(-2px); }
+        #nav-menu.active { display: flex; }
+    }
+
+    /* =========================================
+    ESTILO HERO CON EFECTO FIXED BACKGROUND
+    ========================================= */
+    .hero-parallax {
+        height: 100vh;
+        min-height: 500px; 
+        
+        /* Imagen del hero (actualizada) */
+        background-image: url('images/informatico-sector-it.png'); 
+
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed; /* La clave del efecto */
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+    }
+
+    .hero-parallax::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7); 
+        z-index: 1;
+    }
+
+    .hero-content {
+        color: white;
+        z-index: 2;
+        max-width: 900px;
+        padding: 0 20px;
+    }
+
+    .hero-content h1 {
+        font-family: "Bubblegum Sans", sans-serif;
+        font-size: 5rem;
+        margin: 0 0 20px 0;
+        line-height: 1.1;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .hero-content p {
+        font-family: "Arvo", sans-serif;
+        font-size: 1.4rem;
+        margin: 0;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    }
+
+    @media (max-width: 768px) {
+        .hero-parallax { height: 70vh; }
+        .hero-content h1 { font-size: 2.5rem; }
+        .hero-content p { font-size: 1.1rem; }
+    }
+
+    /* =========================================
+    ESTILOS DE CARDS (Campos Laborales)
+    ========================================= */
+
+    @keyframes side-tilt-slow {
+        0%   { opacity: 0; transform: perspective(600px) rotateY(-25deg); }
+        30%  { transform: perspective(600px) rotateY(20deg); }
+        60%  { transform: perspective(600px) rotateY(-10deg); }
+        80%  { transform: perspective(600px) rotateY(5deg); }
+        100% { opacity: 1; transform: perspective(600px) rotateY(0deg); }
+      }
+      
+      .career-card {
+        opacity: 0;
+        transform: perspective(600px) rotateY(0deg);
+      }
+      
+      .career-card.visible {
+        animation: side-tilt-slow 1s cubic-bezier(0.36, 1.11, 0.89, 1.02) forwards;
+      }
+
+
+    .careers-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+
+    .career-card {
+        background: #f9fbff;
+        border: 2px solid #060c30;
+        box-shadow: 6px 6px 0px #060c30;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        overflow: hidden;
+        min-height: 340px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 30px;
+    }
+
+    .career-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 10px 10px 0px #060c30;
+    }
+
+    /* Cabecera visual */
+    .cc-header {
+        border-bottom: 3px solid #060c30;
+        padding-bottom: 15px;
+        margin-bottom: 0;
+    }
+
+    .cc-header h3 {
+        margin: 0 0 0 0;
+        font-family: "Bubblegum Sans", sans-serif;
+        font-size: 1.8rem;
+        color: #060c30;
+    }
+
+    /* Texto */
+    .cc-body {
+        color: #222;
+        font-family: "Arvo", sans-serif;
+        padding-top: 0;
+    }
+
+    .cc-body p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #333;
+        margin: 0 0 20px 0;
+        padding: 0;
+    }
+
+    /* Lista */
+    .cc-body ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .cc-body li {
+        position: relative;
+        padding-left: 28px;
+        margin-bottom: 12px;
+        font-size: 0.95rem;
+    }
+
+    .cc-body li::before {
+        content: '';
+        width: 10px;
+        height: 10px;
+        background: #060c30;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: 6px;
+    }
+
+    @media (max-width: 768px) {
+        .careers-grid {
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+    }
+        /* Centrar tarjetas específicas */
+        .career-card:nth-child(1),
+        .career-card:nth-child(3) {
+            justify-self: center;
+            max-width: 340px;
+        }
+
+        /* Imagen dentro de cards */
+        .cc-body img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 6px;
+            margin: 15px auto 0; /* centrado horizontal */
+            display: block;
+        }
+
+
+    /* =========================================
+    SECCIÓN DE OPORTUNIDADES
+    ========================================= */
+    .opportunities-section {
+        background: #d6e1fc;
+        padding: 80px 20px;
+    }
+
+    .opportunities-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+    }
+
+    .opportunity-block {
+        background: white;
+        border: 2px solid #060c30;
+        padding: 30px;
+        box-shadow: 4px 4px 0px #060c30;
+        border-radius: 8px;
+    }
+
+    .opportunity-block h3 {
+        font-family: "Bubblegum Sans", sans-serif;
+        font-size: 1.8rem;
+        color: #060c30;
+        margin-top: 0;
+    }
+
+    .opportunity-block p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #333;
+        margin-bottom: 15px;
+    }
+
+    .opportunity-block ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .opportunity-block li {
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 10px;
+        font-size: 0.95rem;
+    }
+
+    .opportunity-block li::before {
+        content: '▸';
+        position: absolute;
+        left: 0;
+        color: #060c30;
+        font-weight: bold;
+    }
+     /* =================================
+    ESTILOS PARA LOS EMPRENDIMIENTOS 
+    ===================================== */
+    .emprendimiento-section {
+        padding: 80px 20px;
+        background: #d6e1fc; 
+    }
+    
+    .emprendimiento-section .main-heading {
+        padding-top: 0; /* Ajuste para que el padding solo sea el de la sección */
+        padding-bottom: 40px; 
+    }
+
+    .emprendimiento-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .emprendimiento-block {
+        background: white;
+        border-left: 8px solid #192761;
+        padding: 30px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+
+    .emprendimiento-info h3 {
+        font-family: "Bubblegum Sans", sans-serif;
+        font-size: 2rem;
+        color: #0E183B;
+        margin: 0 0 10px 0;
+    }
+
+    @media (max-width: 768px) {
+        .emprendimiento-block {
+            flex-direction: column;
+            text-align: center;
+            border-left: none;
+            border-top: 8px solid #192761;
+        }
+    }
+
+
+    /* =========================================
+    SECCIÓN DE SALARIOS
+    ========================================= */
+    .salaries-section {
+        background: #d6e1fc;
+        padding: 80px 20px;
+    }
+
+    .salary-grid {
+        max-width: 1000px;
+        margin: 0 auto 40px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        padding: 0 20px;
+    }
+
+    .salary-card {
+        background: white;
+        border: 3px solid #060c30;
+        padding: 30px;
+        text-align: center;
+        box-shadow: 5px 5px 0px #060c30;
+        transition: transform 0.3s ease;
+    }
+
+    .salary-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .salary-card h3 {
+        font-family: "Bubblegum Sans", sans-serif;
+        font-size: 2rem;
+        color: #060c30;
+        margin: 0 0 10px 0;
+    }
+
+    .salary-amount {
+        font-family: "Bubblegum Sans", sans-serif;
+        font-size: 1.8rem;
+        color: #192761;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    .salary-card p {
+        font-size: 0.95rem;
+        color: #555;
+        line-height: 1.5;
+    }
+
+    .salary-note {
+        background: #f0f4ff;
+        border-left: 4px solid #060c30;
+        padding: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 0.95rem;
+        color: #555;
+    }
+
+    /* =========================================
+    SECCIÓN DE EGRESADOS
+    ========================================= */
+    .alumni-section {
+        background: #d6e1fc;
+        padding: 80px 20px;
+    }
+
+    .alumni-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+
+    .alumni-card {
+        background: white;
+        border: 2px solid #060c30;
+        padding: 25px;
+        box-shadow: 5px 5px 0px #060c30;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .alumni-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 8px 8px 0px #060c30;
+    }
+
+    .alumni-header {
+        border-bottom: 2px solid #060c30;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+
+    .alumni-header h4 {
+        font-family: "Bubblegum Sans", sans-serif;
+        font-size: 1.5rem;
+        color: #060c30;
+        margin: 0 0 5px 0;
+    }
+
+    .alumni-role {
+        font-size: 0.9rem;
+        color: #192761;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .alumni-story {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #333;
+        margin: 0;
+    }
+
+    
+    /* =========================================
+    FOOTER
+    ========================================= */
+    footer {
+        position: relative;
+        background: url('images/informatico-sector-it.png') center center / cover no-repeat fixed;
+        color: white;
+        text-align: center;
+        padding: 80px 20px;
+        border-top: 8px solid #d6e1fc;
+        overflow: hidden;
+    }
+    
+    footer::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-color: rgba(0,0,0,0.7);
+        z-index: 0;
+    }
+    
+    footer p {
+        position: relative;
+        z-index: 1;
+        margin: 10px 0;
+        font-size: 1rem;
+    }
+    
+    /* =========================================
+    ANIMACIONES REVEAL (JS)
+    ========================================= */
+    .reveal {
+        position: relative;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
