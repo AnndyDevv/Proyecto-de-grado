@@ -1,95 +1,380 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Competencias Técnicas - Estilo Zig-Zag</title>
-    <link rel="stylesheet" href="competencias_tecnicas.css">
-    <script src="competencias_tecnicas.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Competencias Técnicas - Estilo Zig-Zag</title>
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bubblegum+Sans&family=Fuzzy+Bubbles:wght@400;700&family=Gorditas:wght@400;700&family=Lilita+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+         font-family: "Ubuntu", serif;
+      margin: 0;
+      padding: 0;
+      background-color: #d6e1fc;
+      color: rgb(0, 0, 0);
+    }
+
+ header {
+        background: #060c30;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        padding: 20px 40px;
+        position: relative;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header h1 {
+        color: white;
+        margin: 0;
+        font-size: 1.4rem;
+    }
+    .brand {
+  display: flex;
+  align-items: center; /* Centra el logo y el H1 verticalmente entre sí */
+}
+
+.logo {
+  /* ¡Ahora sí, ajusta el tamaño! */
+  height: 60px; /* Tamaño más grande */
+  width: auto; 
+  margin-right: 15px;
+  filter: invert(1); /* Espacio entre el logo y el título */
+}
+
+    #nav-menu {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    #nav-menu a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 600;
+        padding: 12px 20px;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+    }
+
+    #nav-menu a:hover {
+        background-color: white;
+        color: #060c30;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+    }
+
+    @media (max-width: 700px) {
+        #menu-btn { display: block; }
+        #nav-menu {
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: none;
+            flex-direction: column !important;
+            gap: 15px;
+            z-index: 1000;
+        }
+        #nav-menu a { color: #000000; padding: 10px 15px; }
+        #nav-menu a:hover { background-color: #060c30; color: white; transform: translateY(-2px); }
+        #nav-menu.active { display: flex; }
+    }
+
+    .title{
+        text-align: center;
+        margin: 60px;
+        font-family: "Ubuntu", serif;
+        font-weight: 700;
+        color: #0E183B;;
+        font-style: normal;
+        font-size: 70px;
+    }
+
+    h2{
+        color: #0E183B;
+    }
+
+
+
+    /* ---- CONTENEDOR GENERAL ---- */
+    .competencias-tecnicas {
+    padding: 20px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+    }
+
+    /* ---- ITEMS EN ZIG-ZAG ---- */
+    .competencia-item {
+      display: flex;
+      align-items: stretch;
+      margin-bottom: 120px;
+      gap: 50px;
+    }
+
+   .media {
+  flex: 1;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px; /* crea espacio blanco alrededor de la imagen */
+}
+
+.media img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.media:hover img {
+  transform: scale(1.03);
+}
+
+    .contenido {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .contenido h2 {
+      font-size: 38px;
+      margin-top: 0;
+      border-bottom: 3px solid #e0e0e0;
+      padding-bottom: 10px;
+    }
+
+    .contenido p {
+      font-size: 17px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .contenido ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .contenido li {
+      font-size: 18px;
+      padding: 8px 0;
+      line-height: 1.6;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .icon {
+      font-family: 'Space Mono', monospace;
+      font-weight: bold;
+      margin-right: 10px;
+      font-size: 20px;
+    }
+
+    /* ---- ZIG-ZAG ---- */
+    .zig .media { order: 1; }
+    .zig .contenido { order: 2; }
+
+    .zag .media { order: 2; }
+    .zag .contenido { order: 1; }
+
+    /* ---- RESPONSIVE ---- */
+    @media (max-width: 992px) {
+      .competencia-item {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .contenido {
+        text-align: center;
+      }
+
+      .media {
+        width: 100%;
+      }
+    }
+  </style>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('menu-btn');
+      const nav = document.getElementById('nav-menu');
+
+      function checkWidth() {
+        if (window.innerWidth < 700) {
+          btn.style.display = 'block';
+          nav.classList.remove('active');
+        } else {
+          btn.style.display = 'none';
+          nav.style.display = 'flex';
+        }
+      }
+
+      btn.addEventListener('click', () => {
+        nav.classList.toggle('active');
+      });
+
+      window.addEventListener('resize', checkWidth);
+      window.addEventListener('load', checkWidth);
+    });
+  </script>
 </head>
 <body>
     <header>
-        <h1>U.E 17 de Septiembre</h1>
-        <button id="menu-btn" style="background:white;border:none;font-size:1.8rem;cursor:pointer;display:none;">☰</button>
-        <nav id="nav-menu" style="display:flex; flex-direction: row; gap: 20px;">
-            <a href="main.html">Inicio</a>
-            <a href="que_aprenderas.html">¿Qué aprenderas?</a>
-            <a href="#contacto">Salida profesional</a>
-            <a href="#contacto">Plan de estudio</a>
-        </nav>
-    </header>
+  <div class="brand">
+    <img src="images/logo 2.svg" alt="Logo U.E 17 de Septiembre" class="logo">
+    <h1>U.E 17 de Septiembre</h1>
+  </div>
+  
+   <button id="menu-btn" style="background:transparent;border:none;font-size:1.8rem;cursor:pointer;display:none; filter: invert(1); ">☰</button>
+  <nav id="nav-menu">
+    <a href="main.html">Inicio</a>
+    <a href="que_aprenderas.html">¿Qué aprenderás?</a>
+    <a href="#contacto">Salida profesional</a>
+    <a href="#contacto">Plan de estudio</a>
+  </nav>
+</header>
 
-    <section class="competencias-tecnicas">
-        <h1>2. Competencias Técnicas</h1>
-        <p class="intro">Lista clara de lo que el estudiante será capaz de hacer en las áreas de tecnología clave.</p>
+  <section class="competencias-tecnicas">
+    <div class="title">
+        <p>Competencias Técnicas</p>
+    </div>
 
-        <div class="competencia-item zig">
-            <div class="media">
-                <img src="images/baner.png" alt="Código en una pantalla oscura con luces de colores">
-            </div>
-            <div class="contenido">
-                <h2>Programación</h2>
-                <ul>
-                    <li><span class="icon">&gt;</span> Leer, diseñar y escribir algoritmos.</li>
-                    <li><span class="icon">&gt;</span> Programar en un lenguaje estructurado y uno orientado a objetos.</li>
-                </ul>
-            </div>
-        </div>
+    <!-- PROGRAMACIÓN -->
+    <div class="competencia-item zig">
+      <div class="media">
+        <img src="images/programacion.jpg" alt="Código en una pantalla oscura">
+      </div>
+      <div class="contenido">
+        <h2>Programación</h2>
+<p>
+  La programación es el arte de transformar ideas en soluciones digitales. En esta área aprenderás desde los principios de la lógica hasta la construcción de aplicaciones completas.
+  Dominarás el uso de lenguajes como <strong>C++</strong>, <strong>Python</strong> y <strong>JavaScript</strong>, comprendiendo sus estructuras, sintaxis y paradigmas.
+</p>
+<p>
+  Aprenderás también sobre estructuras de datos, algoritmos, buenas prácticas de codificación, depuración y control de versiones con Git.
+  Desarrollarás proyectos prácticos que consolidarán tus habilidades de pensamiento computacional.
+</p>
+<ul>
+  <li><span class="icon">&gt;</span> Diseñar y analizar algoritmos eficientes.</li>
+  <li><span class="icon">&gt;</span> Crear programas estructurados y orientados a objetos.</li>
+  <li><span class="icon">&gt;</span> Desarrollar aplicaciones funcionales en C++, Python y JavaScript.</li>
+  <li><span class="icon">&gt;</span> Usar herramientas como Visual Studio Code y GitHub.</li>
+</ul>
+      </div>
+    </div>
 
-        <div class="competencia-item zag">
-            <div class="contenido">
-                <h2>Hardware</h2>
-                <ul>
-                    <li><span class="icon">⚙️</span> Armar y desarmar computadoras.</li>
-                    <li><span class="icon">⚙️</span> Realizar mantenimiento preventivo y correctivo.</li>
-                </ul>
-            </div>
-            <div class="media">
-                <img src="images/wa_1.jpeg" alt="Primer plano de una placa madre y microprocesador">
-            </div>
-        </div>
+    <!-- HARDWARE -->
+    <div class="competencia-item zag">
+      <div class="contenido">
+        <h2>Hardware</h2>
+<p>
+  El área de hardware te enseñará el funcionamiento físico de los sistemas de cómputo. Conocerás las partes internas de un ordenador,
+  cómo interactúan entre sí y cómo ensamblarlas correctamente.
+</p>
+<p>
+  Aprenderás a identificar fallas comunes, realizar diagnósticos, limpiar y mantener equipos en buen estado, y reemplazar componentes dañados de forma segura.
+</p>
+<ul>
+  <li><span class="icon">⚙️</span> Armar y desarmar computadoras personales.</li>
+  <li><span class="icon">⚙️</span> Identificar y probar componentes electrónicos.</li>
+  <li><span class="icon">⚙️</span> Aplicar mantenimiento preventivo y correctivo.</li>
+  <li><span class="icon">⚙️</span> Instalar sistemas operativos después del ensamblaje.</li>
+</ul>
 
-        <div class="competencia-item zig">
-            <div class="media">
-                <img src="images/wa_2.jpeg" alt="Conexiones y cables de red estructurado">
-            </div>
-            <div class="contenido">
-                <h2>Redes</h2>
-                <ul>
-                    <li><span class="icon">🌐</span> Crear redes LAN básicas.</li>
-                    <li><span class="icon">🌐</span> Cableado estructurado.</li>
-                    <li><span class="icon">🌐</span> Configurar routers/switches básicos.</li>
-                </ul>
-            </div>
-        </div>
+      </div>
+      <div class="media">
+        <img src="images/hardware.jpg" alt="Placa madre y microprocesador">
+      </div>
+    </div>
 
-        <div class="competencia-item zag">
-            <div class="contenido">
-                <h2>Software</h2>
-                <ul>
-                    <li><span class="icon">💻</span> Manejo avanzado de ofimática.</li>
-                    <li><span class="icon">💻</span> Administrar sistemas operativos Windows y Linux.</li>
-                </ul>
-            </div>
-            <div class="media">
-                <img src="https://via.placeholder.com/600x400/fca311/FFFFFF?text=Software" alt="Ventanas de Windows y Linux abiertas en un escritorio">
-            </div>
-        </div>
-        
-        <div class="competencia-item zig">
-            <div class="media">
-                <img src="https://via.placeholder.com/600x400/4a4e69/FFFFFF?text=Soporte+T%C3%A9cnico" alt="Persona dando soporte técnico">
-            </div>
-            <div class="contenido">
-                <h2>Soporte técnico</h2>
-                <ul>
-                    <li><span class="icon">💡</span> Diagnóstico de fallas.</li>
-                    <li><span class="icon">💡</span> Atención al usuario.</li>
-                    <li><span class="icon">💡</span> Instalación de software.</li>
-                </ul>
-            </div>
-        </div>
+    <!-- REDES -->
+    <div class="competencia-item zig">
+      <div class="media">
+        <img src="images/redes.avif" alt="Cables de red estructurado">
+      </div>
+      <div class="contenido">
+        <h2>Redes</h2>
+<p>
+  En redes, aprenderás a conectar computadoras para que puedan compartir información de forma segura y eficiente.
+  Conocerás cómo funcionan los protocolos de comunicación, las direcciones IP y la configuración de routers y switches.
+</p>
+<p>
+  Aprenderás a crear topologías de red, realizar cableado estructurado y asegurar la conectividad en entornos reales usando herramientas como <strong>Packet Tracer</strong>.
+</p>
+<ul>
+  <li><span class="icon">🌐</span> Crear redes LAN y WAN básicas.</li>
+  <li><span class="icon">🌐</span> Configurar routers, switches y puntos de acceso.</li>
+  <li><span class="icon">🌐</span> Implementar cableado estructurado.</li>
+  <li><span class="icon">🌐</span> Diagnosticar problemas de conectividad.</li>
+</ul>
 
-    </section>
+      </div>
+    </div>
+
+    <!-- SOFTWARE -->
+    <div class="competencia-item zag">
+      <div class="contenido">
+        <h2>Software</h2>
+<p>
+  En esta área aprenderás a usar, instalar y mantener software tanto a nivel de usuario como de administrador.
+  Explorarás herramientas ofimáticas, sistemas operativos y programas especializados para tareas profesionales.
+</p>
+<p>
+  También comprenderás la diferencia entre software libre y propietario, las licencias de uso y la gestión responsable de programas dentro de un entorno laboral.
+</p>
+<ul>
+  <li><span class="icon">💻</span> Manejar software de ofimática avanzada (Word, Excel, PowerPoint).</li>
+  <li><span class="icon">💻</span> Instalar y configurar sistemas Windows y Linux.</li>
+  <li><span class="icon">💻</span> Administrar software profesional y educativo.</li>
+  <li><span class="icon">💻</span> Gestionar actualizaciones y copias de seguridad.</li>
+</ul>
+
+      </div>
+      <div class="media">
+        <img src="images/software.jpg" alt="Ventanas de Windows y Linux abiertas en un escritorio">
+      </div>
+    </div>
+
+    <!-- SOPORTE TÉCNICO -->
+    <div class="competencia-item zig">
+      <div class="media">
+        <img src="images/soporte-tecnico.avif" alt="Persona dando soporte técnico">
+      </div>
+      <div class="contenido">
+       <h2>Soporte Técnico</h2>
+<p>
+  El soporte técnico se centra en resolver problemas informáticos y asistir a los usuarios. Aprenderás a diagnosticar errores,
+  reparar sistemas, documentar incidencias y brindar atención eficiente tanto presencial como remota.
+</p>
+<p>
+  Además, desarrollarás habilidades blandas como la comunicación efectiva y la paciencia, fundamentales para trabajar con usuarios finales.
+</p>
+<ul>
+  <li><span class="icon">💡</span> Diagnosticar y resolver fallas de hardware y software.</li>
+  <li><span class="icon">💡</span> Atender solicitudes de soporte de manera profesional.</li>
+  <li><span class="icon">💡</span> Instalar y mantener software esencial para oficinas.</li>
+  <li><span class="icon">💡</span> Documentar reportes de mantenimiento y asistencia técnica.</li>
+</ul>
+
+      </div>
+    </div>
+  </section>
 </body>
 </html>

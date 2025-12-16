@@ -1,36 +1,48 @@
 
-    @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Gorditas:wght@400;700&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bubblegum+Sans&family=Fuzzy+Bubbles:wght@400;700&family=Gorditas:wght@400;700&family=Lilita+One&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Fuzzy+Bubbles:wght@400;700&family=Gorditas:wght@400;700&display=swap');
-    
     body {
         margin: 0;
-        font-family: "Arvo", sans-serif;
+        font-family: "Ubuntu", sans-serif;
         color: #222;
-          background:    #d6e1fc;
+        background:    #d6e1fc;
     }
    /* =========================================
    HEADER CON EFECTO HOVER COMPLETO
 ========================================= */
+/* 1. ESTILOS DEL HEADER (Ajuste de espaciado) */
 header {
-    background: #060c30;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    padding: 20px 40px;
-    position: relative;
-    top: 0;
-    z-index: 10;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+        background: #060c30;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        padding: 20px 40px;
+        position: relative;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header h1 {
+        color: white;
+        margin: 0;
+        font-size: 1.4rem;
+    }
+.brand {
+  display: flex;
+  align-items: center; /* Centra el logo y el H1 verticalmente entre sí */
 }
 
-header h1 {
-    color: white;
-    margin: 0;
-    font-size: 1.4rem;
+.logo {
+  /* ¡Ahora sí, ajusta el tamaño! */
+ height: 60px; /* Tamaño más grande */
+  width: auto;
+  margin-right: 15px;
+   filter: invert(1); 
 }
-
-/* CONTENEDOR DE NAVEGACIÓN */
+.brand h1 {
+  /* Asegúrate de que no haya margen en el H1 que pueda estorbar */
+  margin: 0; 
+  font-size: 1.8rem;
+}
 #nav-menu {
     display: flex;
     flex-direction: row;
@@ -108,24 +120,21 @@ header h1 {
     }
 
     .titulo-grande {
-        font-size: 4.4rem;
-        font-weight: 700;
-        font-family: "Arvo", sans-serif;
-    }
+        font-size: 4.6rem;
+        font-weight: 900;
 
-    #texto-sombra {
-        text-shadow: 0 0 8px rgba(0,0,0,0.8);
     }
 
     .hero p {
         font-size: 1.1rem;
+        font-family: sans-serif;
         opacity: 0.9;
         max-width: 700px;
         margin: 20px auto;
     }
 
     /* =========================================
-       SECCIÓN ¿QUÉ ES ESTE BACHILLERATO? - IMAGEN PEGADA AL BORDE IZQUIERDO
+ SECCIÓN ¿QUÉ ES ESTE BACHILLERATO? - IMAGEN PEGADA AL BORDE IZQUIERDO
     ========================================= */
     .sobre-bachi {
         padding: 100px 0;
@@ -315,6 +324,7 @@ header h1 {
         SECCIÓN CARRUSEL TIPO MENÚ DE RESTAURANTE
     ========================================= */
     .carousel-section {
+        font-family: sans-serif;
         padding: 100px 0;
         /*background: linear-gradient(135deg, #06092c 0%, #030519 100%);*/
         width: 100%;
