@@ -1,0 +1,492 @@
+body {
+        margin: 0;
+        font-family: "Arvo", sans-serif;
+        color: #222;
+        background: #d6e1fc; /* Fondo general */
+    }
+
+    /* =========================================
+    ESTILOS DE TÍTULOS REUTILIZABLES
+    ========================================= */
+    .main-heading {
+        text-align: center;
+        padding: 60px 20px 0; /* Padding superior, y el inferior lo maneja la sección */
+    }
+
+    .main-heading h2 {
+        font-family: 'Bubblegum Sans', sans-serif; 
+        font-size: 3.5rem; 
+        color: #0E183B; /* Azul oscuro */
+        margin: 0 0 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .numero-circulo {
+        background: #060c30;
+        color: white;
+        font-family: "Bubblegum Sans", sans-serif;
+        font-size: 2.5rem;
+        width: 100px;
+        height: 100px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin-right: 20px;
+        border: 4px solid #d6e1fc;
+    }
+
+    .main-subtext {
+        font-size: 1.2rem; 
+        max-width: 600px; 
+        margin: 0 auto; 
+        color: #555;
+    }
+
+
+    /* =========================================
+    HEADER CON EFECTO HOVER COMPLETO
+    ========================================= */
+    header {
+        background: #060c30;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        padding: 20px 40px;
+        position: relative;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header h1 {
+        color: white;
+        margin: 0;
+        font-size: 1.4rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center; /* Centra el logo y el H1 verticalmente entre sí */
+    }
+
+    .logo {
+      /* ¡Ahora sí, ajusta el tamaño! */
+     height: 60px; /* Tamaño más grande */
+      width: auto;
+      margin-right: 15px;
+       filter: invert(1); 
+    }
+
+    .brand h1 {
+      /* Asegúrate de que no haya margen en el H1 que pueda estorbar */
+      margin: 0; 
+      font-size: 1.8rem;
+    }
+
+    #nav-menu {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    #nav-menu a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 600;
+        padding: 12px 20px;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+    }
+
+    #nav-menu a:hover {
+        background-color: white;
+        color: #060c30;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+    }
+
+    @media (max-width: 700px) {
+        #menu-btn { display: block; }
+        #nav-menu {
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: none;
+            flex-direction: column !important;
+            gap: 15px;
+            z-index: 1000;
+        }
+        #nav-menu a { color: #000000; padding: 10px 15px; }
+        #nav-menu a:hover { background-color: #060c30; color: white; transform: translateY(-2px); }
+        #nav-menu.active { display: flex; }
+    }
+
+    /* =========================================
+    ESTILO HERO CON EFECTO FIXED BACKGROUND
+    ========================================= */
+    .hero-parallax {
+        height: 100vh;
+        min-height: 500px; 
+        
+        /* Imagen del hero (actualizada) */
+        background-image: url('https://ecuador.unir.net/wp-content/uploads/sites/8/2021/06/shutterstock_1788958916.jpg'); 
+
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed; /* La clave del efecto */
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+    }
+
+    .hero-parallax::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7); 
+        z-index: 1;
+    }
+
+    .hero-content {
+        color: white;
+        z-index: 2;
+        max-width: 900px;
+        padding: 0 20px;
+    }
+
+    .hero-content h1 {
+        font-family: "Bubblegum Sans", sans-serif;
+        font-size: 5rem;
+        margin: 0 0 20px 0;
+        line-height: 1.1;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .hero-content p {
+        font-family: "Arvo", sans-serif;
+        font-size: 1.4rem;
+        margin: 0;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    }
+
+    @media (max-width: 768px) {
+        .hero-parallax { height: 70vh; }
+        .hero-content h1 { font-size: 2.5rem; }
+        .hero-content p { font-size: 1.1rem; }
+    }
+
+    /* =========================================
+    ESTILOS PARA LA SECCIÓN DE 1º BACHILLERATO
+    ========================================= */
+    .primerobach-contenido {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: justify;
+        background-color: rgba(172, 186, 243, 0.2);
+        border: 1px solid rgba(200, 200, 200, 0.5);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .primerobach-contenido p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .primerobach-contenido h4 {
+        font-family: 'Bubblegum Sans', sans-serif;
+        font-size: 1.8rem;
+        color: #0E183B;
+        margin: 20px 0 10px 0;
+    }
+
+    .primerobach-contenido ul {
+        list-style: disc;
+        padding-left: 20px;
+        margin: 0;
+    }
+
+    .primerobach-contenido li {
+        margin-bottom: 10px;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .primerobach-contenido img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 20px auto;
+        border: 3px solid #0c1651;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+    }
+
+    .primerobach-contenido img:hover {
+        transform: scale(1.05);
+    }
+
+    /* =========================================
+    ESTILOS PARA LA SECCIÓN DE 2º BACHILLERATO
+    ========================================= */
+    .segundobach-contenido {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: justify;
+        background-color: rgba(172, 186, 243, 0.2);
+        border: 1px solid rgba(200, 200, 200, 0.5);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .segundobach-contenido p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .segundobach-contenido h4 {
+        font-family: 'Bubblegum Sans', sans-serif;
+        font-size: 1.8rem;
+        color: #0E183B;
+        margin: 20px 0 10px 0;
+    }
+
+    .segundobach-contenido ul {
+        list-style: disc;
+        padding-left: 20px;
+        margin: 0;
+    }
+
+    .segundobach-contenido li {
+        margin-bottom: 10px;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .segundobach-contenido img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 20px auto;
+        border: 3px solid #0c1651;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+    }
+
+    .segundobach-contenido img:hover {
+        transform: scale(1.05);
+    }
+
+    /* =========================================
+    ESTILOS PARA LA SECCIÓN DE 3º BACHILLERATO
+    ========================================= */
+    .tercrobach-contenido {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: justify;
+        background-color: rgba(172, 186, 243, 0.2);
+        border: 1px solid rgba(200, 200, 200, 0.5);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .tercrobach-contenido p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .tercrobach-contenido h4 {
+        font-family: 'Bubblegum Sans', sans-serif;
+        font-size: 1.8rem;
+        color: #0E183B;
+        margin: 20px 0 10px 0;
+    }
+
+    .tercrobach-contenido ul {
+        list-style: disc;
+        padding-left: 20px;
+        margin: 0;
+    }
+
+    .tercrobach-contenido li {
+        margin-bottom: 10px;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .tercrobach-contenido img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 20px auto;
+        border: 3px solid #0c1651;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+    }
+
+    .tercrobach-contenido img:hover {
+        transform: scale(1.05);
+    }
+
+    /* =========================================
+    ESTILOS PARA LA SECCIÓN DE PROGRAMAS Y MATERIALES
+    ========================================= */
+    .programas-section {
+        padding: 100px 20px;
+        background: #d6e1fc;
+    }
+    
+    .programas-section .main-heading {
+        padding-top: 0;
+        padding-bottom: 40px;
+    }
+
+    .programas-texto {
+        max-width: 800px;
+        margin: 0 auto 20px;
+        text-align: justify;
+    }
+
+    .programas-texto p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #333;
+    }
+
+    .programas-imagen img {
+        max-width: 75%;
+        max-height: 650px;
+        height: auto;        border: 3px solid #0c1651;        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        display: block;
+        margin: 20px auto;
+        transition: transform 0.3s ease;
+    }
+
+    .programas-imagen img:hover {
+        transform: scale(1.05);
+    }
+
+    .materiales-carousel-container {
+        position: relative;
+        width: 100%;
+        margin: 40px auto 0;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .materiales-carousel {
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        gap: 15px;
+        padding: 20px 0;
+        scroll-snap-type: x mandatory;
+    }
+
+    .material-card {
+        background: white;
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: left;
+        min-width: 280px;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+    }
+
+    .material-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .material-card h4 {
+        font-family: 'Bubblegum Sans', sans-serif;
+        font-size: 1.5rem;
+        color: #0E183B;
+        margin: 0 0 15px 0;
+    }
+
+    .material-card ul {
+        list-style: disc;
+        padding-left: 20px;
+        margin: 0;
+    }
+
+    .material-card li {
+        margin-bottom: 8px;
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+        .materiales-grid {
+            grid-template-columns: 1fr;
+            padding: 0 10px;
+        }
+    }
+   
+   /* =========================================
+    FOOTER
+    ========================================= */
+    footer {
+        position: relative;
+        background: url('https://ecuador.unir.net/wp-content/uploads/sites/8/2021/06/shutterstock_1788958916.jpg') center center / cover no-repeat fixed;
+        color: white;
+        text-align: center;
+        padding: 80px 20px;
+        border-top: 8px solid #d6e1fc;
+        overflow: hidden;
+    }
+    
+    footer::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-color: rgba(0,0,0,0.7);
+        z-index: 0;
+    }
+    
+    footer p {
+        position: relative;
+        z-index: 1;
+        margin: 10px 0;
+        font-size: 1rem;
+.left {
+    margin-right: 20px;
+}
+
+.right {
+    margin-left: 20px;
+}
+
+/* RESPONSIVE PARA BOTONES */
+@media (max-width: 768px) {
+    .carousel-btn {
+        padding: 15px 20px;
+        font-size: 20px;
+    }
+}

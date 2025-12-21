@@ -49,6 +49,25 @@ body {
         font-size: 1.4rem;
     }
 
+    .brand {
+      display: flex;
+      align-items: center; /* Centra el logo y el H1 verticalmente entre sí */
+    }
+
+    .logo {
+      /* ¡Ahora sí, ajusta el tamaño! */
+     height: 60px; /* Tamaño más grande */
+      width: auto;
+      margin-right: 15px;
+       filter: invert(1); 
+    }
+
+    .brand h1 {
+      /* Asegúrate de que no haya margen en el H1 que pueda estorbar */
+      margin: 0; 
+      font-size: 1.8rem;
+    }
+
     #nav-menu {
         display: flex;
         flex-direction: row;
