@@ -9,231 +9,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bubblegum+Sans&family=Fuzzy+Bubbles:wght@400;700&family=Gorditas:wght@400;700&family=Lilita+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-         font-family: "Ubuntu", serif;
-      margin: 0;
-      padding: 0;
-      background-color: #d6e1fc;
-      color: rgb(0, 0, 0);
-    }
-
- header {
-        background: #060c30;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        padding: 20px 40px;
-        position: relative;
-        top: 0;
-        z-index: 10;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    header h1 {
-        color: white;
-        margin: 0;
-        font-size: 1.4rem;
-    }
-    .brand {
-  display: flex;
-  align-items: center; /* Centra el logo y el H1 verticalmente entre sí */
-}
-
-.logo {
-  /* ¡Ahora sí, ajusta el tamaño! */
-  height: 60px; /* Tamaño más grande */
-  width: auto; 
-  margin-right: 15px;
-  filter: invert(1); /* Espacio entre el logo y el título */
-}
-
-    #nav-menu {
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-    }
-
-    #nav-menu a {
-        text-decoration: none;
-        color: #fff;
-        font-weight: 600;
-        padding: 12px 20px;
-        border-radius: 2px;
-        transition: all 0.3s ease;
-        position: relative;
-        display: inline-block;
-    }
-
-    #nav-menu a:hover {
-        background-color: white;
-        color: #060c30;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
-    }
-
-    @media (max-width: 700px) {
-        #menu-btn { display: block; }
-        #nav-menu {
-            position: absolute;
-            top: 70px;
-            right: 20px;
-            background: white;
-            padding: 20px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            display: none;
-            flex-direction: column !important;
-            gap: 15px;
-            z-index: 1000;
-        }
-        #nav-menu a { color: #000000; padding: 10px 15px; }
-        #nav-menu a:hover { background-color: #060c30; color: white; transform: translateY(-2px); }
-        #nav-menu.active { display: flex; }
-    }
-
-    .title{
-        text-align: center;
-        margin: 60px;
-        font-family: "Ubuntu", serif;
-        font-weight: 700;
-        color: #0E183B;;
-        font-style: normal;
-        font-size: 70px;
-    }
-
-    h2{
-        color: #0E183B;
-    }
+<link rel="stylesheet" href="competencias_tecnicas.css">
+<script src="competencias_tecnicas.js"></script>
 
 
-
-    /* ---- CONTENEDOR GENERAL ---- */
-    .competencias-tecnicas {
-    padding: 20px 5%;
-    max-width: 1400px;
-    margin: 0 auto;
-    }
-
-    /* ---- ITEMS EN ZIG-ZAG ---- */
-    .competencia-item {
-      display: flex;
-      align-items: stretch;
-      margin-bottom: 120px;
-      gap: 50px;
-    }
-
-   .media {
-  flex: 1;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 15px; /* crea espacio blanco alrededor de la imagen */
-}
-
-.media img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  transition: transform 0.3s ease-in-out;
-}
-
-.media:hover img {
-  transform: scale(1.03);
-}
-
-    .contenido {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .contenido h2 {
-      font-size: 38px;
-      margin-top: 0;
-      border-bottom: 3px solid #e0e0e0;
-      padding-bottom: 10px;
-    }
-
-    .contenido p {
-      font-size: 17px;
-      line-height: 1.7;
-      margin-bottom: 20px;
-    }
-
-    .contenido ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .contenido li {
-      font-size: 18px;
-      padding: 8px 0;
-      line-height: 1.6;
-      display: flex;
-      align-items: flex-start;
-    }
-
-    .icon {
-      font-family: 'Space Mono', monospace;
-      font-weight: bold;
-      margin-right: 10px;
-      font-size: 20px;
-    }
-
-    /* ---- ZIG-ZAG ---- */
-    .zig .media { order: 1; }
-    .zig .contenido { order: 2; }
-
-    .zag .media { order: 2; }
-    .zag .contenido { order: 1; }
-
-    /* ---- RESPONSIVE ---- */
-    @media (max-width: 992px) {
-      .competencia-item {
-        flex-direction: column;
-        text-align: center;
-        margin-bottom: 60px;
-      }
-
-      .contenido {
-        text-align: center;
-      }
-
-      .media {
-        width: 100%;
-      }
-    }
-  </style>
-
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      const btn = document.getElementById('menu-btn');
-      const nav = document.getElementById('nav-menu');
-
-      function checkWidth() {
-        if (window.innerWidth < 700) {
-          btn.style.display = 'block';
-          nav.classList.remove('active');
-        } else {
-          btn.style.display = 'none';
-          nav.style.display = 'flex';
-        }
-      }
-
-      btn.addEventListener('click', () => {
-        nav.classList.toggle('active');
-      });
-
-      window.addEventListener('resize', checkWidth);
-      window.addEventListener('load', checkWidth);
-    });
-  </script>
 </head>
 <body>
     <header>
@@ -246,8 +25,8 @@
   <nav id="nav-menu">
     <a href="main.html">Inicio</a>
     <a href="que_aprenderas.html">¿Qué aprenderás?</a>
-    <a href="#contacto">Salida profesional</a>
-    <a href="#contacto">Plan de estudio</a>
+    <a href="salida_profesional.html">Salida profesional</a>
+    <a href="plan_de_estudio.html">Plan de estudio</a>
   </nav>
 </header>
 
@@ -292,10 +71,10 @@
   Aprenderás a identificar fallas comunes, realizar diagnósticos, limpiar y mantener equipos en buen estado, y reemplazar componentes dañados de forma segura.
 </p>
 <ul>
-  <li><span class="icon">⚙️</span> Armar y desarmar computadoras personales.</li>
-  <li><span class="icon">⚙️</span> Identificar y probar componentes electrónicos.</li>
-  <li><span class="icon">⚙️</span> Aplicar mantenimiento preventivo y correctivo.</li>
-  <li><span class="icon">⚙️</span> Instalar sistemas operativos después del ensamblaje.</li>
+  <li> Armar y desarmar computadoras personales.</li>
+  <li> Identificar y probar componentes electrónicos.</li>
+  <li> Aplicar mantenimiento preventivo y correctivo.</li>
+  <li> Instalar sistemas operativos después del ensamblaje.</li>
 </ul>
 
       </div>
@@ -319,10 +98,10 @@
   Aprenderás a crear topologías de red, realizar cableado estructurado y asegurar la conectividad en entornos reales usando herramientas como <strong>Packet Tracer</strong>.
 </p>
 <ul>
-  <li><span class="icon">🌐</span> Crear redes LAN y WAN básicas.</li>
-  <li><span class="icon">🌐</span> Configurar routers, switches y puntos de acceso.</li>
-  <li><span class="icon">🌐</span> Implementar cableado estructurado.</li>
-  <li><span class="icon">🌐</span> Diagnosticar problemas de conectividad.</li>
+  <li> Crear redes LAN y WAN básicas.</li>
+  <li> Configurar routers, switches y puntos de acceso.</li>
+  <li> Implementar cableado estructurado.</li>
+  <li> Diagnosticar problemas de conectividad.</li>
 </ul>
 
       </div>
@@ -340,10 +119,10 @@
   También comprenderás la diferencia entre software libre y propietario, las licencias de uso y la gestión responsable de programas dentro de un entorno laboral.
 </p>
 <ul>
-  <li><span class="icon">💻</span> Manejar software de ofimática avanzada (Word, Excel, PowerPoint).</li>
-  <li><span class="icon">💻</span> Instalar y configurar sistemas Windows y Linux.</li>
-  <li><span class="icon">💻</span> Administrar software profesional y educativo.</li>
-  <li><span class="icon">💻</span> Gestionar actualizaciones y copias de seguridad.</li>
+  <li> Manejar software de ofimática avanzada (Word, Excel, PowerPoint).</li>
+  <li> Instalar y configurar sistemas Windows y Linux.</li>
+  <li> Administrar software profesional y educativo.</li>
+  <li> Gestionar actualizaciones y copias de seguridad.</li>
 </ul>
 
       </div>
@@ -358,7 +137,7 @@
         <img src="images/soporte-tecnico.avif" alt="Persona dando soporte técnico">
       </div>
       <div class="contenido">
-       <h2>Soporte Técnico</h2>
+      <h2>Soporte Técnico</h2>
 <p>
   El soporte técnico se centra en resolver problemas informáticos y asistir a los usuarios. Aprenderás a diagnosticar errores,
   reparar sistemas, documentar incidencias y brindar atención eficiente tanto presencial como remota.
@@ -367,14 +146,38 @@
   Además, desarrollarás habilidades blandas como la comunicación efectiva y la paciencia, fundamentales para trabajar con usuarios finales.
 </p>
 <ul>
-  <li><span class="icon">💡</span> Diagnosticar y resolver fallas de hardware y software.</li>
-  <li><span class="icon">💡</span> Atender solicitudes de soporte de manera profesional.</li>
-  <li><span class="icon">💡</span> Instalar y mantener software esencial para oficinas.</li>
-  <li><span class="icon">💡</span> Documentar reportes de mantenimiento y asistencia técnica.</li>
+  <li> Diagnosticar y resolver fallas de hardware y software.</li>
+  <li> Atender solicitudes de soporte de manera profesional.</li>
+  <li> Instalar y mantener software esencial para oficinas.</li>
+  <li> Documentar reportes de mantenimiento y asistencia técnica.</li>
 </ul>
 
       </div>
     </div>
   </section>
+
+  <footer>
+        <div class="footer">
+<p class="footer-copyright">
+    © 2025 - Bachillerato Técnico en Informática<br>
+    Unidad Educativa "17 de Septiembre" • Modalidad Presencial
+</p>
+
+<p class="footer-authors">
+    Proyecto de grado desarrollado por:<br>
+    <strong>Andy Landi</strong>, <strong>Santiago Angulo</strong> y <strong>Jean Ibarra</strong>
+</p>  
+<div class="footer-social">
+    <a href="https://github.com/AnndyDevv/Proyecto-de-grado" target="_blank" aria-label="GitHub">
+    <svg class="github-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+    </svg>
+    <span>Ver proyecto en GitHub</span>
+    </a>
+</div>
+</div>
+    </footer>
+</body>
+</html>
 </body>
 </html>

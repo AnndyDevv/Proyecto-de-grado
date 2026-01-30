@@ -1,17 +1,13 @@
-   /* --- FUENTES E INICIALIZACIÓN --- */
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Space+Mono&display=swap');
-         @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Gorditas:wght@400;700&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bubblegum+Sans&family=Fuzzy+Bubbles:wght@400;700&family=Gorditas:wght@400;700&family=Lilita+One&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Fuzzy+Bubbles:wght@400;700&family=Gorditas:wght@400;700&display=swap');
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #060c30; /* Fondo muy claro */
-            color: White;
-        }
 
-        header {
+    body {
+         font-family: "Ubuntu", serif;
+      margin: 0;
+      padding: 0;
+      background-color: #d6e1fc;
+      color: rgb(0, 0, 0);
+    }
+
+ header {
         background: #060c30;
         box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         padding: 20px 40px;
@@ -21,196 +17,247 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-}
-
-header h1 {
-    color: white;
-    margin: 0;
-    font-size: 1.4rem;
-}
-
-/* CONTENEDOR DE NAVEGACIÓN */
-#nav-menu {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-
-/* ESTILOS PARA LOS ENLACES - EFECTO HOVER COMPLETO */
-#nav-menu a {
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
-    padding: 12px 20px;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-}
-
-/* EFECTO HOVER - TODA EL ÁREA SE PONE BLANCA */
-#nav-menu a:hover {
-    background-color: white;
-    color: #060c30;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
-}
-
-/* RESPONSIVE */
-@media (max-width: 700px) {
-    #menu-btn {
-        background: white;
-        border: none;
-        font-size: 1.8rem;
-        cursor: pointer;
-        display: block;
     }
 
+    header h1 {
+        color: white;
+        margin: 0;
+        font-size: 1.4rem;
+    }
+    .brand {
+  display: flex;
+  align-items: center; /* Centra el logo y el H1 verticalmente entre sí */
+}
+
+.logo {
+  /* ¡Ahora sí, ajusta el tamaño! */
+  height: 60px; /* Tamaño más grande */
+  width: auto; 
+  margin-right: 15px;
+  filter: invert(1); /* Espacio entre el logo y el título */
+}
+
     #nav-menu {
-        position: absolute;
-        top: 70px;
-        right: 20px;
-        background: white;
-        padding: 20px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        display: none;
-        flex-direction: column !important;
-        gap: 15px;
-        z-index: 1000;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
     }
 
     #nav-menu a {
-        color: #000000;
-        padding: 10px 15px;
+        text-decoration: none;
+        color: #fff;
+        font-weight: 600;
+        padding: 12px 20px;
+        border-radius: 2px;
         transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
     }
 
     #nav-menu a:hover {
-        background-color: #060c30;
-        color: white;
+        background-color: white;
+        color: #060c30;
         transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
     }
 
-    /* Mostrar menú cuando está activo */
-    #nav-menu.active {
-        display: flex;
-    }
-}
-
-        h1 {
-            text-align: center;
-            padding: 40px 0 10px;
-            font-size: 48px;
-        }
-
-        p.intro {
-            text-align: center;
-            font-size: 18px;
-            margin-bottom: 60px;
-        }
-
-        /* --- ESTILO GENERAL DEL CONTENEDOR --- */
-        .competencias-tecnicas {
-            padding: 20px 5%;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        /* --- ESTILO DE LA SECCIÓN ZIG-ZAG (FLEXBOX) --- */
-        .competencia-item {
-            display: flex;
-            align-items: center; /* Alineación vertical al centro */
-            margin-bottom: 120px; /* Espaciado generoso entre secciones */
-            gap: 50px; /* Espacio entre la imagen y el texto */
-        }
-
-        .media, .contenido {
-            flex: 1; /* Distribuye el espacio equitativamente */
+    @media (max-width: 700px) {
+        #menu-btn { display: block; }
+        #nav-menu {
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            background: white;
             padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: none;
+            flex-direction: column !important;
+            gap: 15px;
+            z-index: 1000;
         }
+        #nav-menu a { color: #000000; padding: 10px 15px; }
+        #nav-menu a:hover { background-color: #060c30; color: white; transform: translateY(-2px); }
+        #nav-menu.active { display: flex; }
+    }
 
-        /* --- ESTILO DE IMAGEN MODERNO --- */
-        .competencia-item img {
-            width: 100%;
-            height: auto; 
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* Sombra elegante */
-            transition: transform 0.3s ease-in-out;
-        }
+    .title{
+        text-align: center;
+        margin: 60px;
+        font-family: "Ubuntu", serif;
+        font-weight: 700;
+        color: #0E183B;;
+        font-style: normal;
+        font-size: 70px;
+    }
 
-        .competencia-item img:hover {
-            transform: translateY(-8px); /* Efecto de "levantamiento" sutil */
-        }
-        
-        /* --- ESTILO DE TÍTULOS Y TEXTO --- */
-        .competencia-item h2 {
-            font-size: 38px; 
-            margin-top: 0;
-            border-bottom: 3px solid #e0e0e0;
-            padding-bottom: 10px;
-        }
+    h2{
+        color: #0E183B;
+    }
 
-        /* --- ESTILO DE LISTA (VIÑETAS MODERNAS) --- */
-        .competencia-item ul {
-            list-style: none; /* Quitamos las viñetas por defecto */
-            padding-left: 0;
-        }
 
-        .competencia-item li {
-            font-size: 18px;
-            padding: 12px 0;
-            line-height: 1.6;
-            display: flex; /* Para alinear el icono y el texto */
-            align-items: flex-start;
-        }
 
-        .competencia-item li .icon {
-            font-family: 'Space Mono', monospace; /* Fuente de código para los iconos */
-            font-weight: bold;
-            margin-right: 15px;
-            font-size: 20px;
-            line-height: 1.6;
-        }
+    /* ---- CONTENEDOR GENERAL ---- */
+    .competencias-tecnicas {
+    padding: 20px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+    }
 
-        .competencia-item {
-        display: flex;
-        align-items: stretch; /* Hace que texto e imagen tengan la misma altura */
-        margin-bottom: 120px;
-        gap: 50px;
+    /* ---- ITEMS EN ZIG-ZAG ---- */
+    .competencia-item {
+      display: flex;
+      align-items: stretch;
+      margin-bottom: 120px;
+      gap: 50px;
+    }
+
+   .media {
+  flex: 1;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px; /* crea espacio blanco alrededor de la imagen */
 }
 
-        .contenido {
-        display: flex;
+.media img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.media:hover img {
+  transform: scale(1.03);
+}
+
+    .contenido {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .contenido h2 {
+      font-size: 38px;
+      margin-top: 0;
+      border-bottom: 3px solid #e0e0e0;
+      padding-bottom: 10px;
+    }
+
+    .contenido p {
+      font-size: 17px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .contenido ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .contenido li {
+      font-size: 18px;
+      padding: 8px 0;
+      line-height: 1.6;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .icon {
+      font-family: 'Space Mono', monospace;
+      font-weight: bold;
+      margin-right: 10px;
+      font-size: 20px;
+    }
+
+    /* ---- ZIG-ZAG ---- */
+    .zig .media { order: 1; }
+    .zig .contenido { order: 2; }
+
+    .zag .media { order: 2; }
+    .zag .contenido { order: 1; }
+
+    /* ---- RESPONSIVE ---- */
+    @media (max-width: 992px) {
+      .competencia-item {
         flex-direction: column;
-        justify-content: center; /* Centra verticalmente el texto */
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .contenido {
+        text-align: center;
+      }
+
+      .media {
+        width: 100%;
+      }
+    }
+ /* =========================================
+       FOOTER
+    ========================================= */
+        
+  .footer {
+background-color: #01030f;
+color: #f0f0f0;
+padding: 2rem 1rem;
+text-align: center;
+font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-        /* --- ALTERNANCIA ZIG-ZAG (ORDEN DE COLUMNAS) --- */
+.footer-copyright {
+font-size: 0.95rem;
+line-height: 1.6;
+margin-bottom: 1rem;
+opacity: 0.9;
+}
 
-        /* ZIG: Imagen Izquierda, Texto Derecha (Orden por defecto) */
-        .zig .media { order: 1; }
-        .zig .contenido { order: 2; }
+.footer-authors {
+font-size: 0.9rem;
+line-height: 1.5;
+margin-bottom: 1.5rem;
+opacity: 0.8;
+}
 
-        /* ZAG: Texto Izquierda, Imagen Derecha (Invertimos el orden) */
-        .zag .media { order: 2; }
-        .zag .contenido { order: 1; }
+.footer-authors strong {
+color: #ffffff;
+font-weight: 600;
+}
 
+.footer-social {
+margin-top: 1.5rem;
+}
 
-        /* --- RESPONSIVE PARA MÓVIL --- */
-        @media (max-width: 992px) {
-            .competencia-item {
-                flex-direction: column; /* Apila imagen y texto verticalmente */
-                text-align: center;
-                margin-bottom: 60px;
-            }
+.footer-social a {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+color: #f0f0f0;
+text-decoration: none;
+padding: 0.5rem 1rem;
+border: 1px solid #374151;
+border-radius: 6px;
+transition: all 0.3s ease;
+background-color: rgba(255, 255, 255, 0.05);
+}
 
-            /* Reseteamos el orden para que sea siempre Texto - Imagen en móvil */
-            .competencia-item .media, 
-            .competencia-item .contenido {
-                order: initial;
-                text-align: left;
-            }
+.footer-social a:hover {
+background-color: rgba(255, 255, 255, 0.1);
+border-color: #60a5fa;
+color: #60a5fa;
+transform: translateY(-2px);
+}
 
-            .competencia-item h2 {
-                text-align: center;
-            }
-        }
+.github-icon {
+width: 20px;
+height: 20px;
+}
+
+.footer-social span {
+font-size: 0.9rem;
+font-weight: 500;
+}

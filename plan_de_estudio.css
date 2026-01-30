@@ -1,5 +1,6 @@
 body {
         margin: 0;
+        padding: 0;
         font-family: "Arvo", sans-serif;
         color: #222;
         background: #d6e1fc; /* Fondo general */
@@ -452,41 +453,63 @@ body {
    /* =========================================
     FOOTER
     ========================================= */
-    footer {
-        position: relative;
-        background: url('https://ecuador.unir.net/wp-content/uploads/sites/8/2021/06/shutterstock_1788958916.jpg') center center / cover no-repeat fixed;
-        color: white;
-        text-align: center;
-        padding: 80px 20px;
-        border-top: 8px solid #d6e1fc;
-        overflow: hidden;
-    }
-    
-    footer::before {
-        content: '';
-        position: absolute;
-        top: 0; left: 0; right: 0; bottom: 0;
-        background-color: rgba(0,0,0,0.7);
-        z-index: 0;
-    }
-    
-    footer p {
-        position: relative;
-        z-index: 1;
-        margin: 10px 0;
-        font-size: 1rem;
-.left {
-    margin-right: 20px;
+.footer {
+background-color: #01030f;
+color: #f0f0f0;
+padding: 2rem 1rem;
+text-align: center;
+font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-.right {
-    margin-left: 20px;
+.footer-copyright {
+font-size: 0.95rem;
+line-height: 1.6;
+margin-bottom: 1rem;
+opacity: 0.9;
 }
 
-/* RESPONSIVE PARA BOTONES */
-@media (max-width: 768px) {
-    .carousel-btn {
-        padding: 15px 20px;
-        font-size: 20px;
-    }
+.footer-authors {
+font-size: 0.9rem;
+line-height: 1.5;
+margin-bottom: 1.5rem;
+opacity: 0.8;
+}
+
+.footer-authors strong {
+color: #ffffff;
+font-weight: 600;
+}
+
+.footer-social {
+margin-top: 1.5rem;
+}
+
+.footer-social a {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+color: #f0f0f0;
+text-decoration: none;
+padding: 0.5rem 1rem;
+border: 1px solid #374151;
+border-radius: 6px;
+transition: all 0.3s ease;
+background-color: rgba(255, 255, 255, 0.05);
+}
+
+.footer-social a:hover {
+background-color: rgba(255, 255, 255, 0.1);
+border-color: #60a5fa;
+color: #60a5fa;
+transform: translateY(-2px);
+}
+
+.github-icon {
+width: 20px;
+height: 20px;
+}
+
+.footer-social span {
+font-size: 0.9rem;
+font-weight: 500;
 }

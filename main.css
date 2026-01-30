@@ -574,56 +574,63 @@ header {
        FOOTER
     ========================================= */
         
-    footer {
-        background: #01030f;
-        color: #eee;
-        text-align: center;
-        padding: 40px 10px;
-        margin-top: 40px;
-    }
-    
-    @media (max-width: 700px) {
-       
-          nav a {
-        margin-left: 20px;
-        text-decoration: none;
-        color: #000000;
-        font-weight: 600;
-    }
-      #nav-menu {
-            position: absolute;
-            top: 70px;
-            right: 20px;
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            display: none;
-            flex-direction: column !important;
-            gap: 15px;
-            z-index: 1000;
-        }
-    }
-
-    @media (max-width: 700px) {
-        .titulo-grande {
-            font-size: 2.4rem;
-            line-height: 1.2;
-        }
-    }
-
-    body {
-        overflow-x: hidden;
-    }
-
-    /* ====== ANIMACIÓN DE APARICIÓN ====== */
-.reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s ease;
+    .footer {
+background-color: #01030f;
+color: #f0f0f0;
+padding: 2rem 1rem;
+text-align: center;
+font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-.reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
+.footer-copyright {
+font-size: 0.95rem;
+line-height: 1.6;
+margin-bottom: 1rem;
+opacity: 0.9;
+}
+
+.footer-authors {
+font-size: 0.9rem;
+line-height: 1.5;
+margin-bottom: 1.5rem;
+opacity: 0.8;
+}
+
+.footer-authors strong {
+color: #ffffff;
+font-weight: 600;
+}
+
+.footer-social {
+margin-top: 1.5rem;
+}
+
+.footer-social a {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+color: #f0f0f0;
+text-decoration: none;
+padding: 0.5rem 1rem;
+border: 1px solid #374151;
+border-radius: 6px;
+transition: all 0.3s ease;
+background-color: rgba(255, 255, 255, 0.05);
+}
+
+.footer-social a:hover {
+background-color: rgba(255, 255, 255, 0.1);
+border-color: #60a5fa;
+color: #60a5fa;
+transform: translateY(-2px);
+}
+
+.github-icon {
+width: 20px;
+height: 20px;
+}
+
+.footer-social span {
+font-size: 0.9rem;
+font-weight: 500;
 }
