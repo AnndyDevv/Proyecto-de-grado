@@ -11,7 +11,6 @@
                 nav.style.display = 'flex';
             }
         }
-
         btn.addEventListener('click', () => {
             nav.style.display = nav.style.display === 'none' ? 'block' : 'none';
         });

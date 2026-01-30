@@ -11,7 +11,6 @@
         });
     }, { threshold: 0.15 });
     reveals.forEach(el => observer.observe(el));
-
     // ====================================
     // MENÚ RESPONSIVE (botón ☰)
     // ====================================

@@ -20,7 +20,6 @@
 
         // Código del carrusel MEJORADO
 
-        
         document.addEventListener("DOMContentLoaded", function () {
             const carousel = document.getElementById("carousel");
             const nextBtn = document.getElementById("nextBtn");
