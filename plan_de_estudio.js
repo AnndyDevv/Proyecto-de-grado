@@ -73,12 +73,35 @@
     const nextBtn = document.getElementById('nextBtn');
 
     if (prevBtn && nextBtn && carousel) {
-        prevBtn.addEventListener('click', () => {
-            carousel.scrollBy({ left: -300, behavior: 'smooth' });
-        });
+        // Mejora: desplazamiento por ancho de card + soporte drag
+        carousel.style.scrollBehavior = 'smooth';
+        carousel.style.scrollSnapType = 'x mandatory';
 
-        nextBtn.addEventListener('click', () => {
-            carousel.scrollBy({ left: 300, behavior: 'smooth' });
-        });
+        const cards = carousel.querySelectorAll('.card');
+        cards.forEach(card => card.style.scrollSnapAlign = 'center');
+
+        function getStep() {
+            const first = carousel.querySelector('.card');
+            if (!first) return 345;
+            const cardWidth = first.offsetWidth;
+            const gap = parseInt(getComputedStyle(carousel).gap) || 25;
+            return cardWidth + gap;
+        }
+
+        nextBtn.addEventListener('click', () => { const step = getStep(); carousel.scrollBy({ left: step, behavior: 'smooth' }); });
+        prevBtn.addEventListener('click', () => { const step = getStep(); carousel.scrollBy({ left: -step, behavior: 'smooth' }); });
+
+        let isDown = false; let startX; let scrollStart;
+
+        carousel.addEventListener('pointerdown', (e) => { isDown = true; carousel.setPointerCapture(e.pointerId); startX = e.clientX; scrollStart = carousel.scrollLeft; carousel.classList.add('dragging'); });
+        carousel.addEventListener('pointermove', (e) => { if (!isDown) return; const dx = e.clientX - startX; carousel.scrollLeft = scrollStart - dx; });
+
+        function releasePointer(e) { if (!isDown) return; isDown = false; try { carousel.releasePointerCapture(e.pointerId); } catch(_) {} carousel.classList.remove('dragging'); const step = getStep(); const index = Math.round(carousel.scrollLeft / step); carousel.scrollTo({ left: index * step, behavior: 'smooth' }); }
+
+        carousel.addEventListener('pointerup', releasePointer);
+        carousel.addEventListener('pointercancel', releasePointer);
+        carousel.addEventListener('pointerleave', (e) => { if (isDown) releasePointer(e); });
+
+        carousel.addEventListener('wheel', (e) => { if (Math.abs(e.deltaX) === 0 && Math.abs(e.deltaY) > 0) { carousel.scrollLeft += e.deltaY; e.preventDefault(); } }, { passive: false });
     }
 });

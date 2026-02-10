@@ -449,6 +449,52 @@ body {
             padding: 0 10px;
         }
     }
+    
+    /* Carrusel estilo main (cards) */
+    .carousel-container {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .carousel {
+        display: flex;
+        overflow: hidden;
+        scroll-behavior: smooth;
+        gap: 25px;
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .carousel .card { max-width: 380px; min-width: 280px; }
+
+    .card { min-width: 280px; background: white; border: 0.5px solid rgba(0,0,0,0.12); overflow: hidden; flex-shrink: 0; box-shadow: 0 8px 22px rgba(0,0,0,0.10); transition: transform 0.25s ease, box-shadow 0.25s ease; display: flex; flex-direction: column; align-items: stretch; }
+    .card:hover { transform: translateY(-8px); box-shadow: 0 12px 32px rgba(0,0,0,0.18); }
+    .card-content { padding: 16px; flex: none; }
+    .card-content h3 { margin: 0 0 8px 0; font-size: 1.5rem; color: #0E183B; font-family: 'Bubblegum Sans', sans-serif; }
+    .card-content p { margin: 0 0 8px 0; color: #333; }
+    .card-content ul { margin: 0; padding-left: 16px; }
+    .card-content li { margin-bottom: 6px; }
+        .carousel .card { max-width: 420px; min-width: 260px; }
+        .card { min-width: 260px; background: white; border: 0.5px solid rgba(0,0,0,0.12); overflow: hidden; flex-shrink: 0; box-shadow: 0 8px 22px rgba(0,0,0,0.10); transition: transform 0.25s ease, box-shadow 0.25s ease; display: flex; flex-direction: column; align-items: stretch; }
+        .card:hover { transform: translateY(-6px); box-shadow: 0 10px 28px rgba(0,0,0,0.16); }
+        .card-content { padding: 14px; flex: none; }
+        .card-content h3 { margin: 0 0 8px 0; font-size: 1.5rem; color: #0E183B; font-family: 'Bubblegum Sans', sans-serif; }
+        .card-content p { margin: 0 0 8px 0; color: #333; }
+        .card-content ul { margin: 0; padding-left: 16px; }
+        .card-content li { margin-bottom: 6px; }
+
+    .carousel-btn { background: #060c30; color: white; border: none; width: 48px; height: 48px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 6px 18px rgba(0,0,0,0.15); transition: transform 0.15s ease, background 0.15s ease; }
+    .carousel-btn:hover { transform: translateY(-4px); background: #0e1a44; }
+    .carousel-btn.left { margin-right: 12px; }
+    .carousel-btn.right { margin-left: 12px; }
+
+    @media (max-width: 1024px) { .carousel .card { min-width: 300px; } }
+    @media (max-width: 768px) { .card { height: 520px; } .carousel { gap: 18px; } }
+    @media (max-width: 480px) { .card { min-width: 260px; height: 520px; } }
    
    /* =========================================
     FOOTER
