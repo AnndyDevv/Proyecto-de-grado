@@ -21,7 +21,6 @@
             navMenu.classList.toggle('active');
         });
     }
-
     // ====================================
     // ANIMACIÓN DE CARDS (campos laborales)
     // ====================================
