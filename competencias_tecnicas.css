@@ -1,92 +1,11 @@
-
+﻿
     body {
       font-family: "Ubuntu", sans-serif;
       margin: 0;
       padding: 0;
       background-color: #d6e1fc;
       color: rgb(0, 0, 0);
-    }
-
- header {
-        background: #060c30;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        padding: 20px 40px;
-        position: relative;
-        top: 0;
-        z-index: 10;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    header h1 {
-        color: white;
-        margin: 0;
-        font-size: 1.4rem;
-    }
-  .brand h1 a { color: inherit; text-decoration: none; }
-    .brand {
-  display: flex;
-  align-items: center; /* Centra el logo y el H1 verticalmente entre sí */
-}
-
-    /* Forzar el mismo estilo del título que en index */
-    .brand h1 {
-      font-family: "Ubuntu", sans-serif;
-      font-size: 1.8rem;
-      font-weight: 700;
-    }
-
-.logo {
-  /* ¡Ahora sí, ajusta el tamaño! */
-  height: 60px; /* Tamaño más grande */
-  width: auto; 
-  margin-right: 15px;
-  filter: invert(1); /* Espacio entre el logo y el título */
-}
-
-    #nav-menu {
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-    }
-
-    #nav-menu a {
-        text-decoration: none;
-        color: #fff;
-        font-weight: 600;
-        padding: 12px 20px;
-        border-radius: 2px;
-        transition: all 0.3s ease;
-        position: relative;
-        display: inline-block;
-    }
-
-    #nav-menu a:hover {
-        background-color: white;
-        color: #060c30;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
-    }
-
-    @media (max-width: 700px) {
-        #menu-btn { display: block; }
-        #nav-menu {
-            position: absolute;
-            top: 70px;
-            right: 20px;
-            background: white;
-            padding: 20px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            display: none;
-            flex-direction: column !important;
-            gap: 15px;
-            z-index: 1000;
-        }
-        #nav-menu a { color: #000000; padding: 10px 15px; }
-        #nav-menu a:hover { background-color: #060c30; color: white; transform: translateY(-2px); }
-        #nav-menu.active { display: flex; }
-    }
+    }\n
 
     .title{
         text-align: center;
@@ -96,13 +15,13 @@
     color: #0E183B;
     font-style: normal;
     font-size: 70px;
-    /* evitar desbordes en pantallas pequeñas */
+    /* evitar desbordes en pantallas pequeÃ±as */
     overflow-wrap: anywhere;
     word-break: break-word;
     white-space: normal;
     }
 
-/* Reglas responsivas para que el título no desborde en dispositivos móviles */
+/* Reglas responsivas para que el tÃ­tulo no desborde en dispositivos mÃ³viles */
 @media (max-width: 900px) {
   .title {
     font-size: 3.2rem; /* ~51px */
@@ -231,67 +150,4 @@
         width: 100%;
       }
     }
- /* =========================================
-       FOOTER
-    ========================================= */
-        
-  .footer {
-background-color: #01030f;
-color: #f0f0f0;
-padding: 2rem 1rem;
-text-align: center;
-font-family: 'Segoe UI', Arial, sans-serif;
-}
-
-.footer-copyright {
-font-size: 0.95rem;
-line-height: 1.6;
-margin-bottom: 1rem;
-opacity: 0.9;
-}
-
-.footer-authors {
-font-size: 0.9rem;
-line-height: 1.5;
-margin-bottom: 1.5rem;
-opacity: 0.8;
-}
-
-.footer-authors strong {
-color: #ffffff;
-font-weight: 600;
-}
-
-.footer-social {
-margin-top: 1.5rem;
-}
-
-.footer-social a {
-display: inline-flex;
-align-items: center;
-gap: 8px;
-color: #f0f0f0;
-text-decoration: none;
-padding: 0.5rem 1rem;
-border: 1px solid #374151;
-border-radius: 6px;
-transition: all 0.3s ease;
-background-color: rgba(255, 255, 255, 0.05);
-}
-
-.footer-social a:hover {
-background-color: rgba(255, 255, 255, 0.1);
-border-color: #60a5fa;
-color: #60a5fa;
-transform: translateY(-2px);
-}
-
-.github-icon {
-width: 20px;
-height: 20px;
-}
-
-.footer-social span {
-font-size: 0.9rem;
-font-weight: 500;
-}
+ 

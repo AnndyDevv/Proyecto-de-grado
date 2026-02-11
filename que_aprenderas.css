@@ -1,4 +1,4 @@
-
+﻿
     body {
         margin: 0;
         font-family: "Ubuntu", sans-serif;
@@ -7,11 +7,11 @@
     }
 
     /* =========================================
-    ESTILOS DE TÍTULOS REUTILIZABLES
+    ESTILOS DE TÃTULOS REUTILIZABLES
     ========================================= */
     .main-heading {
         text-align: center;
-        padding: 60px 20px 0; /* Padding superior, y el inferior lo maneja la sección */
+        padding: 60px 20px 0; /* Padding superior, y el inferior lo maneja la secciÃ³n */
     }
 
     .main-heading h2 {
@@ -29,89 +29,7 @@
     }
 
 
-    /* =========================================
-    HEADER CON EFECTO HOVER COMPLETO
-    ========================================= */
-    header {
-        background: #060c30;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        padding: 20px 40px;
-        position: relative;
-        top: 0;
-        z-index: 10;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    header h1 {
-        color: white;
-        margin: 0;
-        font-size: 1.4rem;
-    }
-    .brand {
-  display: flex;
-  align-items: center; /* Centra el logo y el H1 verticalmente entre sí */
-}
-
-    /* Forzar el mismo estilo del título que en index */
-    .brand h1 {
-        font-family: "Ubuntu", sans-serif;
-        font-size: 1.8rem;
-        font-weight: 700;
-    }
-
-.logo {
-  /* ¡Ahora sí, ajusta el tamaño! */
-  height: 60px; /* Tamaño más grande */
-  width: auto; 
-     filter: invert(1); 
-  margin-right: 15px;/* Espacio entre el logo y el título */
-}
-.brand h1 a { color: inherit; text-decoration: none; }
-
-    #nav-menu {
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-    }
-
-    #nav-menu a {
-        text-decoration: none;
-        color: #fff;
-        font-weight: 600;
-        padding: 12px 20px;
-        border-radius: 2px;
-        transition: all 0.3s ease;
-        position: relative;
-        display: inline-block;
-    }
-
-    #nav-menu a:hover {
-        background-color: white;
-        color: #060c30;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
-    }
-
-    @media (max-width: 700px) {
-        #menu-btn { display: block; }
-        #nav-menu {
-            position: absolute;
-            top: 70px;
-            right: 20px;
-            background: white;
-            padding: 20px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            display: none;
-            flex-direction: column !important;
-            gap: 15px;
-            z-index: 1000;
-        }
-        #nav-menu a { color: #000000; padding: 10px 15px; }
-        #nav-menu a:hover { background-color: #060c30; color: white; transform: translateY(-2px); }
-        #nav-menu.active { display: flex; }
-    }
+    
 
     /* =========================================
     ESTILO HERO CON EFECTO FIXED BACKGROUND
@@ -120,7 +38,7 @@
         height: 100vh;
         min-height: 500px; 
         
-        /* Usando una imagen placeholder para que funcione el código, reemplaza esto con tu imagen */
+        /* Usando una imagen placeholder para que funcione el cÃ³digo, reemplaza esto con tu imagen */
         background-image: url('images/image.png'); 
 
         background-size: cover;
@@ -171,7 +89,7 @@
     }
 
     /* =========================================
-    ESTILOS DE CARDS (Módulos)
+    ESTILOS DE CARDS (MÃ³dulos)
     ========================================= */
 
     @keyframes side-tilt-slow {
@@ -195,7 +113,7 @@
     .curriculum-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 20px; /* más juntas */
+  gap: 20px; /* mÃ¡s juntas */
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
@@ -207,7 +125,7 @@
   box-shadow: 6px 6px 0px #060c30;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   overflow: hidden;
-  min-height: 340px; /* más grandes */
+  min-height: 340px; /* mÃ¡s grandes */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -219,7 +137,7 @@
   box-shadow: 10px 10px 0px #060c30;
 }
 
-/* Cabecera visual (más sobria, sin emojis) */
+/* Cabecera visual (mÃ¡s sobria, sin emojis) */
 .cc-header {
   border-bottom: 3px solid #060c30;
   padding-bottom: 15px;
@@ -233,7 +151,7 @@
   color: #060c30;
 }
 
-/* Texto más amplio */
+/* Texto mÃ¡s amplio */
 .cc-body {
   color: #222;
   font-family: "Arvo", sans-serif;
@@ -246,7 +164,7 @@
   margin-bottom: 20px;
 }
 
-/* Lista con íconos personalizados */
+/* Lista con Ã­conos personalizados */
 .cc-body ul {
   list-style: none;
   padding: 0;
@@ -282,7 +200,7 @@
     
 
     /* =========================================
-    ESTILOS PARA LOS AÑOS (TIMELINE EN BLOQUES)
+    ESTILOS PARA LOS AÃ‘OS (TIMELINE EN BLOQUES)
     ========================================= */
     .year-section {
         padding: 80px 20px;
@@ -290,7 +208,7 @@
     }
     
     .year-section .main-heading {
-        padding-top: 0; /* Ajuste para que el padding solo sea el de la sección */
+        padding-top: 0; /* Ajuste para que el padding solo sea el de la secciÃ³n */
         padding-bottom: 40px; 
     }
 
@@ -344,7 +262,7 @@
     }
 
     /* =========================================
-    ESTILOS PARA SECCIÓN MIXTA (FCT)
+    ESTILOS PARA SECCIÃ“N MIXTA (FCT)
     ========================================= */
     .seccion-mixta {
         background: #d6e1fc; 
@@ -362,7 +280,7 @@
     .mixta-texto { flex: 1; }
     .mixta-img { flex: 1; }
 
-    /* Estilo del título dentro de la columna FCT (más pequeño que el principal) */
+    /* Estilo del tÃ­tulo dentro de la columna FCT (mÃ¡s pequeÃ±o que el principal) */
     .mixta-texto h2 {
         font-family: 'Bubblegum Sans', sans-serif; 
         font-size: 2.5rem; 
@@ -408,67 +326,4 @@
     }
     
 
-     /* =========================================
-       FOOTER
-    ========================================= */
-        
-.footer {
-background-color: #01030f;
-color: #f0f0f0;
-padding: 2rem 1rem;
-text-align: center;
-font-family: 'Segoe UI', Arial, sans-serif;
-}
-
-.footer-copyright {
-font-size: 0.95rem;
-line-height: 1.6;
-margin-bottom: 1rem;
-opacity: 0.9;
-}
-
-.footer-authors {
-font-size: 0.9rem;
-line-height: 1.5;
-margin-bottom: 1.5rem;
-opacity: 0.8;
-}
-
-.footer-authors strong {
-color: #ffffff;
-font-weight: 600;
-}
-
-.footer-social {
-margin-top: 1.5rem;
-}
-
-.footer-social a {
-display: inline-flex;
-align-items: center;
-gap: 8px;
-color: #f0f0f0;
-text-decoration: none;
-padding: 0.5rem 1rem;
-border: 1px solid #374151;
-border-radius: 6px;
-transition: all 0.3s ease;
-background-color: rgba(255, 255, 255, 0.05);
-}
-
-.footer-social a:hover {
-background-color: rgba(255, 255, 255, 0.1);
-border-color: #60a5fa;
-color: #60a5fa;
-transform: translateY(-2px);
-}
-
-.github-icon {
-width: 20px;
-height: 20px;
-}
-
-.footer-social span {
-font-size: 0.9rem;
-font-weight: 500;
-}
+     

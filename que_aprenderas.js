@@ -1,25 +1,4 @@
-//boton del menu
- const btn = document.getElementById('menu-btn');
-        const nav = document.getElementById('nav-menu');
-
-        function checkWidth() {
-            if (window.innerWidth < 700) {
-                btn.style.display = 'block';
-                nav.style.display = 'none';
-            } else {
-                btn.style.display = 'none';
-                nav.style.display = 'flex';
-            }
-        }
-        btn.addEventListener('click', () => {
-            nav.style.display = nav.style.display === 'none' ? 'block' : 'none';
-        });
-
-        window.addEventListener('resize', checkWidth);
-        window.addEventListener('load', checkWidth);
-
-
-//
+﻿//
 document.addEventListener("DOMContentLoaded", () => {
             const reveals = document.querySelectorAll(".reveal");
             const observer = new IntersectionObserver((entries) => {
@@ -31,16 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }, { threshold: 0.15 });
             reveals.forEach(el => observer.observe(el));
         });
-        
-        // Script para el menú responsive (botón ☰)
-        const menuBtn = document.getElementById('menu-btn');
-        const navMenu = document.getElementById('nav-menu');
-        if (menuBtn && navMenu) {
-            menuBtn.addEventListener('click', () => {
-                navMenu.classList.toggle('active');
-            });
-        }
-
         //cards
 
         document.addEventListener("DOMContentLoaded", () => {
@@ -51,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 entries.forEach(entry => {
                   if (entry.isIntersecting) {
                     entry.target.classList.add("visible");
-                    observer.unobserve(entry.target); // evita reanimación
+                    observer.unobserve(entry.target); // evita reanimaciÃ³n
                   }
                 });
               },
@@ -77,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
               if (entry.isIntersecting) {
                 diagonales.forEach((grupo, i) => {
                   if (grupo.includes(entry.target)) {
-                    // ⏱ aumentamos el delay para que se note más
+                    // â± aumentamos el delay para que se note mÃ¡s
                     setTimeout(() => {
                       grupo.forEach(card => card.classList.add('visible'));
                     }, i * 600); // antes era 300, ahora 600ms entre grupos
@@ -89,3 +58,4 @@ document.addEventListener("DOMContentLoaded", () => {
           }, { threshold: 0.3 });
         
           cards.forEach(card => observer.observe(card));
+

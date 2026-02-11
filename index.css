@@ -1,4 +1,4 @@
-
+﻿
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap");
 
     body {
@@ -23,159 +23,7 @@
 .skip-link:focus {
     top: 12px;
 }
-   /* =========================================
-   HEADER CON EFECTO HOVER COMPLETO
-========================================= */
-/* 1. ESTILOS DEL HEADER (Ajuste de espaciado) */
-header {
-        background: #060c30;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        padding: 20px 40px;
-        position: relative;
-        top: 0;
-        z-index: 10;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 14px;
-    }
-
-    header h1 {
-        color: white;
-        margin: 0;
-        font-size: 1.4rem;
-    }
-.brand {
-  display: flex;
-  align-items: center; /* Centra el logo y el H1 verticalmente entre sí */
-}
-
-.logo {
-  /* ¡Ahora sí, ajusta el tamaño! */
- height: 60px; /* Tamaño más grande */
-  width: auto;
-  margin-right: 15px;
-   filter: invert(1); 
-}
-.brand h1 {
-  /* Asegúrate de que no haya margen en el H1 que pueda estorbar */
-  margin: 0; 
-  font-size: 1.8rem;
-}
-.brand-title {
-    display: inline-flex;
-    align-items: baseline;
-    gap: 10px;
-    line-height: 1;
-}
-
-.brand-title-ue {
-    font-family: "Sora", "Segoe UI", Tahoma, sans-serif;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    border: 1px solid rgba(255, 255, 255, 0.56);
-    border-radius: 999px;
-    padding: 0.28rem 0.5rem;
-    opacity: 0.96;
-}
-
-.brand-title-name {
-    font-family: "Sora", "Segoe UI", Tahoma, sans-serif;
-    font-size: clamp(1.35rem, 2.1vw, 1.95rem);
-    font-weight: 800;
-    letter-spacing: -0.02em;
-}
-
-#nav-menu {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-
-/* ESTILOS PARA LOS ENLACES - EFECTO HOVER COMPLETO */
-#nav-menu a {
-    font-family: "Sora", "Segoe UI", Tahoma, sans-serif;
-    text-decoration: none;
-    color: #fff;
-    font-weight: 600;
-    padding: 12px 20px;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-}
-
-/* EFECTO HOVER - TODA EL ÁREA SE PONE BLANCA */
-#nav-menu a:hover {
-    background-color: white;
-    color: #060c30;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
-}
-
-/* RESPONSIVE */
-@media (max-width: 700px) {
-    #menu-btn {
-        background: white;
-        border: none;
-        font-size: 1.8rem;
-        cursor: pointer;
-        display: block;
-    }
-
-    #nav-menu {
-        position: absolute;
-        top: 70px;
-        right: 20px;
-        background: white;
-        padding: 20px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        display: none;
-        flex-direction: column !important;
-        gap: 15px;
-        z-index: 1000;
-    }
-
-    #nav-menu a {
-        color: #000000;
-        padding: 10px 15px;
-        transition: all 0.3s ease;
-    }
-
-    #nav-menu a:hover {
-        background-color: #060c30;
-        color: white;
-        transform: translateY(-2px);
-    }
-
-    /* Mostrar menú cuando está activo */
-    #nav-menu.active {
-        display: flex;
-    }
-
-    .brand {
-        gap: 10px;
-    }
-
-    .brand-title {
-        gap: 8px;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-
-    .brand-title-ue {
-        font-size: 0.63rem;
-        letter-spacing: 0.16em;
-        padding: 0.22rem 0.42rem;
-    }
-
-    .brand-title-name {
-        font-size: clamp(1.08rem, 5.6vw, 1.42rem);
-    }
-}
-
+   
 .hero {
         padding: 120px 40px;
         text-align: center;
@@ -251,7 +99,7 @@ header {
     }
 
     /* =========================================
- SECCIÓN ¿QUÉ ES ESTE BACHILLERATO? - IMAGEN PEGADA AL BORDE IZQUIERDO
+ SECCIÃ“N Â¿QUÃ‰ ES ESTE BACHILLERATO? - IMAGEN PEGADA AL BORDE IZQUIERDO
     ========================================= */
     .sobre-bachi {
         padding: 100px 0;
@@ -376,7 +224,7 @@ header {
         }
     }
     
-/* ======== SECCIÓN MIXTA TEXTO + IMAGEN ======== */
+/* ======== SECCIÃ“N MIXTA TEXTO + IMAGEN ======== */
 
 .seccion-mixta {
     padding: 70px 20px;
@@ -438,7 +286,7 @@ header {
 
 
     /* =========================================
-        SECCIÓN CARRUSEL TIPO MENÚ DE RESTAURANTE
+        SECCIÃ“N CARRUSEL TIPO MENÃš DE RESTAURANTE
     ========================================= */
     .carousel-section {
         font-family: sans-serif;
@@ -495,11 +343,11 @@ header {
         padding: 20px 0;
     }
  .carousel .card {
-    max-width: 350px;   /* Tamaño ideal */
-    min-width: 320px;   /* Tamaño mínimo */
+    max-width: 350px;   /* TamaÃ±o ideal */
+    min-width: 320px;   /* TamaÃ±o mÃ­nimo */
 }
 
-    /* CARDS ALTAS COMO MENÚ DE RESTAURANTE - IMAGEN ABAJO */
+    /* CARDS ALTAS COMO MENÃš DE RESTAURANTE - IMAGEN ABAJO */
   .card {
      min-width: 320px;
     height: 600px;
@@ -563,7 +411,7 @@ header {
         transform: scale(1.05);
     }
 
-    /* BOTONES MÁS VISIBLES */
+    /* BOTONES MÃS VISIBLES */
     .carousel-btn {
         background: white;
         color: #0E183B;
@@ -594,7 +442,7 @@ header {
 
     /* BADGE DECORATIVO */
 
-    /* Responsive para el carrusel tipo menú */
+    /* Responsive para el carrusel tipo menÃº */
     @media (max-width: 1024px) {
         .card {
             min-width: 280px;
@@ -659,7 +507,7 @@ header {
     }
 
     /* =========================================
-        SECCIÓN DE BOTONES / ENLACES
+        SECCIÃ“N DE BOTONES / ENLACES
     ========================================= */
     .section-title {
          font-size: 4.2rem;
@@ -713,103 +561,11 @@ header {
         }
     }
 
-    /* =========================================
-       FOOTER
-    ========================================= */
-        
-    .footer {
-background-color: #01030f;
-color: #f0f0f0;
-padding: 2rem 1rem;
-text-align: center;
-font-family: 'Segoe UI', Arial, sans-serif;
-}
-
-.footer-copyright {
-font-size: 0.95rem;
-line-height: 1.6;
-margin-bottom: 1rem;
-opacity: 0.9;
-}
-
-.footer-authors {
-font-size: 0.9rem;
-line-height: 1.5;
-margin-bottom: 1.5rem;
-opacity: 0.8;
-}
-
-.footer-authors strong {
-color: #ffffff;
-font-weight: 600;
-}
-
-.footer-social {
-margin-top: 1.5rem;
-}
-
-.footer-social a {
-display: inline-flex;
-align-items: center;
-gap: 8px;
-color: #f0f0f0;
-text-decoration: none;
-padding: 0.5rem 1rem;
-border: 1px solid #374151;
-border-radius: 6px;
-transition: all 0.3s ease;
-background-color: rgba(255, 255, 255, 0.05);
-}
-
-.footer-social a:hover {
-background-color: rgba(255, 255, 255, 0.1);
-border-color: #60a5fa;
-color: #60a5fa;
-transform: translateY(-2px);
-}
-
-.github-icon {
-width: 20px;
-height: 20px;
-}
-
-.footer-social span {
-font-size: 0.9rem;
-font-weight: 500;
-}
-
-#to-top {
-    position: fixed;
-    right: 24px;
-    bottom: 24px;
-    width: 48px;
-    height: 48px;
-    border: none;
-    border-radius: 50%;
-    font-size: 1.3rem;
-    color: #fff;
-    background: #0E183B;
-    cursor: pointer;
-    box-shadow: 0 10px 24px rgba(0,0,0,0.25);
-    opacity: 0;
-    transform: translateY(10px);
-    pointer-events: none;
-    transition: all 0.25s ease;
-}
-
-#to-top.visible {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-}
-
-#to-top:hover {
-    background: #192761;
-}
-
+    
 @media (max-width: 900px) {
     .metricas {
         grid-template-columns: 1fr;
         margin-top: 25px;
     }
 }
+
