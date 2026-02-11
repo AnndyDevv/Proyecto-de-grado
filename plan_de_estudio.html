@@ -8,18 +8,23 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bubblegum+Sans&family=Fuzzy+Bubbles:wght@400;700&family=Gorditas:wght@400;700&family=Lilita+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="plan_de_estudio.css">
+    <link rel="stylesheet" href="ui-upgrades.css">
     <script src="plan_de_estudio.js" defer></script>
+    <script src="index.js" defer></script>
+    <script src="ui-upgrades.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
 
     <header>
         <div class="brand">
             <img src="images/logo 2.svg" alt="Logo U.E 17 de Septiembre" class="logo">
-            <h1>U.E 17 de Septiembre</h1>
+            <h1><a href="index.html">U.E 17 de Septiembre</a></h1>
         </div>
-        <button id="menu-btn" style="background:white;border:none;font-size:1.8rem;cursor:pointer;display:none;">☰</button>
+    <button id="menu-btn" style="background:transparent;border:none;font-size:1.8rem;cursor:pointer;display:none; filter: invert(1);">☰</button>
         <nav id="nav-menu" style="display:flex; flex-direction: row; gap: 20px;">
             <a href="main.html">Inicio</a>
             <a href="que_aprenderas.html">¿Qué aprenderás?</a>
@@ -28,14 +33,79 @@
         </nav>
     </header>
 
+    <nav class="ux-section-nav">
+        <div class="ux-container ux-section-nav-inner">
+            <a href="#tabla-plan">Tabla</a>
+            <a href="#primer-anio">Primero</a>
+            <a href="#segundo-anio">Segundo</a>
+            <a href="#tercer-anio">Tercero</a>
+            <a href="#faq">FAQ</a>
+        </div>
+    </nav>
+
+    <main id="contenido-principal">
+
     <section class="hero-parallax">
         <div class="hero-content">
+            <p class="ux-breadcrumb"><a href="main.html">Inicio</a> / Plan de estudio</p>
             <h1>Plan de Estudio</h1>
             <p>Descubre cómo se organiza tu formación a lo largo de la carrera y qué contenidos te prepararán progresivamente para el ámbito tecnológico y laboral.</p>
+            <div class="ux-hero-actions">
+                <a class="ux-btn ux-btn-solid" href="#tabla-plan">Ver tabla por anio</a>
+                <a class="ux-btn" href="#primer-anio">Comenzar recorrido</a>
+            </div>
         </div>
     </section>
 
-    <section class="primerobach-section reveal"></section>
+    <section class="ux-fast-summary ux-container reveal" id="resumen">
+        <h2 class="ux-section-title">Vista general</h2>
+        <div class="ux-summary-grid">
+            <article class="ux-summary-card"><strong>3</strong><p>Anios de formacion progresiva en tecnologia aplicada.</p></article>
+            <article class="ux-summary-card"><strong>10+</strong><p>Materias tecnicas integradas entre software, redes y soporte.</p></article>
+            <article class="ux-summary-card"><strong>1</strong><p>Etapa final con enfoque de profesionalizacion y practica real.</p></article>
+        </div>
+    </section>
+
+    <section class="ux-container reveal" id="tabla-plan" style="margin: 56px auto;">
+        <h2 class="ux-section-title">Tabla resumida por anio</h2>
+        <div class="ux-panel ux-table-wrap">
+            <table class="ux-table">
+                <thead>
+                    <tr>
+                        <th>Anio</th>
+                        <th>Enfoque principal</th>
+                        <th>Materias tecnicas clave</th>
+                        <th>Resultado esperado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1ro</td>
+                        <td>Fundamentos</td>
+                        <td>Informatica basica, logica, ofimatica, sistemas operativos</td>
+                        <td>Base tecnica para avanzar a desarrollo y redes</td>
+                    </tr>
+                    <tr>
+                        <td>2do</td>
+                        <td>Construccion</td>
+                        <td>Programacion estructurada, redes I, hardware, bases de datos, web</td>
+                        <td>Capacidad para resolver problemas tecnicos reales</td>
+                    </tr>
+                    <tr>
+                        <td>3ro</td>
+                        <td>Integracion</td>
+                        <td>POO, redes II, sistemas de red, emprendimiento, proyecto</td>
+                        <td>Perfil listo para empleo inicial o continuidad universitaria</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p style="text-align:center; margin-top: 16px;">
+            <a class="ux-btn ux-btn-solid" style="border-color:#0e183b;background:#0e183b;color:#fff;" href="https://educacion.gob.ec/wp-content/uploads/downloads/2020/04/EGC_Informatica.pdf" target="_blank" rel="noopener noreferrer">Descargar malla curricular oficial</a>
+        </p>
+    </section>
+
+    <section class="primerobach-section reveal" id="primer-anio"></section>
     <div class="main-heading">
         <h2><span class="numero-circulo">1º</span> Primero de Bachillerato</h2>
     </div>
@@ -52,7 +122,7 @@
     <img src="images/primerodebachillerato.jpeg">
     </section>
 
-    <section class="segundobach-section reveal"></section>
+    <section class="segundobach-section reveal" id="segundo-anio"></section>
     <div class="main-heading">
         <h2><span class="numero-circulo">2º</span> Segundo de Bachillerato</h2>
     </div>
@@ -69,7 +139,7 @@
     <img src="images/segundobach.jpeg">
     </section>
 
-    <section class="tercrobach-section reveal"></section>
+    <section class="tercrobach-section reveal" id="tercer-anio"></section>
     <div class="main-heading">
         <h2><span class="numero-circulo">3º</span> Tercero de Bachillerato</h2>
     </div>
@@ -169,6 +239,25 @@
             <button class="carousel-btn right" id="nextBtn">❯</button>
         </div>
     </section>
+
+    <section class="ux-faq ux-container reveal" id="faq">
+        <h2 class="ux-section-title">Preguntas frecuentes</h2>
+        <article class="ux-faq-item">
+            <button class="ux-faq-btn" type="button" aria-expanded="false">Las materias tecnicas son iguales en los tres anios?</button>
+            <div class="ux-faq-panel" hidden>No, cada anio incrementa complejidad y profundidad tecnica.</div>
+        </article>
+        <article class="ux-faq-item">
+            <button class="ux-faq-btn" type="button" aria-expanded="false">Se realizan proyectos durante la formacion?</button>
+            <div class="ux-faq-panel" hidden>Si, se realizan practicas y proyectos integradores para consolidar competencias.</div>
+        </article>
+        <article class="ux-faq-item">
+            <button class="ux-faq-btn" type="button" aria-expanded="false">Donde puedo ver la malla oficial?</button>
+            <div class="ux-faq-panel" hidden>Puedes abrir el enlace de malla curricular oficial incluido en esta misma pagina.</div>
+        </article>
+    </section>
+
+    </main>
+
     <footer>
         <div class="footer">
 <p class="footer-copyright">

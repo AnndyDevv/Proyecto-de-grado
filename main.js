@@ -1,3 +1,20 @@
+ const brandTitle = document.querySelector('.brand h1');
+        if (brandTitle) {
+            const rawTitle = brandTitle.textContent.replace(/\s+/g, ' ').trim();
+            const nameOnly = rawTitle.replace(/^U\.?\s*E\.?\s*/i, '').trim();
+            if (nameOnly && !brandTitle.querySelector('.brand-title-name')) {
+                brandTitle.textContent = '';
+                brandTitle.classList.add('brand-title');
+                const ueSpan = document.createElement('span');
+                ueSpan.className = 'brand-title-ue';
+                ueSpan.textContent = 'U.E';
+                const nameSpan = document.createElement('span');
+                nameSpan.className = 'brand-title-name';
+                nameSpan.textContent = nameOnly;
+                brandTitle.append(ueSpan, nameSpan);
+            }
+        }
+
  const btn = document.getElementById('menu-btn');
         const nav = document.getElementById('nav-menu');
 
@@ -24,6 +41,7 @@
             const carousel = document.getElementById("carousel");
             const nextBtn = document.getElementById("nextBtn");
             const prevBtn = document.getElementById("prevBtn");
+            const dotsContainer = document.getElementById("carouselDots");
 
             if (!carousel) return;
 
@@ -34,6 +52,35 @@
             cards.forEach(card => {
                 card.style.scrollSnapAlign = "center";
             });
+
+            let dots = [];
+
+            function updateActiveDot() {
+                if (!dots.length) return;
+                const step = getStep();
+                const index = Math.round(carousel.scrollLeft / step);
+                dots.forEach((dot, dotIndex) => {
+                    dot.classList.toggle("active", dotIndex === index);
+                    dot.setAttribute("aria-current", dotIndex === index ? "true" : "false");
+                });
+            }
+
+            if (dotsContainer && cards.length) {
+                dotsContainer.innerHTML = "";
+                dots = Array.from(cards).map((_, index) => {
+                    const dot = document.createElement("button");
+                    dot.className = "carousel-dot";
+                    dot.type = "button";
+                    dot.setAttribute("aria-label", `Ir a la tarjeta ${index + 1}`);
+                    dot.addEventListener("click", () => {
+                        const step = getStep();
+                        carousel.scrollTo({ left: step * index, behavior: "smooth" });
+                    });
+                    dotsContainer.appendChild(dot);
+                    return dot;
+                });
+                updateActiveDot();
+            }
 
             function getStep() {
                 const first = carousel.querySelector(".card");
@@ -47,12 +94,14 @@
                 nextBtn.addEventListener("click", () => {
                     const step = getStep();
                     carousel.scrollBy({ left: step, behavior: "smooth" });
+                    setTimeout(updateActiveDot, 220);
                 });
             }
             if (prevBtn) {
                 prevBtn.addEventListener("click", () => {
                     const step = getStep();
                     carousel.scrollBy({ left: -step, behavior: "smooth" });
+                    setTimeout(updateActiveDot, 220);
                 });
             }
 
@@ -82,6 +131,7 @@
                 const step = getStep();
                 const index = Math.round(carousel.scrollLeft / step);
                 carousel.scrollTo({ left: index * step, behavior: "smooth" });
+                updateActiveDot();
             }
 
             carousel.addEventListener("pointerup", releasePointer);
@@ -94,8 +144,13 @@
                 if (Math.abs(e.deltaX) === 0 && Math.abs(e.deltaY) > 0) {
                     carousel.scrollLeft += e.deltaY;
                     e.preventDefault();
+                    updateActiveDot();
                 }
             }, { passive: false });
+
+            carousel.addEventListener("scroll", () => {
+                window.requestAnimationFrame(updateActiveDot);
+            });
         });
 
         //reveal 
@@ -117,4 +172,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }, options);
 
     reveals.forEach(el => observer.observe(el));
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const toTopBtn = document.getElementById("to-top");
+    if (!toTopBtn) return;
+
+    function toggleButton() {
+        toTopBtn.classList.toggle("visible", window.scrollY > 320);
+    }
+
+    window.addEventListener("scroll", toggleButton);
+    toggleButton();
+
+    toTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
 });

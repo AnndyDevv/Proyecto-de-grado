@@ -11,13 +11,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bubblegum+Sans&family=Fuzzy+Bubbles:wght@400;700&family=Gorditas:wght@400;700&family=Lilita+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="ui-upgrades.css">
+    <script src="ui-upgrades.js" defer></script>
     <script src="main.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
     <header>
 <div class="brand">
     <img src="images/logo 2.svg" alt="Logo U.E 17 de Septiembre" class="logo">
-    <h1>U.E 17 de Septiembre</h1>
+    <h1><a href="main.html">U.E 17 de Septiembre</a></h1>
 </div>
 <button id="menu-btn" style="background:transparent;border:none;font-size:1.8rem;cursor:pointer;display:none; filter: invert(1); ">☰</button>
 <nav id="nav-menu">
@@ -29,9 +32,30 @@
 </header>
 
 
+    <main id="contenido-principal">
+
     <section class="hero" id="inicio">
         <h2 class="titulo-grande" id="texto-sombra">BACHILLERATO TÉCNICO EN INFORMÁTICA</h2>
         <p class="texto-sombra">Una formación moderna y versátil que combina tecnología, lógica, creatividad y práctica. Aquí se forjan los futuros desarrolladores, técnicos y creadores digitales.</p>
+        <div class="hero-actions">
+            <a href="plan_de_estudio.html" class="hero-btn hero-btn-primary">Ver plan de estudio</a>
+            <a href="#porque-estudiar" class="hero-btn">Descubrir beneficios</a>
+        </div>
+    </section>
+
+    <section class="metricas reveal" aria-label="Indicadores de la formación">
+        <article class="metrica-card">
+            <span class="metrica-valor">3</span>
+            <p>Años de formación técnica progresiva.</p>
+        </article>
+        <article class="metrica-card">
+            <span class="metrica-valor">6+</span>
+            <p>Áreas clave: programación, redes, hardware, software y más.</p>
+        </article>
+        <article class="metrica-card">
+            <span class="metrica-valor">100%</span>
+            <p>Enfoque en práctica, proyectos reales y trabajo colaborativo.</p>
+        </article>
     </section>
 
     <section class="sobre-bachi reveal">
@@ -97,7 +121,7 @@
     <!-- ================================
      SECCIÓN CARRUSEL TIPO MENÚ DE RESTAURANTE
     ================================= -->
-    <section class="carousel-section ">
+    <section class="carousel-section " id="porque-estudiar">
         <h2 class="carousel-title">¿Por qué estudiar Informática?</h2>
         
         <div class="carousel-container">
@@ -173,6 +197,8 @@
 
             <button class="carousel-btn right" id="nextBtn">❯</button>
         </div>
+
+        <div class="carousel-dots" id="carouselDots" aria-label="Indicadores del carrusel"></div>
     </section>
 
     <!-- ================================
@@ -188,6 +214,10 @@
             <a class="info-btn" href="https://educacion.gob.ec/informacion-y-figuras-profesionales/" target="_blank">👤 Perfil del Estudiante</a>
         </div>
     </section>
+
+    </main>
+
+    <button id="to-top" aria-label="Volver arriba">↑</button>
 
     <footer>
         <div class="footer">

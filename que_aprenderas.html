@@ -8,31 +8,70 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bubblegum+Sans&family=Fuzzy+Bubbles:wght@400;700&family=Gorditas:wght@400;700&family=Lilita+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="que_aprenderas.css">
+    <link rel="stylesheet" href="ui-upgrades.css">
     <script src="que_aprenderas.js" defer></script>
+    <script src="index.js" defer></script>
+    <script src="ui-upgrades.js" defer></script>
 </head>
 <body>
+<a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
 <header>
   <div class="brand">
     <img src="images/logo 2.svg" alt="Logo U.E 17 de Septiembre" class="logo">
-    <h1>U.E 17 de Septiembre</h1>
+        <h1><a href="index.html">U.E 17 de Septiembre</a></h1>
   </div>
   
    <button id="menu-btn" style="background:transparent;border:none;font-size:1.8rem;cursor:pointer;display:none; filter: invert(1); ">☰</button>
-  <nav id="nav-menu">
-    <a href="main.html">Inicio</a>
+    <nav id="nav-menu">
+    <a href="que_aprenderas.html">Â¿QuÃ© aprenderÃ¡s?</a>
     <a href="competencias_tecnicas.html">Competencias tecnicas</a>
     <a href="salida_profesional.html">Salida profesional</a>
     <a href="plan_de_estudio.html">Plan de estudio</a>
   </nav>
 </header>
 
+<nav class="ux-section-nav">
+    <div class="ux-container ux-section-nav-inner">
+        <a href="#modulos">Modulos</a>
+        <a href="#camino">Camino por anio</a>
+        <a href="#fct">FCT</a>
+        <a href="#faq">FAQ</a>
+    </div>
+</nav>
+
+<main id="contenido-principal">
+
 
     <section class="hero-parallax">
         <div class="hero-content">
+            <p class="ux-breadcrumb"><a href="main.html">Inicio</a> / Que aprenderas</p>
             <h1>¿Qué apréndras?</h1>
             <p>Una formación moderna y versátil que combina tecnología, lógica, creatividad y práctica. Aquí se forjan los futuros desarrolladores, técnicos y creadores digitales.</p>
+            <div class="ux-hero-actions">
+                <a class="ux-btn ux-btn-solid" href="#modulos">Ver modulos</a>
+                <a class="ux-btn" href="#camino">Tu ruta por anio</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="ux-fast-summary ux-container reveal" id="resumen">
+        <h2 class="ux-section-title">En 30 segundos</h2>
+        <div class="ux-summary-grid">
+            <article class="ux-summary-card">
+                <strong>6</strong>
+                <p>Modulos tecnicos para programacion, redes, web, soporte y multimedia.</p>
+            </article>
+            <article class="ux-summary-card">
+                <strong>3</strong>
+                <p>Anios de crecimiento progresivo con enfoque practico en laboratorio.</p>
+            </article>
+            <article class="ux-summary-card">
+                <strong>1 FCT</strong>
+                <p>Experiencia real de pasantias para llegar mejor preparado al trabajo.</p>
+            </article>
         </div>
     </section>
 
@@ -42,7 +81,7 @@
         </p>
     </div>
 
-    <section class="reveal" style="padding-bottom: 80px;">
+    <section class="reveal" id="modulos" style="padding-bottom: 80px;">
         <div class="curriculum-grid">
             
             <article class="curriculum-card">
@@ -126,7 +165,7 @@
         </div>
     </section>
 
-    <section class="year-section reveal">
+    <section class="year-section reveal" id="camino">
         <div class="main-heading">
             <h2>Tu Camino Año a Año</h2>
         </div>
@@ -160,7 +199,7 @@
         </div>
     </section>
 
-    <section class="seccion-mixta reveal">
+    <section class="seccion-mixta reveal" id="fct">
         <div class="mixta-contenido">
             <div class="mixta-texto">
                 <h2>Formación en Centros de Trabajo (FCT)</h2>
@@ -177,6 +216,30 @@
             </div>
         </div>
     </section>
+
+    <section class="ux-faq ux-container reveal" id="faq">
+        <h2 class="ux-section-title">Preguntas frecuentes</h2>
+        <article class="ux-faq-item">
+            <button class="ux-faq-btn" type="button" aria-expanded="false">Necesito conocimientos previos para entrar?</button>
+            <div class="ux-faq-panel" hidden>
+                No. Inicias desde fundamentos y avanzas paso a paso con acompanamiento docente.
+            </div>
+        </article>
+        <article class="ux-faq-item">
+            <button class="ux-faq-btn" type="button" aria-expanded="false">Se trabaja mas teoria o practica?</button>
+            <div class="ux-faq-panel" hidden>
+                La base teorica se aplica en proyectos, laboratorio y actividades tecnicas reales.
+            </div>
+        </article>
+        <article class="ux-faq-item">
+            <button class="ux-faq-btn" type="button" aria-expanded="false">Puedo seguir estudiando en la universidad?</button>
+            <div class="ux-faq-panel" hidden>
+                Si. La formacion tecnica te da ventaja para carreras de software, sistemas, redes o TI.
+            </div>
+        </article>
+    </section>
+
+    </main>
 
    <footer>
         <div class="footer">

@@ -8,35 +8,72 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bubblegum+Sans&family=Fuzzy+Bubbles:wght@400;700&family=Gorditas:wght@400;700&family=Lilita+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="competencias_tecnicas.css">
+<link rel="stylesheet" href="ui-upgrades.css">
 <script src="competencias_tecnicas.js"></script>
+<script src="index.js" defer></script>
+<script src="ui-upgrades.js" defer></script>
 
 
 </head>
 <body>
+<a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
     <header>
   <div class="brand">
     <img src="images/logo 2.svg" alt="Logo U.E 17 de Septiembre" class="logo">
-    <h1>U.E 17 de Septiembre</h1>
+    <h1><a href="index.html">U.E 17 de Septiembre</a></h1>
   </div>
   
-   <button id="menu-btn" style="background:transparent;border:none;font-size:1.8rem;cursor:pointer;display:none; filter: invert(1); ">☰</button>
+  <button id="menu-btn" style="background:transparent;border:none;font-size:1.8rem;cursor:pointer;display:none; filter: invert(1); ">☰</button>
   <nav id="nav-menu">
-    <a href="main.html">Inicio</a>
     <a href="que_aprenderas.html">¿Qué aprenderás?</a>
+    <a href="competencias_tecnicas.html">Competencias tecnicas</a>
     <a href="salida_profesional.html">Salida profesional</a>
     <a href="plan_de_estudio.html">Plan de estudio</a>
   </nav>
 </header>
 
-  <section class="competencias-tecnicas">
+  <nav class="ux-section-nav">
+    <div class="ux-container ux-section-nav-inner">
+      <a href="#bloques">Competencias</a>
+      <a href="#niveles">Niveles</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#faq">FAQ</a>
+    </div>
+  </nav>
+
+<main id="contenido-principal">
+
+  <section class="hero-parallax ux-hero">
+    <div class="hero-content">
+      <p class="ux-breadcrumb"><a href="main.html">Inicio</a> / Competencias tecnicas</p>
+      <h1>Competencias tecnicas</h1>
+      <p>Formacion aplicada para programar, mantener equipos, desplegar redes y resolver problemas reales en entornos de TI.</p>
+      <div class="ux-hero-actions">
+        <a class="ux-btn ux-btn-solid" href="#bloques">Ver competencias</a>
+        <a class="ux-btn" href="#niveles">Niveles esperados</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="ux-fast-summary ux-container reveal" id="resumen">
+    <h2 class="ux-section-title">Perfil tecnico rapido</h2>
+    <div class="ux-summary-grid">
+      <article class="ux-summary-card"><strong>5</strong><p>Areas clave de dominio tecnico y operativo.</p></article>
+      <article class="ux-summary-card"><strong>70%</strong><p>Trabajo practico en laboratorio y proyectos guiados.</p></article>
+      <article class="ux-summary-card"><strong>+1</strong><p>Ruta abierta hacia empleo inicial o educacion superior.</p></article>
+    </div>
+  </section>
+
+  <section class="competencias-tecnicas" id="bloques">
     <div class="title">
         <p>Competencias Técnicas</p>
     </div>
 
     <!-- PROGRAMACIÓN -->
-    <div class="competencia-item zig">
+    <div class="competencia-item zig" id="programacion">
       <div class="media">
         <img src="images/programacion.jpg" alt="Código en una pantalla oscura">
       </div>
@@ -60,7 +97,7 @@
     </div>
 
     <!-- HARDWARE -->
-    <div class="competencia-item zag">
+    <div class="competencia-item zag" id="hardware">
       <div class="contenido">
         <h2>Hardware</h2>
 <p>
@@ -84,7 +121,7 @@
     </div>
 
     <!-- REDES -->
-    <div class="competencia-item zig">
+    <div class="competencia-item zig" id="redes">
       <div class="media">
         <img src="images/redes.avif" alt="Cables de red estructurado">
       </div>
@@ -108,7 +145,7 @@
     </div>
 
     <!-- SOFTWARE -->
-    <div class="competencia-item zag">
+    <div class="competencia-item zag" id="software">
       <div class="contenido">
         <h2>Software</h2>
 <p>
@@ -132,7 +169,7 @@
     </div>
 
     <!-- SOPORTE TÉCNICO -->
-    <div class="competencia-item zig">
+    <div class="competencia-item zig" id="soporte">
       <div class="media">
         <img src="images/soporte-tecnico.avif" alt="Persona dando soporte técnico">
       </div>
@@ -156,6 +193,78 @@
     </div>
   </section>
 
+  <section class="ux-container reveal" id="niveles" style="margin: 60px auto;">
+    <h2 class="ux-section-title">Nivel esperado por competencia</h2>
+    <div class="ux-panel">
+      <div class="ux-meter-list">
+        <div class="ux-meter-item">
+          <div class="ux-meter-head"><span>Programacion</span><span>Intermedio</span></div>
+          <div class="ux-meter-track"><div class="ux-meter-fill" style="width: 78%;"></div></div>
+        </div>
+        <div class="ux-meter-item">
+          <div class="ux-meter-head"><span>Hardware y mantenimiento</span><span>Intermedio</span></div>
+          <div class="ux-meter-track"><div class="ux-meter-fill" style="width: 74%;"></div></div>
+        </div>
+        <div class="ux-meter-item">
+          <div class="ux-meter-head"><span>Redes</span><span>Intermedio</span></div>
+          <div class="ux-meter-track"><div class="ux-meter-fill" style="width: 72%;"></div></div>
+        </div>
+        <div class="ux-meter-item">
+          <div class="ux-meter-head"><span>Software y ofimatica</span><span>Intermedio alto</span></div>
+          <div class="ux-meter-track"><div class="ux-meter-fill" style="width: 82%;"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ux-container reveal" id="proyectos" style="margin: 60px auto;">
+    <h2 class="ux-section-title">Proyectos de practica sugeridos</h2>
+    <div class="ux-grid-3">
+      <article class="ux-panel">
+        <h3>App de escritorio</h3>
+        <ul class="ux-list">
+          <li>CRUD basico con interfaz.</li>
+          <li>Validaciones y reportes simples.</li>
+          <li>Entrega documentada.</li>
+        </ul>
+      </article>
+      <article class="ux-panel">
+        <h3>Red LAN funcional</h3>
+        <ul class="ux-list">
+          <li>Topologia y direccionamiento.</li>
+          <li>Router y switch configurados.</li>
+          <li>Pruebas de conectividad.</li>
+        </ul>
+      </article>
+      <article class="ux-panel">
+        <h3>Plan de soporte</h3>
+        <ul class="ux-list">
+          <li>Checklist de mantenimiento.</li>
+          <li>Bitacora de incidencias.</li>
+          <li>Protocolo de atencion al usuario.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="ux-faq ux-container reveal" id="faq">
+    <h2 class="ux-section-title">Preguntas frecuentes</h2>
+    <article class="ux-faq-item">
+      <button class="ux-faq-btn" type="button" aria-expanded="false">Que herramientas se usan en clase?</button>
+      <div class="ux-faq-panel" hidden>Se trabajan IDEs, suites ofimaticas, simuladores de red y sistemas operativos reales.</div>
+    </article>
+    <article class="ux-faq-item">
+      <button class="ux-faq-btn" type="button" aria-expanded="false">Se evalua solo teoria?</button>
+      <div class="ux-faq-panel" hidden>No. El peso fuerte esta en practica guiada, proyectos y solucion de casos.</div>
+    </article>
+    <article class="ux-faq-item">
+      <button class="ux-faq-btn" type="button" aria-expanded="false">Con esto puedo trabajar al graduarme?</button>
+      <div class="ux-faq-panel" hidden>Si, puedes postular a roles iniciales de soporte, mantenimiento, redes o desarrollo junior.</div>
+    </article>
+  </section>
+
+  </main>
+
   <footer>
         <div class="footer">
 <p class="footer-copyright">
@@ -177,7 +286,5 @@
 </div>
 </div>
     </footer>
-</body>
-</html>
 </body>
 </html>

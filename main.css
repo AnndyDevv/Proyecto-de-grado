@@ -1,10 +1,28 @@
 
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap");
+
     body {
         margin: 0;
-        font-family: "Ubuntu", sans-serif;
+        font-family: "Source Sans 3", "Segoe UI", Tahoma, sans-serif;
         color: #222;
         background:    #d6e1fc;
     }
+
+.skip-link {
+    position: absolute;
+    top: -50px;
+    left: 12px;
+    background: #060c30;
+    color: #fff;
+    padding: 10px 14px;
+    text-decoration: none;
+    z-index: 2000;
+    border-radius: 6px;
+}
+
+.skip-link:focus {
+    top: 12px;
+}
    /* =========================================
    HEADER CON EFECTO HOVER COMPLETO
 ========================================= */
@@ -19,6 +37,7 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: 14px;
     }
 
     header h1 {
@@ -43,6 +62,32 @@ header {
   margin: 0; 
   font-size: 1.8rem;
 }
+.brand-title {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 10px;
+    line-height: 1;
+}
+
+.brand-title-ue {
+    font-family: "Sora", "Segoe UI", Tahoma, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0.56);
+    border-radius: 999px;
+    padding: 0.28rem 0.5rem;
+    opacity: 0.96;
+}
+
+.brand-title-name {
+    font-family: "Sora", "Segoe UI", Tahoma, sans-serif;
+    font-size: clamp(1.35rem, 2.1vw, 1.95rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
 #nav-menu {
     display: flex;
     flex-direction: row;
@@ -51,6 +96,7 @@ header {
 
 /* ESTILOS PARA LOS ENLACES - EFECTO HOVER COMPLETO */
 #nav-menu a {
+    font-family: "Sora", "Segoe UI", Tahoma, sans-serif;
     text-decoration: none;
     color: #fff;
     font-weight: 600;
@@ -108,6 +154,26 @@ header {
     #nav-menu.active {
         display: flex;
     }
+
+    .brand {
+        gap: 10px;
+    }
+
+    .brand-title {
+        gap: 8px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .brand-title-ue {
+        font-size: 0.63rem;
+        letter-spacing: 0.16em;
+        padding: 0.22rem 0.42rem;
+    }
+
+    .brand-title-name {
+        font-size: clamp(1.08rem, 5.6vw, 1.42rem);
+    }
 }
 
 .hero {
@@ -120,9 +186,13 @@ header {
     }
 
     .titulo-grande {
-        font-size: 4.6rem;
+        font-size: clamp(1.9rem, 7.5vw, 4.6rem);
         font-weight: 900;
-
+        line-height: 1.08;
+        max-width: 18ch;
+        margin: 0 auto;
+        overflow-wrap: anywhere;
+        text-wrap: balance;
     }
 
     .hero p {
@@ -131,6 +201,53 @@ header {
         opacity: 0.9;
         max-width: 700px;
         margin: 20px auto;
+    }
+
+    .hero-actions {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 26px;
+    }
+
+    .hero-btn {
+        text-decoration: none;
+        color: #fff;
+        border: 1px solid rgba(255,255,255,0.8);
+        padding: 12px 20px;
+        font-weight: 600;
+        transition: all 0.25s ease;
+    }
+
+    .hero-btn-primary,
+    .hero-btn:hover {
+        background: #fff;
+        color: #060c30;
+    }
+
+    .metricas {
+        max-width: 1150px;
+        margin: -45px auto 40px;
+        padding: 0 20px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .metrica-card {
+        background: #fff;
+        border: 1px solid rgba(6, 12, 48, 0.15);
+        padding: 22px;
+        box-shadow: 0 8px 24px rgba(8, 26, 90, 0.08);
+    }
+
+    .metrica-valor {
+        display: block;
+        font-size: 2rem;
+        color: #0E183B;
+        font-weight: 700;
+        margin-bottom: 8px;
     }
 
     /* =========================================
@@ -345,6 +462,28 @@ header {
         display: flex;
         align-items: center;
         padding: 0 20px;
+    }
+
+    .carousel-dots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 18px;
+    }
+
+    .carousel-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: none;
+        background: rgba(14, 24, 59, 0.35);
+        cursor: pointer;
+        transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .carousel-dot.active {
+        background: #0E183B;
+        transform: scale(1.25);
     }
 
     .carousel {
@@ -565,6 +704,10 @@ header {
 
     /* Responsivo */
     @media (max-width: 600px) {
+        .hero {
+            padding: 80px 16px;
+        }
+
         .links-grid {
             grid-template-columns: 1fr;
         }
@@ -633,4 +776,40 @@ height: 20px;
 .footer-social span {
 font-size: 0.9rem;
 font-weight: 500;
+}
+
+#to-top {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    color: #fff;
+    background: #0E183B;
+    cursor: pointer;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: all 0.25s ease;
+}
+
+#to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+#to-top:hover {
+    background: #192761;
+}
+
+@media (max-width: 900px) {
+    .metricas {
+        grid-template-columns: 1fr;
+        margin-top: 25px;
+    }
 }

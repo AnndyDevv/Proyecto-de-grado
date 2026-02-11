@@ -8,18 +8,23 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bubblegum+Sans&family=Fuzzy+Bubbles:wght@400;700&family=Gorditas:wght@400;700&family=Lilita+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="salida_profesional.css">
+    <link rel="stylesheet" href="ui-upgrades.css">
     <script src="salida_profesional.js" defer></script>
+    <script src="index.js" defer></script>
+    <script src="ui-upgrades.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
 
     <header>
         <div class="brand">
             <img src="images/logo 2.svg" alt="Logo U.E 17 de Septiembre" class="logo">
-            <h1>U.E 17 de Septiembre</h1>
+            <h1><a href="index.html">U.E 17 de Septiembre</a></h1>
         </div>
-        <button id="menu-btn" style="background:white;border:none;font-size:1.8rem;cursor:pointer;display:none;">☰</button>
+    <button id="menu-btn" style="background:transparent;border:none;font-size:1.8rem;cursor:pointer;display:none; filter: invert(1);">☰</button>
         <nav id="nav-menu" style="display:flex; flex-direction: row; gap: 20px;">
             <a href="main.html">Inicio</a>
             <a href="que_aprenderas.html">¿Qué aprenderás?</a>
@@ -28,10 +33,68 @@
         </nav>
     </header>
 
+    <nav class="ux-section-nav">
+        <div class="ux-container ux-section-nav-inner">
+            <a href="#rutas">Rutas</a>
+            <a href="#puestos">Puestos</a>
+            <a href="#espacios">Espacios</a>
+            <a href="#faq">FAQ</a>
+        </div>
+    </nav>
+
+    <main id="contenido-principal">
+
     <section class="hero-parallax">
         <div class="hero-content">
+            <p class="ux-breadcrumb"><a href="main.html">Inicio</a> / Salida profesional</p>
             <h1>Salida Profesional</h1>
             <p>Múltiples caminos hacia el éxito. Descubre todas las oportunidades laborales y áreas donde puedes desarrollar tu carrera profesional tras graduarte del bachillerato técnico.</p>
+            <div class="ux-hero-actions">
+                <a class="ux-btn ux-btn-solid" href="#rutas">Rutas recomendadas</a>
+                <a class="ux-btn" href="#puestos">Puestos de inicio</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="ux-fast-summary ux-container reveal" id="resumen">
+        <h2 class="ux-section-title">Panorama rapido</h2>
+        <div class="ux-summary-grid">
+            <article class="ux-summary-card"><strong>3</strong><p>Rutas principales: empleo, universidad y emprendimiento.</p></article>
+            <article class="ux-summary-card"><strong>5+</strong><p>Roles iniciales de entrada en soporte, redes y desarrollo.</p></article>
+            <article class="ux-summary-card"><strong>100%</strong><p>Perfil aplicable a instituciones publicas y privadas.</p></article>
+        </div>
+    </section>
+
+    <section class="ux-container reveal" id="rutas" style="margin: 50px auto;">
+        <h2 class="ux-section-title">Elige tu ruta despues de graduarte</h2>
+        <div class="ux-grid-3">
+            <article class="ux-panel">
+                <h3>Ingreso laboral</h3>
+                <p>Ruta para empezar con experiencia real en soporte, redes o mantenimiento.</p>
+                <ul class="ux-list">
+                    <li>Insercion rapida en roles junior.</li>
+                    <li>Aprendizaje continuo en puesto.</li>
+                    <li>Construccion de portafolio profesional.</li>
+                </ul>
+            </article>
+            <article class="ux-panel">
+                <h3>Universidad</h3>
+                <p>Ruta para ampliar profundidad tecnica y acceder a roles de mayor complejidad.</p>
+                <ul class="ux-list">
+                    <li>Ingenieria en sistemas o software.</li>
+                    <li>Base tecnica previa como ventaja.</li>
+                    <li>Mejor proyeccion a mediano plazo.</li>
+                </ul>
+            </article>
+            <article class="ux-panel">
+                <h3>Emprendimiento</h3>
+                <p>Ruta para ofrecer servicios propios de soporte, redes o desarrollo web basico.</p>
+                <ul class="ux-list">
+                    <li>Servicios para negocios locales.</li>
+                    <li>Flexibilidad de horarios.</li>
+                    <li>Escalado progresivo por clientes.</li>
+                </ul>
+            </article>
         </div>
     </section>
 
@@ -42,7 +105,7 @@
         </p>
     </div>
 
-    <section class="reveal" style="padding-bottom: 80px;">
+    <section class="reveal" id="puestos" style="padding-bottom: 80px;">
         <div class="careers-grid">
             
             <article class="career-card">
@@ -118,7 +181,7 @@
         </div>
     </section>
 
-    <section class="opportunities-section reveal">
+    <section class="opportunities-section reveal" id="espacios">
         <div class="main-heading">
             <h2>Espacios de trabajo</h2>
             <p class="main-subtext">Conoce algunos de los diferentes espacios de trabajo donde puedes desenvolverte profesionalmente y aplicar tus habilidades técnicas.</p>
@@ -274,6 +337,24 @@
 
         </div>
     </section>
+
+    <section class="ux-faq ux-container reveal" id="faq">
+        <h2 class="ux-section-title">Preguntas frecuentes</h2>
+        <article class="ux-faq-item">
+            <button class="ux-faq-btn" type="button" aria-expanded="false">Puedo trabajar apenas me gradue?</button>
+            <div class="ux-faq-panel" hidden>Si. Existen puestos iniciales en soporte, mantenimiento, redes y asistencia TI.</div>
+        </article>
+        <article class="ux-faq-item">
+            <button class="ux-faq-btn" type="button" aria-expanded="false">Que opcion conviene mas: trabajo o universidad?</button>
+            <div class="ux-faq-panel" hidden>Depende de tu objetivo. Puedes trabajar para ganar experiencia y continuar estudios despues.</div>
+        </article>
+        <article class="ux-faq-item">
+            <button class="ux-faq-btn" type="button" aria-expanded="false">Es posible emprender sin gran inversion?</button>
+            <div class="ux-faq-panel" hidden>Si, con servicios de soporte, instalacion de redes o web basica para negocios locales.</div>
+        </article>
+    </section>
+
+    </main>
 
     <footer>
         <div class="footer">

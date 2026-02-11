@@ -1,7 +1,7 @@
 
     body {
         margin: 0;
-        font-family: "Arvo", sans-serif;
+        font-family: "Ubuntu", sans-serif;
         color: #222;
         background: #d6e1fc; /* Fondo general */
     }
@@ -54,6 +54,13 @@
   align-items: center; /* Centra el logo y el H1 verticalmente entre sí */
 }
 
+    /* Forzar el mismo estilo del título que en index */
+    .brand h1 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+
 .logo {
   /* ¡Ahora sí, ajusta el tamaño! */
   height: 60px; /* Tamaño más grande */
@@ -61,6 +68,7 @@
      filter: invert(1); 
   margin-right: 15px;/* Espacio entre el logo y el título */
 }
+.brand h1 a { color: inherit; text-decoration: none; }
 
     #nav-menu {
         display: flex;
